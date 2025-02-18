@@ -1,7 +1,7 @@
 ---
 title: Šetnja do Novog Sada
 pubDate: 2025-01-30T09:00:00.000Z
-heroImage: "@assets/images/do-novog-sada.jpg"
+heroImage: '@assets/images/do-novog-sada.jpg'
 ---
 Dvodnevna šetnja od Beograda do Novog Sada je, bez premca, najambiciozniji podvig studenata u blokadi do sada. Logistika, koordinacija, ali i očigledan fizički napor i izdržljivost koje je ovaj projekat zahtevao, testirali su posvećenost studenata njihovoj plemenitoj misiji. Kolona, koja je brojala oko hiljadu ljudi, krenula je od Fakulteta dramskih umetnosti, s blagim zakašnjenjem zbog ogromnog broja okupljenih, koji su došli ili da se pridruže pešacima ili da ih isprate na njihov podvig. Kolonu su pratile desetine automobila i kombija napunjenih šatorima, vrećama za spavanje, vodom, hranom, medicinskom opremom, kao i ličnim stvarima šetača. Beogradske ulice retko viđaju parade praćene takvim interesovanjem koje su pokazale okupljene grupe na trotoarima i prozorima modernih nebodera, pozdravljajući ovu zelenu kolonu, koja u tom trenutku nije mogla ni zamislitii sve prepreke i komplikacije koje će sresti tokom svog putovanja.
 
@@ -18,4 +18,3 @@ Iako u Novi Sad nije trebalo da stignu još narednih pet sati, šetači su već 
 Nakon ceremonije razmene zastava i odavanja počasti stradalima kod Železničke stanice, zavladala je kontrastna tišina u trajanju od petnaest minuta. Taksisti, prijatelji i spontani volonteri odvezli su iscrpljene studente do kampusa Novosadskog univerziteta, gde su šetači bili ugošćeni na sestrinskim fakultetima. Dočekani gromoglasnim aplauzom, smešteni u već pripremljene krevete i uz medicinsku pomoć koja im je pružena, šetači su utonuli u zasluženi san.
 
 Sutradan, održan je najveći protest u istoriji Novog Sada. Rame uz rame, građani i studenti obaju gradova su blokirali mostove, razmenjivali utiske i okončali svoje putovanje s jasnim zaključkom – dok smo ujedinjeni, ništa nam ne može preprečiti put do Slobode.
-
