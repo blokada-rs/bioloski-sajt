@@ -1,29 +1,63 @@
 ---
+import { Icon } from "astro-icon/components";
 const today = new Date();
+const socialIcons = [
+  {
+    icon: "logo-instagram",
+    link: "https://instagram.com/studenti_u_blokadi",
+  },
+  {
+    icon: "logo-facebook",
+    link: "https://www.facebook.com/people/Studenti-u-blokadi-UB/61571631694236/",
+  },
+  {
+    icon: "logo-twitter",
+    link: "https://x.com/studentblokade",
+  },
+  {
+    icon: "logo-github",
+    link: "https://github.com/blokada-rs/sajt",
+  },
+];
+const iconSize = 26;
 ---
 
 <footer>
-	Blokade fakulteta {today.getFullYear()}.
+  <div class="footer-container">
+    <div>Blokade fakulteta {today.getFullYear()}.</div>
+    <div class="social-links">
+      {
+        socialIcons.map(({ icon, link }) => (
+          <a href={link} target="_blank" rel="noopener noreferrer" style={`height: ${iconSize}px;`}>
+            <Icon name={icon} size={iconSize} class="icon" />
+          </a>
+        ))
+      }
+    </div>
+  </div>
 </footer>
 
 <style>
-	footer {
-		padding: 2em 1em 6em 1em;
-		background: linear-gradient(var(--gray-gradient)) no-repeat;
-		color: rgb(var(--gray));
-		text-align: center;
-	}
-	.social-links {
-		display: flex;
-		justify-content: center;
-		gap: 1em;
-		margin-top: 1em;
-	}
-	.social-links a {
-		text-decoration: none;
-		color: rgb(var(--gray));
-	}
-	.social-links a:hover {
-		color: rgb(var(--gray-dark));
-	}
+  .footer-container {
+    width: 70rem;
+    max-width: calc(100% - 2em);
+    margin: auto;
+    padding: 0em 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+  .icon {
+    color: rgb(var(--gray));
+  }
+  .icon:hover {
+    color: rgb(var(--gray-dark));
+    cursor: pointer;
+  }
 </style>
