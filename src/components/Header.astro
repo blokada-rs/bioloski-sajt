@@ -1,6 +1,8 @@
 ---
 import { file } from '@scripts/translate';
 import HeaderLink from './HeaderLink.astro';
+import { Icon } from "astro-icon/components";
+import { ICON_SIZE_LG,ICON_SIZE_MD } from 'consts';
 
 const { lang } = Astro.params;
 
@@ -11,13 +13,16 @@ const { frontmatter } = await file("zaglavlje", lang);
 	<nav>
 		<h2><a href=`/${lang}`>{frontmatter.naslov}</a></h2>
 
-		<button popovertarget="menu-links">
-			Meni
+		<button popovertarget="menu-links" 
+		style={`height: ${ICON_SIZE_LG}px;`}>
+			<Icon name="burger-classic" size={ICON_SIZE_LG} />
 		</button>
 
 		<div id="menu-links" popover>
 			<nav class="internal-links">
-				<button popovertarget="menu-links" popovertargetaction="hide">Zatvori</button>
+				<button popovertarget="menu-links" popovertargetaction="hide" style={`height: ${ICON_SIZE_MD}px;`}>
+					<Icon name="close" size={ICON_SIZE_MD} />
+				</button>
 				{frontmatter.linkovi.map(({naziv, link}: {naziv: string, link: string}) => 
 					<HeaderLink href={`/${lang}${link}`}>{naziv}</HeaderLink>
 				)}
@@ -59,6 +64,16 @@ const { frontmatter } = await file("zaglavlje", lang);
 		color: var(--black);
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
+	}
+
+	nav button {	
+		background: none;
+		color: inherit;
+		border: none;
+		padding: 0 0 0 0.5em;
+		font: inherit;
+		outline: inherit;	
+		cursor: pointer;
 	}
 
 	nav a.active {
