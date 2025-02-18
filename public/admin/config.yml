@@ -23,8 +23,7 @@ i18n:
 collections:
   - name: "stranice"
     label: "Stranice"
-    i18n:
-      structure: multiple_files
+    i18n: true
     files:
       - label: "Početna"
         name: "pocetna"
