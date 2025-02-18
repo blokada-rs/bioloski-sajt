@@ -1,6 +1,7 @@
 ---
-title: Pravni fakultet
+title: Правни факултет
+draft: false
 pubDate: 2025-01-16
 heroImage: '@assets/images/profesor-pravnog.jpg'
 ---
-U toku petnaestominutne tišine dogodio se stravičan incident, koji Više javno tužilaštvo kvalifikuje kao teško ubistvo u pokušaju, u kojem je povređena studentkinja Pravnog fakulteta. Ovaj incident izazvao je hitnu rekaciju studenata. Okupljanje i višesatna blokafa ulica bili su izraz solidarnosti i osude svake vrste nasilja.
+У току петнаестоминутне тишине догодио се стравичан инцидент, који Више јавно тужилаштво квалификује као тешко убиство у покушају, у којем је повређена студенткиња Правног факултета. Овај инцидент изазвао је хитну рекацију студената. Окупљање и вишесатна блокафа улица били су израз солидарности и осуде сваке врсте насиља.

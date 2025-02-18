@@ -1,23 +1,23 @@
 ---
-title: Pod našom (Auto)komandom
+title: Под нашом (Ауто)командом
 draft: false
 pubDate: 2025-01-27T14:03:00
 heroImage: '@assets/images/autokomanda.jpg'
 ---
-Za 27. januar 2025. godine, studenti u blokadi iz Beograda temeljno su planirali prvu celodnevnu akciju. Održana je dvadesetčetvoročasovna blokada Auto-komande.
+За 27. јануар 2025. године, студенти у блокади из Београда темељно су планирали прву целодневну акцију. Одржана је двадесетчетворочасовна блокада Ауто-команде.
 
-Dan je počeo okupljanjem studenata ispred svojih fakulteta. Kolone studenata iz različitih pravaca slivale su se ka Auto-komandi. Bilo je neobično sunčano za januar i takvo jutro je najavljivalo lep i topao dan. Prozori zgrada, vrata lokala i autobuska stajališta bili su puni ljudi koji su pozdravljali studente. Srednjoškolci su se uz svoje profesore takođe priključivali velikom broju studenata.
+Дан је почео окупљањем студената испред својих факултета. Колоне студената из различитих праваца сливале су се ка Ауто-команди. Било је необично сунчано за јануар и такво јутро је најављивало леп и топао дан. Прозори зграда, врата локала и аутобуска стајалишта били су пуни људи који су поздрављали студенте. Средњошколци су се уз своје професоре такође прикључивали великом броју студената.
 
-Blokada je uspostavljena u 10 časova. U tim trenucima najveći zadatak su imali redari. Trčali su noseći betonske blokove, različite barikade, pazeći na ostale studente. Auto-putem su došli studenti Poljoprivrednog fakulteta zajedno sa poljoprivrednicima koji su došli svojim traktorima. Hrabri traktoristi su iz svojih mesta doputovali dan ranije kako bi bili jedna od barikada studenata. Ubrzo se čuo zvuk motorâ. Bajkeri su se takođe priključili blokadama i bili na prvim linijama. Ubrzo su se studentima priključili i vojni veterani.
+Блокада је успостављена у 10 часова. У тим тренуцима највећи задатак су имали редари. Трчали су носећи бетонске блокове, различите барикаде, пазећи на остале студенте. Ауто-путем су дошли студенти Пољопривредног факултета заједно са пољопривредницима који су дошли својим тракторима. Храбри трактористи су из својих места допутовали дан раније како би били једна од барикада студената. Убрзо се чуо звук моторâ. Бајкери су се такође прикључили блокадама и били на првим линијама. Убрзо су се студентима прикључили и војни ветерани.
 
-Usledio je i najemotivniji trenutak dana, 11.52. Održano je petnaestominutno ćutanje, kao i svakog dana. Sećanje na ljude koji su tragično nastradali u Novom Sadu postalo je veza svih studenata u blokadi i građana. Zajedništvo i empatija daju snagu i veru da više niko neće nastradati zbog nemara, neznanja i korupcije.
+Уследио је и најемотивнији тренутак дана, 11.52. Одржано је петнаестоминутно ћутање, као и сваког дана. Сећање на људе који су трагично настрадали у Новом Саду постало је веза свих студената у блокади и грађана. Заједништво и емпатија дају снагу и веру да више нико неће настрадати због немара, незнања и корупције.
 
-Datum akcije nije slučajno izabran – 27. januara se obeležava i Sveti Sava, školska slava. Pojedini fakulteti i verujući studenti su pripremili slavski kolač, zajedno ga prelomili i na taj način obeležili ovaj dan.
+Датум акције није случајно изабран – 27. јануара се обележава и Свети Сава, школска слава. Поједини факултети и верујући студенти су припремили славски колач, заједно га преломили и на тај начин обележили овај дан.
 
-Pored već pomenutih redara, studenti Veterinarskog fakulteta su imali veliki zadatak i važnu ulogu u organizaciji akcije. Njihova zgrada je služila kao mesto za neophodni predah redara i prijem donacija kojе su građani celog dana donosili. Studenti Mašinskog fakulteta su takođe preuzeli veći deo zadataka i obezbedili hranu za sve učesnike blokade. Njima su u ovom poduhvatu pomogli i profesionalni kuvari.
+Поред већ поменутих редара, студенти Ветеринарског факултета су имали велики задатак и важну улогу у организацији акције. Њихова зграда је служила као место за неопходни предах редара и пријем донација које су грађани целог дана доносили. Студенти Машинског факултета су такође преузели већи део задатака и обезбедили храну за све учеснике блокаде. Њима су у овом подухвату помогли и професионални кувари.
 
-Dan je prolazio, a predveče je Auto-komanda postala premala za sve ljude koji su želeli da se priključe protestu. Za program je bio zaslužan Blokadni hor, koji je pripremio prigodan program. 
+Дан је пролазио, а предвече је Ауто-команда постала премала за све људе који су желели да се прикључе протесту. За програм је био заслужан Блокадни хор, који је припремио пригодан програм. 
 
-Kako je noć padala, građani su se razilazili, a studenti su ostajali na ulici. Odbojka i poneka gitara su ih držale budnima. Pred zoru je započeto čišćenje. Kamion za smeće bio je parkiran malo dalje, pa je scena nošenja smeća ostala posebno upečatljiva. Možda i u tome ima neke simbolike.
+Како је ноћ падала, грађани су се разилазили, а студенти су остајали на улици. Одбојка и понека гитара су их држале буднима. Пред зору је започето чишћење. Камион за смеће био је паркиран мало даље, па је сцена ношења смећа остала посебно упечатљива. Можда и у томе има неке симболике.
 
-Nakon 24 sata, Auto-komanda je ponovo bila prohodna. Saobraćaj je vraćen u svoj uobičajeni ritam, a studenti su se vratili svojim fakultetima. Ova akcija ohrabrila je studente i pokazala im da su spremni za velike poduhvate, sve dok se drže zajedno.
+Након 24 сата, Ауто-команда је поново била проходна. Саобраћај је враћен у свој уобичајени ритам, а студенти су се вратили својим факултетима. Ова акција охрабрила је студенте и показала им да су спремни за велике подухвате, све док се држе заједно.

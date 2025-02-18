@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { collection, langs } from '@scripts/translate';
 import { Image } from 'astro:assets';
 import BaseHead from '../../../components/BaseHead.astro';
 import Header from '../../../components/Header.astro';
@@ -8,18 +8,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../../consts';
 import FormattedDate from '../../../components/FormattedDate.astro';
 
 const { lang } = Astro.params;
-
-const posts = (await getCollection('akcije'))
-	.filter(({data}) => !data.draft)
-	.map(e => ({...e, lang: e.id.split('/')[0], id: e.id.split('/')[1]}))
-	.filter(post => lang.startsWith(post.lang))
-	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const posts = await collection("akcije", lang);
 
 export async function getStaticPaths() {
-	return [
-		{params: {lang: 'sr-lat'}},
-		{params: {lang: 'en'}},
-	]
+	return langs.map(lang => ({params: {lang}}))
 }
 ---
 

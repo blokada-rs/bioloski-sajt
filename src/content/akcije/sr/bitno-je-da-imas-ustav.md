@@ -1,6 +1,7 @@
 ---
-title: Bitno je da imaš (u)stav
+title: Битно је да имаш (у)став
+draft: false
 pubDate: 2025-01-12
 heroImage: '@assets/images/bitno-je-da-imas-ustav.jpg'
 ---
-Protest ispred Ustavnog suda u Beogradu organizovan je zbog kršenja Ustava od strane najviših državnih zvaničnika. Pročitani su članovi Ustava koji su prekršeni, uz 15 minuta tišine kao simbol otpora.
+Протест испред Уставног суда у Београду организован је због кршења Устава од стране највиших државних званичника. Прочитани су чланови Устава који су прекршени, уз 15 минута тишине као симбол отпора.

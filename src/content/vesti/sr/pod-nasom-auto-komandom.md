@@ -1,33 +1,32 @@
 ---
-title: Pod našom (auto)komandom
+title: Под нашом (ауто)командом
 draft: false
 pubDate: 2025-01-27
 heroImage: '@assets/images/autokomanda.jpg'
 ---
-Pozivamo vas da nam se pridružite na dvadesetčetvoročasovnoj blokadi Auto-komande, koja će nastupiti u ponedeljak 27. 1. u 10h. Blokada će obuhvatiti deo Bulevara oslobođenja, pa sve do raskrsnice Ustaničke, Južnog bulevara i Nebojšine ulice. Tačno ucrtane granice blokade možete videti na slici ispod.
+Позивамо вас да нам се придружите на двадесетчетворочасовној блокади Ауто-команде, која ће наступити у понедељак 27. 1. у 10х. Блокада ће обухватити део Булевара ослобођења, па све до раскрснице Устаничке, Јужног булевара и Небојшине улице. Тачно уцртане границе блокаде можете видети на слици испод.
 
 ![Granice blokade autokomande](@assets/images/autokomanda-granice.png "Titl")
+## Сатница активности
 
-## Satnica aktivnosti
+- 10.00 Почетак скупа на Ауто-команди
+- 11.52 Петнаест минута тишине ради одавања поште настрадалима
+- 13.00 Почетак “Kувања са студентима”
+- 16.00 Блокадни баскет
+- 18.00 Долазак радника и њихов говор
+- 20.00 Укључивање блицева на телефонима и читање захтева
 
-- 10.00 Početak skupa na Auto-komandi
-- 11.52 Petnaest minuta tišine radi odavanja pošte nastradalima
-- 13.00 Početak “Kuvanja sa studentima”
-- 16.00 Blokadni basket
-- 18.00 Dolazak radnika i njihov govor
-- 20.00 Uključivanje bliceva na telefonima i čitanje zahteva
+## Мере опреза на блокади
 
-## Mere opreza na blokadi
+Молимо вас да током блокаде на Ауто-команди не излазите на аутопут, јер такве акције могу угрозити вашу безбедност и безбедност других учесника у саобраћају. Такође, молимо вас да не излазите на шине како бисмо омогућили несметан пролазак хитне помоћи, као и да не долазите на локацију пре 10 часова.
 
-Molimo vas da tokom blokade na Auto-komandi ne izlazite na autoput, jer takve akcije mogu ugroziti vašu bezbednost i bezbednost drugih učesnika u saobraćaju. Takođe, molimo vas da ne izlazite na šine kako bismo omogućili nesmetan prolazak hitne pomoći, kao i da ne dolazite na lokaciju pre 10 časova.
+Организација блокаде замишљена је као миран протест који јасно шаље поруку, али не сме довести до инцидената или непотребних ризика. Ако се ипак одлучите на такав корак, напомињемо да то чините искључиво на своју одговорност. Апелујемо на све да се придржавају договорених правила блокаде и плана кретања како бисмо доприносили очувању сигурности свих присутних.
 
-Organizacija blokade zamišljena je kao miran protest koji jasno šalje poruku, ali ne sme dovesti do incidenata ili nepotrebnih rizika. Ako se ipak odlučite na takav korak, napominjemo da to činite isključivo na svoju odgovornost. Apelujemo na sve da se pridržavaju dogovorenih pravila blokade i plana kretanja kako bismo doprinosili očuvanju sigurnosti svih prisutnih.
+Посебно апелујемо да се стриктно поштују инструкције редара како би све протекло у најбољем реду и како бисмо заједнички осигурали успешну реализацију протеста. Хвала вам на разумевању и што својим понашањем доприносите успеху наше заједничке борбе.
 
-Posebno apelujemo da se striktno poštuju instrukcije redara kako bi sve proteklo u najboljem redu i kako bismo zajednički osigurali uspešnu realizaciju protesta. Hvala vam na razumevanju i što svojim ponašanjem doprinosite uspehu naše zajedničke borbe.
+Поновљамо да се ограђујемо од било каквог повезивања са политичким странкама, политичарима или невладиним организацијама. Наша борба је искључиво грађанска и студентска, али као и увек, сви су добродошли да нас подрже у својству грађана – без икаквих страначких, политичких или организационих обележја.
 
-Ponovljamo da se ograđujemo od bilo kakvog povezivanja sa političkim strankama, političarima ili nevladinim organizacijama. Naša borba je isključivo građanska i studentska, ali kao i uvek, svi su dobrodošli da nas podrže u svojstvu građana – bez ikakvih stranačkih, političkih ili organizacionih obeležja.
+Хвала вам што стојите уз нас и подржавате нашу борбу за правду и одговорност.
 
-Hvala vam što stojite uz nas i podržavate našu borbu za pravdu i odgovornost.
-
-S poštovanjem,
-Studenti u blokadi
+С поштовањем,
+Студенти у блокади

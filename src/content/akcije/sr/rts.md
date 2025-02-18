@@ -1,6 +1,7 @@
 ---
-title: RTS
+title: РТС
+draft: false
 pubDate: 2024-12-12
 heroImage: '@assets/images/rts.jpg'
 ---
-Studenti su se okupili ispred Radio-televizije Srbije zbog nezadovoljstva načinom izveštavanja javnog medijskog servisa. Okupljanje je organizovano tokom glavne informativne emisije Dnevnik 2.
+Студенти су се окупили испред Радио-телевизије Србије због незадовољства начином извештавања јавног медијског сервиса. Окупљање је организовано током главне информативне емисије Дневник 2.

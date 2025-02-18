@@ -1,12 +1,13 @@
 ---
-title: Saopštenje povodom ostavke dr Mile Paunić
+title: Саопштење поводом оставке др Миле Паунић
+draft: false
 pubDate: 2025-01-23
-heroImage: "@assets/images/placeholder.jpg"
+heroImage: '@assets/images/placeholder.jpg'
 ---
-Odluka doktorke Mile Paunić, da podnese ostavku u Zavodu za zdravstvenu zaštitu studenata zbog onemogućavanja zaposlenih da iskažu podršku studentima, nije samo čin lične hrabrosti, već i jasan pokazatelj ozbiljnih problema u društvu. Taj gest solidarnosti i moralnog integriteta istovremeno osvetljava atmosferu pritiska i straha u kojoj čak i podrška studentima biva okarakterisana kao čin koji zaslužuje sankciju.
+Одлука докторке Миле Паунић, да поднесе оставку у Заводу за здравствену заштиту студената због онемогућавања запослених да искажу подршку студентима, није само чин личне храбрости, већ и јасан показатељ озбиљних проблема у друштву. Тај гест солидарности и моралног интегритета истовремено осветљава атмосферу притиска и страха у којој чак и подршка студентима бива окарактерисана као чин који заслужује санкцију.
 
-Ovako nešto nije samo neprihvatljivo, nego je i direktan napad na osnovne vrednosti jednog demokratskog društva. Ustav Republike Srbije garantuje pravo na slobodu mišljenja, izražavanja i udruživanja. Pokušaji da se te vrednosti uguše nisu samo protivzakoniti, već predstavljaju ozbiljan udar na temeljna ljudska prava i slobode.
+Овако нешто није само неприхватљиво, него је и директан напад на основне вредности једног демократског друштва. Устав Републике Србије гарантује право на слободу мишљења, изражавања и удруживања. Покушаји да се те вредности угуше нису само противзаконити, већ представљају озбиљан удар на темељна људска права и слободе.
 
-Studenti u blokadi izražavaju duboko poštovanje prema hrabrosti doktorke Paunić i naglašavaju da niko ne sme biti izložen pritiscima zbog podrške studentima ili zbog izražavanja svog stava. Ovo nije samo borba za solidarnost, ovo je borba za očuvanje osnovnih demokratskih principa i prava svakog građanina.
+Студенти у блокади изражавају дубоко поштовање према храбрости докторке Паунић и наглашавају да нико не сме бити изложен притисцима због подршке студентима или због изражавања свог става. Ово није само борба за солидарност, ово је борба за очување основних демократских принципа и права сваког грађанина.
 
-Stojimo uz sve pojedince koji imaju hrabrosti da, poput doktorke Paunić, stave dostojanstvo i pravdu ispred straha i pritisaka. Samo zajedničkim snagama možemo izgraditi društvo u kojem se sloboda govora i solidarnost poštuju i neguju, društvo u kojem se hrabrost prepoznaje, a pravda ne guši represijom.
+Стојимо уз све појединце који имају храбрости да, попут докторке Паунић, ставе достојанство и правду испред страха и притисака. Само заједничким снагама можемо изградити друштво у којем се слобода говора и солидарност поштују и негују, друштво у којем се храброст препознаје, а правда не гуши репресијом.

@@ -1,10 +1,11 @@
 ---
-title: Pokloni život - daj krv
+title: Поклони живот - дај крв
+draft: false
 pubDate: 2025-01-26
-heroImage: "@assets/images/davanje-krvi.jpg"
+heroImage: '@assets/images/davanje-krvi.jpg'
 ---
-Studenti Visoke zdravstvene škole pozivaju sve punoletne građane na akciju dobrovoljnog davanja krvi.
+Студенти Високе здравствене школе позивају све пунолетне грађане на акцију добровољног давања крви.
 
-Akcija “Pokloni život - daj krv” zakazana je za sredu, 29. januar 2025. godine u 11 časova na adresi Cara Dušana 254 u Zemunu.
+Акција “Поклони живот - дај крв” заказана је за среду, 29. јануар 2025. године у 11 часова на адреси Цара Душана 254 у Земуну.
 
-Ko može dati krv, koje su kontraindikacije i kako se adekvatno pripremiti za davanje krvi možete pogledati na sledećem linku: [https://itks.rs/ko-sve-moze-dati-krv.html](https://itks.rs/ko-sve-moze-dati-krv.html)
+Kо може дати крв, које су контраиндикације и како се адекватно припремити за давање крви можете погледати на следећем линку:  [https://itks.rs/ko-sve-moze-dati-krv.html](https://itks.rs/ko-sve-moze-dati-krv.html)

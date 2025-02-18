@@ -1,6 +1,7 @@
 ---
-title: Generalni štrajk
+title: Генерални штрајк
+draft: false
 pubDate: 2025-01-24
 heroImage: '@assets/images/generalni-strajk.jpg'
 ---
-Talasu jednodnevne građanske neposlušnosti pridružili su se studenti, srednjoškolci, univerzitetski profesori, prosvetni radnici, poslodavci, pojedini sindikati i veliki broj građana. Dan je obeležen obustavom rada i smanjenjem potrošnje, a započeo je okupljanjem ispred Generalštaba Vojske Srbije i opštine Novi Beograd na inicijativu srednjoškolaca. Mirna protestna šetnja na Novom Beogradu narušena je incidentom u kojem je povređena studentkinja Poljoprivrednog fakulteta. Kao odgovor na nasilje, studenti su organizovali spontani protest na Autokomandi, odakle se kolona uputila ka Vrhovnom javnom tužilaštvu, a potom i ka Radio-televiziji Srbije, zahtevajući pravdu i odgovornost institucija.
+Таласу једнодневне грађанске непослушности придружили су се студенти, средњошколци, универзитетски професори, просветни радници, послодавци, поједини синдикати и велики број грађана. Дан је обележен обуставом рада и смањењем потрошње, а започео је окупљањем испред Генералштаба Војске Србије и општине Нови Београд на иницијативу средњошколаца. Мирна протестна шетња на Новом Београду нарушена је инцидентом у којем је повређена студенткиња Пољопривредног факултета. Kао одговор на насиље, студенти су организовали спонтани протест на Аутокоманди, одакле се колона упутила ка Врховном јавном тужилаштву, а потом и ка Радио-телевизији Србије, захтевајући правду и одговорност институција.

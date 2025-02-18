@@ -1,8 +1,9 @@
 ---
-title: 1000 pisama za Zagorku Dolovac
+title: 1000 писама за Загорку Доловац
+draft: false
 pubDate: 2024-12-25
 heroImage: '@assets/images/pisma-za-zagu.jpg'
 ---
-Tri od četiri zahteva su u nadelžnosti Višeg javnog tužilaštva. Ipak, republička javna tužiteljka Zagorka Dolovac ništa nije učinila. Zato su studenti napisali pisamo koje su odneli na adresu Višeg javnog tužilaštva u Beogradu. 
+Три од четири захтева су у надлежности Вишег јавног тужилаштва. Ипак, републичка јавна тужитељка Загорка Доловац ништа није учинила. Зато су студенти написали писамо које су однели на адресу Вишег јавног тужилаштва у Београду. 
 
-Šta su studenti napisali republičkoj javnoj tužiteljki pogledajte na sledećem linku: [https://www.danas.rs/vesti/drustvo/sta-su-studenti-napisali-zagorki-dolovac/](https://www.danas.rs/vesti/drustvo/sta-su-studenti-napisali-zagorki-dolovac/)
+Шта су студенти написали републичкој јавној тужитељки погледајте на следећем линку: [https://www.danas.rs/vesti/drustvo/sta-su-studenti-napisali-zagorki-dolovac/](https://www.danas.rs/vesti/drustvo/sta-su-studenti-napisali-zagorki-dolovac/)

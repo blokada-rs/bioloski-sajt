@@ -1,19 +1,19 @@
 ---
-title: Sretnimo se na Sretenje!
+title: Сретнимо се на Сретење!
 draft: false
 pubDate: 2025-02-13T14:38:00
 heroImage: '@assets/images/protestni-program.jpg'
 ---
-Sretenje je dan kada se sreću zima i leto, ropstvo i sloboda, bezakonje i ustav. Sretenje je dan za dizanje glave i glasa, za verovanje i preduzimanje, za razgovor i okupljanje.
+Сретење је дан када се срећу зима и лето, ропство и слобода, безакоње и устав. Сретење је дан за дизање главе и гласа, за веровање и предузимање, за разговор и окупљање.
 
-U znak traženja pravde, u Kragujevcu će se 15. 2. održati veliki protest na Lepeničkom bulevaru.
+У знак тражења правде, у Крагујевцу ће се 15. 2. одржати велики протест на Лепеничком булевару.
 
-Uvertira za protest u subotu će biti doček studenata koji nekoliko dana pešače ka Kragujevcu. Doček je planiran za petak, 14. februar, u 19.30.
+Увертира за протест у суботу ће бити дочек студената који неколико дана пешаче ка Крагујевцу. Дочек је планиран за петак, 14. фебруар, у 19.30.
 
-U subotu će se održati petnaestočasovna blokada koja će početi u 9.00 i trajaće do 00.07, a produžetak bi se mogao izglasati na građanskom plenumu ukoliko do njega dođe. Ceo dan će biti ispunjen različitim aktivnostima.
+У суботу ће се одржати петнаесточасовна блокада која ће почети у 9.00 и трајаће до 00.07, а продужетак би се могао изгласати на грађанском пленуму уколико до њега дође. Цео дан ће бити испуњен различитим активностима.
 
-![Satnica događaja](@assets/images/sretenje-satnica.jpeg)
+![Сатница догађаја](@assets/images/sretenje-satnica.jpeg)
 
-Pozivamo vas da zajedno ustanemo i još jednom uzdignute glave zatražimo istinu, odgovornost i pravdu. Ovo Sretenje će biti jedno od značajnijih u istoriji. Pridružite nam se u njenom ispisivanju!
+Позивамо вас да заједно устанемо и још једном уздигнуте главе затражимо истину, одговорност и правду. Ово Сретење ће бити једно од значајнијих у историји. Придружите нам се у њеном исписивању!
 
-Sretnimo se na Sretenje
+Сретнимо се на Сретење

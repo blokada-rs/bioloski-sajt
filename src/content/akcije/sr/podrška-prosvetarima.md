@@ -1,6 +1,7 @@
 ---
-title: Podrška prosvetarima
+title: Подршка просветарима
+draft: false
 pubDate: 2025-01-20
 heroImage: '@assets/images/podrska-prosvetarima.jpg'
 ---
-Prvi dan drugog polugodišta obeležen je okupljanjem prosvetnih radnika ispred Filozofskog fakulteta u Beogradu. Uz podršku studenata, nastavnici i učitelji ukazali su na loš položaj obrazovnih radnika u društvu,  uz izražavanje nezadovoljstva sindikatima koji ih predstavljaju.
+Први дан другог полугодишта обележен је окупљањем просветних радника испред Филозофског факултета у Београду. Уз подршку студената, наставници и учитељи указали су на лош положај образовних радника у друштву,  уз изражавање незадовољства синдикатима који их представљају.

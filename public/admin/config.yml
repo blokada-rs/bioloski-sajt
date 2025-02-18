@@ -11,6 +11,9 @@ backend:
   repo: blokada-rs/sajt
   branch: to-publish
 
+output:
+  omit_empty_optional_fields: true
+
 i18n:
   structure: multiple_folders
   locales: [sr, en]
@@ -21,29 +24,35 @@ collections:
   - name: "stranice"
     label: "Stranice"
     i18n:
-      structure: single_file
+      structure: multiple_files
     files:
       - label: "Početna"
         name: "pocetna"
-        file: "src/content/stranice/početna.md"
+        file: "src/content/stranice/{{locale}}/početna.md"
         create: false
         i18n: true
         fields:
-          - { label: "Naslov", name: "naslov", widget: "string", i18n: true }
-          - { label: "Opis", name: "opis", widget: "markdown", i18n: true }
-          - { label: "Zahtevi", name: "zahtevi", widget: "markdown", i18n: true }
+          - { label: "Opis", name: "body", widget: "markdown", i18n: true }
 
       - label: "O Blokadama"
         name: "o-blokadama"
-        file: "src/content/stranice/o-blokadama.md"
+        file: "src/content/stranice/{{locale}}/o-blokadama.md"
         create: false
         i18n: true
         fields:
-          - { label: "Tekst", name: "tekst", widget: "markdown", i18n: true }
+          - { label: "Tekst", name: "body", widget: "markdown", i18n: true }
+      
+      - label: "Zahtevi"
+        name: "zahtevi"
+        file: "src/content/stranice/{{locale}}/zahtevi.md"
+        create: false
+        i18n: true
+        fields:
+          - { label: "Tekst", name: "body", widget: "markdown", i18n: true }
 
       - label: "Zaglavlje"
         name: "zaglavlje"
-        file: "src/content/stranice/zaglavlje.md"
+        file: "src/content/stranice/{{locale}}/zaglavlje.md"
         create: false
         i18n: true
         fields:
@@ -60,6 +69,17 @@ collections:
               - { label: "Naslov", name: "naziv", widget: "string", i18n: true }
               - { label: "Link", name: "link", widget: "string", i18n: true }
 
+      - label: "Ostalo"
+        name: "ostalo"
+        file: "src/content/stranice/{{locale}}/ostalo.md"
+        create: false
+        i18n: true
+        fields:
+          - { label: "Naslov", name: "naslov", widget: "string", i18n: true }
+          - { label: "Kontakt", name: "kontakt", widget: "string", i18n: true }
+          - { label: "Studenti u blokadi", name: "studenti_u_blokadi", widget: "string", i18n: true }
+          - { label: "Kontakti pojedinačnih fakulteta", name: "pojedinacni_fakulteti", widget: "string", i18n: true }
+
   - name: "vesti"
     label: "Vesti"
     folder: "src/content/vesti"
@@ -74,8 +94,9 @@ collections:
       - { label: "Naslov", name: "title", widget: "string", i18n: true }
       - { label: "Draft", name: "draft", widget: "boolean", i18n: true }
       - { label: "Datum objavljivanja", name: "pubDate", widget: "datetime", i18n: "duplicate" }
+      - { label: "Datum izmene", name: "updatedDate", widget: "datetime", i18n: "duplicate", required: false }
       - { label: "Glavna slika", name: "heroImage", widget: "image", i18n: "duplicate" }
-      - { label: "Tekst", name: "body", widget: "markdown", i18n: true, optional: true }
+      - { label: "Tekst", name: "body", widget: "markdown", i18n: true }
 
   - name: "akcije"
     label: "Akcije"
@@ -93,4 +114,4 @@ collections:
       - { label: "Draft", name: "draft", widget: "boolean", i18n: true }
       - { label: "Datum objavljivanja", name: "pubDate", widget: "datetime", i18n: "duplicate" }
       - { label: "Glavna slika", name: "heroImage", widget: "image", i18n: "duplicate" }
-      - { label: "Tekst", name: "body", widget: "markdown", i18n: true, optional: true }
+      - { label: "Tekst", name: "body", widget: "markdown", i18n: true }

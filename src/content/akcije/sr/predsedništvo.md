@@ -1,6 +1,7 @@
 ---
-title: Predsedništvo
+title: Председништво
+draft: false
 pubDate: 2024-12-11
 heroImage: '@assets/images/predsednistvo.jpg'
 ---
-Prva zajednička akcija studenata beogradskih fakulteta organizovana je ispred Predsedništva tokom televizijskog obraćanja predsednika Srbije. Miran, ali izuzetno bučan protest, bio je početna tačka za privlačenje pažnje medija na studentske blokade
+Прва заједничка акција студената београдских факултета организована је испред Председништва током телевизијског обраћања председника Србије. Миран, али изузетно бучан протест, био је почетна тачка за привлачење пажње медија на студентске блокаде

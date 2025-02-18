@@ -1,6 +1,7 @@
 ---
-title: Slavija
+title: Славија
+draft: false
 pubDate: 2024-12-22
 heroImage: '@assets/images/beograd-je-opet-svet.jpg'
 ---
-Najveće okupljanje u novijoj istoriji Srbije desilo se na Slaviji, gde se okupilo preko 100.000 građana, uz podršku poljoprivrednika. Protest je obeležilo 15 minuta tišine u znak poštovanja prema žrtvama tragedije u Novom Sadu.
+Највеће окупљање у новијој историји Србије десило се на Славији, где се окупило преко 100.000 грађана, уз подршку пољопривредника. Протест је обележило 15 минута тишине у знак поштовања према жртвама трагедије у Новом Саду.

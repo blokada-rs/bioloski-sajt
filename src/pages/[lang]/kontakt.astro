@@ -2,26 +2,28 @@
 import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { SITE_DESCRIPTION } from '../../consts';
 
+
+import { file, langs } from '@scripts/translate';
 export async function getStaticPaths() {
-    return [
-        {params: {lang: 'sr-lat'}},
-        {params: {lang: 'en'}},
-    ]
+	return langs.map(lang => ({params: {lang}}))
 }
+
+const { lang } = Astro.params;
+const { frontmatter } = await file("ostalo", lang);
 ---
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title={frontmatter.naziv} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
 		<Header />
 		<main>
-            <h1>Kontakt</h1>
+            <h1>{frontmatter.kontakt}</h1>
             <section>
-                <h2>Studenti u blokadi</h2>
+                <h2>{frontmatter.studenti_u_blokadi}</h2>
                 <div class="nalozi">
                     <a href="https://instagram.com/studenti_u_blokadi">Instagram</a>
                     <a href="https://www.facebook.com/people/Studenti-u-blokadi-UB/61571631694236/">Facebook</a>
@@ -30,7 +32,7 @@ export async function getStaticPaths() {
                 </div>
             </section>
             <section>
-                <h2>Kontakti pojedinačnih fakulteta</h2>
+                <h2>{frontmatter.pojedinacni_fakulteti}</h2>
                 <div class="nalozi">
                     <a href="https://www.instagram.com/blokada.arh.bg">Arhitektonski</a>
                     <a href="https://www.instagram.com/grf.blokade">Građevinski</a>

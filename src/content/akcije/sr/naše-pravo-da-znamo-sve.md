@@ -1,6 +1,7 @@
 ---
-title: “Naše pravo da znamo sve”
+title: “Наше право да знамо све”
+draft: false
 pubDate: 2025-01-17
 heroImage: '@assets/images/vase-pravo-da-znate-sve.jpg'
 ---
-Više od 55 000 studenata i građana okupilo se ispred Radio-televizije Srbije, ukazujući na neobjektivno izveštavanje i potrebu za pravednim i transparentnim informisanjem o studentskim blokadama na zvaničnom javnom servisu.
+Више од 55 000 студената и грађана окупило се испред Радио-телевизије Србије, указујући на необјективно извештавање и потребу за праведним и транспарентним информисањем о студентским блокадама на званичном јавном сервису.

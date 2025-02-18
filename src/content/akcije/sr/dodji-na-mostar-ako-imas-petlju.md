@@ -1,6 +1,7 @@
 ---
-title: Dođi na mostar ako imaš petlju
+title: Дођи на мостар ако имаш петљу
+draft: false
 pubDate: 2025-01-10
 heroImage: '@assets/images/petlja.jpg'
 ---
-Na inicijativu studenata Univerziteta umetnosti, blokirana je Mostarska petlju, kao jedno od ključnih saobraćajnih čvorišta u Beogradu. Neposredno pre blokade Mostarske petlje, studenti su se okupili ispred Palate pravde dok je trajalo saslušanje napadača na studente Fakulteta dramskih umetnosti.
+На иницијативу студената Универзитета уметности, блокирана је Мостарска петљу, као једно од кључних саобраћајних чворишта у Београду. Непосредно пре блокаде Мостарске петље, студенти су се окупили испред Палате правде док је трајало саслушање нападача на студенте Факултета драмских уметности.
