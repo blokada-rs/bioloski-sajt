@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
+import { ICON_SIZE_LG } from "consts";
 const today = new Date();
 const socialIcons = [
   {
@@ -19,7 +20,6 @@ const socialIcons = [
     link: "https://github.com/blokada-rs/sajt",
   },
 ];
-const iconSize = 26;
 ---
 
 <footer>
@@ -28,8 +28,8 @@ const iconSize = 26;
     <div class="social-links">
       {
         socialIcons.map(({ icon, link }) => (
-          <a href={link} target="_blank" rel="noopener noreferrer" style={`height: ${iconSize}px;`}>
-            <Icon name={icon} size={iconSize} class="icon" />
+          <a href={link} target="_blank" rel="noopener noreferrer" style={`height: ${ICON_SIZE_LG}px;`}>
+            <Icon name={icon} size={ICON_SIZE_LG} class="icon" />
           </a>
         ))
       }
