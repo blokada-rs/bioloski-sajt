@@ -1,5 +1,5 @@
 ---
-title: "Bitno je da imaš (u)stav"
+title: Bitno je da imaš (u)stav
 pubDate: 2025-01-12
 heroImage: '@assets/images/bitno-je-da-imas-ustav.jpg'
 ---
