@@ -84,12 +84,15 @@ collections:
     folder: "src/content/vesti"
     create: true
     i18n: true
+    slug: '{{fields.link}}'
+
     sortable_fields:
       fields: [pubDate]
       default:
         field: pubDate
         direction: descending
     fields:
+      - { label: "Link", name: "link", widget: "string", i18n: "duplicate" }
       - { label: "Naslov", name: "title", widget: "string", i18n: true }
       - { label: "Draft", name: "draft", widget: "boolean", i18n: true }
       - { label: "Datum objavljivanja", name: "pubDate", widget: "datetime", i18n: "duplicate" }
@@ -102,6 +105,7 @@ collections:
     folder: "src/content/akcije"
     create: true
     i18n: true
+    slug: '{{fields.link}}'
 
     sortable_fields:
       fields: [pubDate]
@@ -109,6 +113,7 @@ collections:
         field: pubDate
         direction: descending
     fields:
+      - { label: "Link", name: "link", widget: "string", i18n: "duplicate" }
       - { label: "Naslov", name: "title", widget: "string", i18n: true }
       - { label: "Draft", name: "draft", widget: "boolean", i18n: true }
       - { label: "Datum objavljivanja", name: "pubDate", widget: "datetime", i18n: "duplicate" }
