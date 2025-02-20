@@ -1,8 +1,9 @@
 ---
+link: pod-nasom-autokomandom
 title: Под нашом (Ауто)командом
 draft: false
 pubDate: 2025-01-27T14:03:00
-heroImage: '@assets/images/autokomanda.jpg'
+heroImage: '@assets/images/autokomanda-masa.jpg'
 ---
 За 27. јануар 2025. године, студенти у блокади из Београда темељно су планирали прву целодневну акцију. Одржана је двадесетчетворочасовна блокада Ауто-команде.
 
