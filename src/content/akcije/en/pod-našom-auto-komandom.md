@@ -1,8 +1,9 @@
 ---
+link: pod-nasom-autokomandom
 title: Under our command
 draft: false
 pubDate: 2025-01-27T14:03:00
-heroImage: '@assets/images/autokomanda.jpg'
+heroImage: '@assets/images/autokomanda-masa.jpg'
 ---
 Students in blockades from Belgrade thoroughly planned the first all-day action for January 27th 2025 – a 24-hour blockade of the Autokomanda Interchange.
 
