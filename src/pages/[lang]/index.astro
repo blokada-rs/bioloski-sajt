@@ -1,19 +1,19 @@
 ---
-import { file, langs } from '@scripts/translate';
-import { Image } from 'astro:assets';
+import { file, langs } from "@scripts/translate";
+import { Image } from "astro:assets";
 
-import BaseHead from '../../components/BaseHead.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
 
-import { SITE_DESCRIPTION } from '../../consts';
-import indeks from '@assets/images/indeks.jpg'
-import megafon from '@assets/images/megafon.jpg'
-import zastava from '@assets/images/zastava.jpg'
-import slavija from '@assets/images/slavija.jpg'
+import { SITE_DESCRIPTION } from "../../consts";
+import indeks from "@assets/images/indeks.jpg";
+import megafon from "@assets/images/megafon.jpg";
+import zastava from "@assets/images/zastava.jpg";
+import slavija from "@assets/images/slavija.jpg";
 
 export async function getStaticPaths() {
-	return langs.map(lang => ({params: {lang}}))
+  return langs.map((lang) => ({ params: { lang } }));
 }
 
 const { lang } = Astro.params;
@@ -24,139 +24,165 @@ const { frontmatter } = await file("ostalo", lang);
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={frontmatter.naslov} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<div class="title" style={`background-image: url(${slavija.src});`}>
-			<h1>{frontmatter.naslov}</h1>
-		</div>
-		<main>
-			<section>
-				<Pocetna />
-			</section>
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR43G5KCPF"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-			<div class="collage">
-				<Image class="megafon" loading="eager" src={megafon} alt="" />
-				<Image class="indeks" loading="eager" src={indeks} alt="" />
-				<Image class="zastava" loading="eager" src={zastava} alt="" />
-			</div>
+      gtag("config", "G-LR43G5KCPF");
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR43G5KCPF"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-			<section>	
-				<Zahtevi />
-			</section>
-		</main>
-		<Footer />
-	</body>
+      gtag("config", "G-LR43G5KCPF");
+    </script>
+    <BaseHead title={frontmatter.naslov} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <div class="title" style={`background-image: url(${slavija.src});`}>
+      <h1>{frontmatter.naslov}</h1>
+    </div>
+    <main>
+      <section>
+        <Pocetna />
+      </section>
+
+      <div class="collage">
+        <Image class="megafon" loading="eager" src={megafon} alt="" />
+        <Image class="indeks" loading="eager" src={indeks} alt="" />
+        <Image class="zastava" loading="eager" src={zastava} alt="" />
+      </div>
+
+      <section>
+        <Zahtevi />
+      </section>
+    </main>
+    <Footer />
+  </body>
 </html>
 
-
 <style>
-	.title {
-		position: relative;
-		background-size: cover;
-		background-position: center;
-		height: 30rem;
+  .title {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 30rem;
 
-		display: flex;
-		align-items: center;
-	}
+    display: flex;
+    align-items: center;
+  }
 
-	.title::before {
-		content: "";
-		position: absolute;
-		background-color: rgba(0, 0, 0, 0.4);
-		inset: 0;
-		z-index: 0;
-	}
+  .title::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    inset: 0;
+    z-index: 0;
+  }
 
-	.title h1 {
-		margin-inline: auto;
-		padding-inline: 2rem;
-		color: white;
-		z-index: 1;
-		font-size: 5rem;
-		text-align: center;
-	}
+  .title h1 {
+    margin-inline: auto;
+    padding-inline: 2rem;
+    color: white;
+    z-index: 1;
+    font-size: 5rem;
+    text-align: center;
+  }
 
-	@media (max-width: 720px) {
-		.title h1 {
-			padding-inline: 2vw;
-			font-size: 13vw;
-		}
-	}
+  @media (max-width: 720px) {
+    .title h1 {
+      padding-inline: 2vw;
+      font-size: 13vw;
+    }
+  }
 
-	section:not(:first-of-type) {
-		margin-top: 5rem;
-	}
+  section:not(:first-of-type) {
+    margin-top: 5rem;
+  }
 
-	.collage {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(3, 1fr);
-		grid-template-areas: 
-			"megafon megafon indeks"
-			"megafon megafon indeks"
-			"zastava zastava zastava";
-		gap: 1rem;
-	}
+  .collage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "megafon megafon indeks"
+      "megafon megafon indeks"
+      "zastava zastava zastava";
+    gap: 1rem;
+  }
 
+  @media (max-width: 720px) {
+    .collage {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "megafon"
+        "zastava"
+        "indeks";
+    }
 
-	@media (max-width: 720px) {
-		.collage {
-			grid-template-columns: 1fr;
-			grid-template-areas: 
-				"megafon"
-				"zastava"
-				"indeks";
-		}
+    .collage img {
+      max-height: 20vh;
+    }
+  }
 
-		.collage img {
-			max-height: 20vh;
-		}
-	}
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
 
-	img {
-		width: 100%;
-		object-fit: cover;
-	}
+  .collage img {
+    height: 100%;
+  }
 
-	.collage img {
-		height: 100%;
-	}
+  .megafon {
+    grid-area: megafon;
+  }
+  .indeks {
+    grid-area: indeks;
+  }
 
-	.megafon { grid-area: megafon; }
-	.indeks { grid-area: indeks; }
+  .zastava {
+    grid-area: zastava;
+    object-position: bottom;
+    max-height: 20vh;
+  }
 
-	.zastava {
-		grid-area: zastava;
-		object-position: bottom;
-		max-height: 20vh;
-	}
+  .tekst-slika {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: stretch;
+  }
 
-	.tekst-slika {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 2rem;
-		align-items: stretch;
-	}
+  .tekst-slika div {
+    grid-column: span 2;
+  }
 
-	.tekst-slika div {
-		grid-column: span 2;
-	}
+  @media (max-width: 1000px) {
+    .tekst-slika {
+      grid-template-columns: 1fr;
+    }
 
-	@media (max-width: 1000px) {
-		.tekst-slika {
-			grid-template-columns: 1fr;
-		}
+    .tekst-slika div {
+      grid-column: 1;
+    }
+  }
 
-		.tekst-slika div {
-			grid-column: 1;
-		}
-	}
-
-	p {
-		text-align: justify;
-	}
+  p {
+    text-align: justify;
+  }
 </style>
