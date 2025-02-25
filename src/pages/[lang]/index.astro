@@ -1,7 +1,6 @@
 ---
-import { file, langs } from "@scripts/translate";
+import { file, langs, collection } from "@scripts/translate";
 import { Image } from "astro:assets";
-
 import BaseHead from "../../components/BaseHead.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
@@ -11,6 +10,7 @@ import indeks from "@assets/images/indeks.jpg";
 import megafon from "@assets/images/megafon.jpg";
 import zastava from "@assets/images/zastava.jpg";
 import slavija from "@assets/images/slavija.jpg";
+import RecentPosts from "@components/RecentPosts.astro";
 
 export async function getStaticPaths() {
   return langs.map((lang) => ({ params: { lang } }));
@@ -20,6 +20,15 @@ const { lang } = Astro.params;
 const { Content: Pocetna } = await file("pocetna", lang);
 const { Content: Zahtevi } = await file("zahtevi", lang);
 const { frontmatter } = await file("ostalo", lang);
+const postData = await collection("vesti", lang);
+const posts = postData.map((x) => ({
+  title: x.data.title,
+  subtitle:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus maximus consectetur sem pulvinar pellentesque. Sed in egestas massa. Quisque at arcu id ante tincidunt eleifend. Aliquam dapibus augue lacus, quis bibendum erat iaculis id. In viverra auctor lectus in congue.",
+  thumbnail: x.data.heroImage.src,
+  link: `/${lang}/vesti/${x.id}/`,
+  date: x.data.pubDate,
+}));
 ---
 
 <!doctype html>
@@ -32,21 +41,37 @@ const { frontmatter } = await file("ostalo", lang);
     <div class="title" style={`background-image: url(${slavija.src});`}>
       <h1>{frontmatter.naslov}</h1>
     </div>
-    <main>
-      <section>
+    <div>
+      <section class="container-main">
         <Pocetna />
       </section>
 
-      <div class="collage">
-        <Image class="megafon" loading="eager" src={megafon} alt="" />
-        <Image class="indeks" loading="eager" src={indeks} alt="" />
-        <Image class="zastava" loading="eager" src={zastava} alt="" />
-      </div>
-
-      <section>
+      <section class="container-main">
         <Zahtevi />
       </section>
-    </main>
+
+      <section class="posts-section container-main">
+        <RecentPosts
+          title={frontmatter.najnovije_vesti}
+          subtitle={frontmatter.vesti_podnaslov}
+          posts={posts}
+          numPosts={3}
+        />
+        <button class="button-light">{frontmatter.procitaj_vise}</button>
+      </section>
+
+      <div class="dark-post">
+        <section class="posts-section container-main">
+          <RecentPosts
+            title="Najnovije vesti"
+            subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies orci ac sodales placerat. Etiam vitae aliquet ex, cursus fermentum augue. Mauris egestas justo vel augue tincidunt, quis venenatis turpis finibus. Aliquam dapibus augue lacus, quis bibendum erat iaculis id. In viverra auctor lectus in congue."
+            posts={posts}
+            numPosts={3}
+          />
+          <button class="button-red">{frontmatter.procitaj_vise}</button>
+        </section>
+      </div>
+    </div>
     <Footer />
   </body>
 </html>
@@ -86,19 +111,13 @@ const { frontmatter } = await file("ostalo", lang);
     }
   }
 
-  section:not(:first-of-type) {
-    margin-top: 5rem;
+  .posts-section {
+    display: flex;
+    flex-direction: column;
   }
 
-  .collage {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas:
-      "megafon megafon indeks"
-      "megafon megafon indeks"
-      "zastava zastava zastava";
-    gap: 1rem;
+  .dark-post {
+    background-color: #e9e9e9;
   }
 
   @media (max-width: 720px) {

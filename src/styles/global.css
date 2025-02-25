@@ -39,6 +39,13 @@ main {
     min-height: 100vh;
 }
 
+.container-main {
+    width: 70rem;
+    max-width: calc(100% - 2em);
+    margin: auto;
+    padding: 3em 1em;
+}
+
 footer {
     padding: 1em 1em 1em 1em;
     background: linear-gradient(var(--gray-gradient)) no-repeat;
@@ -121,6 +128,62 @@ img {
     height: auto;
     border-radius: 8px;
 }
+
+.button-light {
+    display: inline-block;
+    text-align: center;
+    background-color: #f8f8f8;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    transition:
+      background-color 0.2s ease-in-out,
+      transform 0.1s ease-in-out;
+    margin-top: 15px;
+    width: max-content;
+    align-self: center;
+  }
+
+  .button-light:hover {
+    background-color: #f0f0f0;
+  }
+
+  .button-light:active {
+    background-color: #e0e0e0;
+  }
+
+  .button-red {
+    display: inline-block;
+    text-align: center;
+    background-color: #8B0000;
+    color: #efefef;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    transition:
+      background-color 0.2s ease-in-out,
+      transform 0.1s ease-in-out;
+    margin-top: 15px;
+    width: max-content;
+    align-self: center;
+  }
+
+  .button-red:hover{
+    background-color: #BF0000;
+
+  }
+
+  .button-red:active{
+    background-color: #A40000;
+
+  }
 
 code {
     padding: 2px 5px;
