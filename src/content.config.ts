@@ -52,6 +52,7 @@ const zahtevi = defineCollection({
 	loader: glob({ base: './src/content/stranice', pattern: '**/zahtevi.md' }),
 	// Type-check frontmatter using a schema
 	schema: () => z.object({
+		naslov: z.string(),
 		zahtevi: z.object({
 			original: z.string(),
 			konkretizacija: z.string()

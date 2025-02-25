@@ -47,6 +47,7 @@ collections:
         create: false
         i18n: true
         fields:
+          - { label: "Naslov", name: "naslov", widget: "string", i18n: true }
           - label: "Zahtevi"
             label_singular: 'Zahtev'
             name: "zahtevi"
@@ -55,7 +56,6 @@ collections:
             fields:
               - { label: "Originalni oblik", name: "original", widget: "string", i18n: true }
               - { label: "Konkretizacija", name: "konkretizacija", widget: "markdown", i18n: true }
-
           - { label: "Tekst", name: "body", widget: "markdown", i18n: true }
 
       - label: "Zaglavlje"
