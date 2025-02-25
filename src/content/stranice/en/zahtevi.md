@@ -131,7 +131,10 @@ zahtevi:
 
       In addition to initiating criminal proceedings against individuals who physically assaulted professors and students, and for whom this is to be confirmed, if it transpires that these individuals are public officials, in accordance with Article 2, paragraph 1, 3-4 of the Law on Prevention of Corruption and Article 112, paragraph 3 of the Criminal Code, we simultaneously demand their dismissal from office.
   - original: The dismissal of criminal charges against the arrested and detained students at the protests, as well as the suspension of any ongoing criminal proceedings.
-    konkretizacija: The dismissal of criminal charges against the arrested and detained students at the protests, as well as the suspension of any ongoing criminal proceedings.
+    konkretizacija: |-
+      In the previous period, government representatives stated that all participants in the civil protests had been released. However, this is not considered fulfillment of the demand.
+
+      The reason behind this is that release from detention does not guarantee that these individuals will not be criminally prosecuted or that a conviction will not be rendered against them. In line with this, we demand that criminal charges against all students and professors who participated in civil protests be dismissed, and if criminal proceedings are ongoing, they should be suspended.
   - original: Increase in the higher education budget by 20%.
     konkretizacija: |-
       The allocations for higher education provided for by the Budget Law of the Republic of Serbia for 2025 from the sources of General Budget Revenues and Income amount to **60.15 billion dinars**. The allocations for higher education include items from the budget for Higher and University Education (Chapter 26.4), Student Standard (Chapter 26.5), and the Criminal Police University (Chapter 15.1).
