@@ -47,6 +47,15 @@ collections:
         create: false
         i18n: true
         fields:
+          - label: "Zahtevi"
+            label_singular: 'Zahtev'
+            name: "zahtevi"
+            widget: "list"
+            i18n: true
+            fields:
+              - { label: "Originalni oblik", name: "original", widget: "string", i18n: true }
+              - { label: "Konkretizacija", name: "konkretizacija", widget: "markdown", i18n: true }
+
           - { label: "Tekst", name: "body", widget: "markdown", i18n: true }
 
       - label: "Zaglavlje"
@@ -61,6 +70,7 @@ collections:
             i18n: true
 
           - label: "Linkovi"
+            label_singular: 'Link'
             name: "linkovi"
             widget: "list"
             i18n: true
@@ -75,9 +85,47 @@ collections:
         i18n: true
         fields:
           - { label: "Naslov", name: "naslov", widget: "string", i18n: true }
+          - { label: "Akcije", name: "akcije", widget: "string", i18n: true }
+          - { label: "Vesti", name: "vesti", widget: "string", i18n: true }
           - { label: "Kontakt", name: "kontakt", widget: "string", i18n: true }
           - { label: "Studenti u blokadi", name: "studenti_u_blokadi", widget: "string", i18n: true }
           - { label: "Kontakti pojedinačnih fakulteta", name: "pojedinacni_fakulteti", widget: "string", i18n: true }
+
+  - name: "linkovi"
+    label: "Linkovi"
+    folder: "src/content/linkovi"
+    create: true
+    identifier_field: link
+
+    sortable_fields:
+      fields: [pubDate]
+      default:
+        field: pubDate
+        direction: descending
+    fields:
+      - label: "link"
+        name: "link"
+        widget: "string"
+
+      - label: "Linkovi"
+        label_singular: 'Link'
+        name: "linkovi"
+        widget: "list"
+        fields:
+          - label: "Ikonica"
+            name: "ikonica"
+            widget: "select"
+            options:
+              - { label: "Bez", value: "bez" }
+              - { label: "Instagram", value: "instagram" }
+              - { label: "Twitter", value: "twitter" }
+              - { label: "YouTube", value: "youtube" }
+              - { label: "Viber", value: "viber" }
+              - { label: "Vesti", value: "news" }
+            default: "Bez"
+
+          - { label: "Naslov", name: "naslov", widget: "string", i18n: true }
+          - { label: "Link", name: "link", widget: "string", i18n: true }
 
   - name: "vesti"
     label: "Vesti"
@@ -94,10 +142,19 @@ collections:
     fields:
       - { label: "Link", name: "link", widget: "string", i18n: "duplicate" }
       - { label: "Naslov", name: "title", widget: "string", i18n: true }
-      - { label: "Draft", name: "draft", widget: "boolean", i18n: true }
+      - label: "Status"
+        name: "draft"
+        widget: "select"
+        options:
+          - { label: "Uređivanje", value: "uredjivanje" }
+          - { label: "Lekturisanje", value: "lekturisanje" }
+          - { label: "Prevođenje", value: "prevodjenje" }
+          - { label: "Spremno", value: "spremno" }
+        default: "uredjivanje"
       - { label: "Datum objavljivanja", name: "pubDate", widget: "datetime", i18n: "duplicate" }
       - { label: "Datum izmene", name: "updatedDate", widget: "datetime", i18n: "duplicate", required: false }
       - { label: "Glavna slika", name: "heroImage", widget: "image", i18n: "duplicate" }
+      - { label: "Opis", name: "description", widget: "text", i18n: true, required: false }
       - { label: "Tekst", name: "body", widget: "markdown", i18n: true }
 
   - name: "akcije"
@@ -115,7 +172,16 @@ collections:
     fields:
       - { label: "Link", name: "link", widget: "string", i18n: "duplicate" }
       - { label: "Naslov", name: "title", widget: "string", i18n: true }
-      - { label: "Draft", name: "draft", widget: "boolean", i18n: true }
-      - { label: "Datum objavljivanja", name: "pubDate", widget: "datetime", i18n: "duplicate" }
+      - label: "Status"
+        name: "draft"
+        widget: "select"
+        options:
+          - { label: "Uređivanje", value: "uredjivanje" }
+          - { label: "Lekturisanje", value: "lekturisanje" }
+          - { label: "Prevođenje", value: "prevodjenje" }
+          - { label: "Spremno", value: "spremno" }
+        default: "Uređivanje"
+      - { label: "Datum akcije", name: "pubDate", widget: "datetime", i18n: "duplicate" }
       - { label: "Glavna slika", name: "heroImage", widget: "image", i18n: "duplicate" }
+      - { label: "Opis", name: "description", widget: "text", i18n: true, required: false }
       - { label: "Tekst", name: "body", widget: "markdown", i18n: true }

@@ -1,6 +1,7 @@
 ---
+link: dodji-na-mostar-ako-imas-petlju
 title: Дођи на мостар ако имаш петљу
-draft: false
+draft: spremno
 pubDate: 2025-01-10
 heroImage: '@assets/images/petlja.jpg'
 ---

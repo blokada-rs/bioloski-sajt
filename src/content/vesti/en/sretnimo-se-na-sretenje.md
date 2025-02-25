@@ -1,4 +1,5 @@
 ---
+link: sretnimo-se-na-sretenje
 title: Let's meet at Sretenje!
 draft: false
 pubDate: 2025-02-13T14:38:00

@@ -1,6 +1,7 @@
 ---
+link: generalni-štrajk
 title: Генерални штрајк
-draft: false
+draft: spremno
 pubDate: 2025-01-24
 heroImage: '@assets/images/generalni-strajk.jpg'
 ---

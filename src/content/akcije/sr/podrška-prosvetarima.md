@@ -1,6 +1,7 @@
 ---
+link: podrška-prosvetarima
 title: Подршка просветарима
-draft: false
+draft: spremno
 pubDate: 2025-01-20
 heroImage: '@assets/images/podrska-prosvetarima.jpg'
 ---

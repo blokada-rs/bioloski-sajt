@@ -1,4 +1,5 @@
 ---
+link: generalni-štrajk
 title: General strike
 draft: false
 pubDate: 2025-01-24

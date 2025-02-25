@@ -1,4 +1,5 @@
 ---
+link: šetnja-do-novog-sada
 title: Walk to Novi Sad
 draft: false
 pubDate: 2025-01-30T09:00:00.000Z

@@ -9,10 +9,3 @@ Four days after the incident, students from the Faculty of Dramatic Arts initiat
 In the days that followed, one faculty after another voted to start a blockade at plenums, which are direct-democratic assemblies where all students can participate with equal voting rights.
 
 Over 60 faculties and higher education schools across Serbia are currently in blockade.
-
-## Demands
-
-- The publication of the entire documentation related to the reconstruction of the Railway Station in Novi Sad, which is currently unavailable to the public.
-- We demand confirmation from the competent authorities regarding the identity of all individuals reasonably suspected of physically assaulting students and professors, as well as the initiation of criminal proceedings against them. We also demand the dismissal of these individuals if it is proven that they are public officials.
-- The dismissal of criminal charges against the arrested and detained students at the protests, as well as the suspension of any ongoing criminal proceedings.
-- Increase in the higher education budget by 20%.

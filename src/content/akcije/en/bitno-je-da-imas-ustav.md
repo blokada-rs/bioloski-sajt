@@ -1,4 +1,5 @@
 ---
+link: bitno-je-da-imas-ustav
 title: It’s important to have a stance
 draft: false
 pubDate: 2025-01-12

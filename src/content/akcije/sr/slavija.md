@@ -1,6 +1,7 @@
 ---
+link: slavija
 title: Славија
-draft: false
+draft: spremno
 pubDate: 2024-12-22
 heroImage: '@assets/images/beograd-je-opet-svet.jpg'
 ---

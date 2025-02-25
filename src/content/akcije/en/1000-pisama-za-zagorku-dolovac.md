@@ -1,4 +1,5 @@
 ---
+link: 1000-pisama-za-zagorku-dolovac
 title: 1,000 letters to Zagorka Dolovac
 draft: false
 pubDate: 2024-12-25

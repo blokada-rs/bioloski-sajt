@@ -2,31 +2,56 @@
 import { file } from '@scripts/translate';
 import HeaderLink from './HeaderLink.astro';
 import { Icon } from "astro-icon/components";
-import { ICON_SIZE_LG,ICON_SIZE_MD } from 'consts';
+import { ICON_SIZE_LG, ICON_SIZE_MD } from 'consts';
+import { langs } from '@scripts/translate';
 
 const { lang } = Astro.params;
 
 const { frontmatter } = await file("zaglavlje", lang);
+
+const jezik = (jezik: string) => {
+	let url = Astro.url.pathname.toString();
+	const jezici = langs.sort((a: string, b: string) => b.length - a.length)
+	for (const lang of jezici) {
+		url = url.replace(`/${lang}`, '');
+	}
+
+	return `/${jezik}${url}`
+}
 ---
 
 <header>
 	<nav>
 		<h2><a href=`/${lang}`>{frontmatter.naslov}</a></h2>
 
-		<button popovertarget="menu-links" 
-		style={`height: ${ICON_SIZE_LG}px;`}>
-			<Icon name="burger-classic" size={ICON_SIZE_LG} />
+		<button class="mobile" popovertarget="menu-links" style={`height: ${ICON_SIZE_LG}px;`}>
+			<Icon name="mdi:hamburger-menu" size={ICON_SIZE_LG} />
 		</button>
 
 		<div id="menu-links" popover>
 			<nav class="internal-links">
-				<button popovertarget="menu-links" popovertargetaction="hide" style={`height: ${ICON_SIZE_MD}px;`}>
-					<Icon name="close" size={ICON_SIZE_MD} />
+				<button class="mobile" popovertarget="menu-links" popovertargetaction="hide" style={`height: ${ICON_SIZE_MD}px;`}>
+					<Icon name="mdi:close" size={ICON_SIZE_MD} />
 				</button>
 				{frontmatter.linkovi.map(({naziv, link}: {naziv: string, link: string}) => 
 					<HeaderLink href={`/${lang}${link}`}>{naziv}</HeaderLink>
 				)}
+
+				<button class="icon" popovertarget="translate">
+					<Icon name="mdi:translate" size={ICON_SIZE_LG} />
+				</button>
 			</nav>
+		</div>
+
+		<div id="translate" popover>
+			<button popovertarget="translate" popovertargetaction="hide" style={`height: ${ICON_SIZE_MD}px;`}>
+				<Icon name="mdi:close" size={ICON_SIZE_MD} />
+			</button>
+			<ul>
+				<li><a href={jezik("sr")}>Српски (ћирилица)</a></li>
+				<li><a href={jezik("sr-lat")}>Srpski (latinica)</a></li>
+				<li><a href={jezik("en")}>English</a></li>
+			</ul>
 		</div>
 	</nav>
 </header>
@@ -96,8 +121,12 @@ const { frontmatter } = await file("zaglavlje", lang);
 		display: block;
 	}
 
-	:popover-open {
-		display: block;
+	.icon {
+		display: grid;
+		align-items: center;
+	}
+
+	#menu-links {
 		position: fixed;
 		margin: 0;
 		border: none;
@@ -109,17 +138,21 @@ const { frontmatter } = await file("zaglavlje", lang);
 
 		transition: translate 0.2s;
 		@starting-style {
+			display: block;
 			translate: 100% 0;
 		}
 	}
 
-	[popover]::backdrop {
+	#menu-links::backdrop {
 		display: block;
 		opacity: 0;
 	}
 
-	[popover]:popover-open::backdrop {
+	[popover]::backdrop {
 		transition: opacity 0.2s;
+	}
+
+	[popover]:popover-open::backdrop {
 		opacity: 1;
 		pointer-events: none;
 		background-color: rgba(0, 0, 0, 0.2);
@@ -129,23 +162,73 @@ const { frontmatter } = await file("zaglavlje", lang);
 		}
 	}
 
-	:popover-open nav {
+	#menu-links:popover-open nav {
 		padding: 2rem;
 		flex-direction: column;
 		align-items: start;
 	}
 
-	:popover-open a {
+	#menu-links:popover-open a {
 		padding-bottom: 0;
 	}
 
+	#translate {
+		transition: translate 0.2s;
+		padding: 1rem;
+		border-radius: 0.5rem;
+		flex-direction: column;
+		gap: 1rem;
+
+		@starting-style {
+			display: flex;
+			translate: 0 2rem;
+		}
+	}
+
+	#translate button {
+		margin-left: auto;
+	}
+
+	#translate ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0;
+    }
+
+    #translate a {
+        display: flex;
+        
+        text-decoration: none;
+        color: black;
+        align-items: center;
+        gap: 1rem;
+
+        border: 2px solid black;
+        border-radius: 0.5rem;
+        padding: 1rem;
+    }
+
+    #translate a:hover {
+        filter: opacity(0.5);
+    }
+	
+	button[popovertarget="translate"] {
+		margin-top: 0.5rem;
+	}
+
 	@media (min-width: 750px) {
-		[popover] {
+		#menu-links {
 			display: contents;
 		}
 
-		button {
+		button.mobile {
 			display: none;
+		}
+
+		button[popovertarget="translate"] {
+			margin-top: unset;
 		}
 	}
 </style>

@@ -1,6 +1,7 @@
 ---
+link: saopstenje-mila-paunic
 title: Саопштење поводом оставке др Миле Паунић
-draft: false
+draft: spremno
 pubDate: 2025-01-23
 heroImage: '@assets/images/placeholder.jpg'
 ---

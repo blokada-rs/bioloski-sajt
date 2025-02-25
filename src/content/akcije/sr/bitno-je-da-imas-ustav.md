@@ -1,6 +1,7 @@
 ---
+link: bitno-je-da-imas-ustav
 title: Битно је да имаш (у)став
-draft: false
+draft: spremno
 pubDate: 2025-01-12
 heroImage: '@assets/images/bitno-je-da-imas-ustav.jpg'
 ---

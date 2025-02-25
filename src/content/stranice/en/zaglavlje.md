@@ -1,12 +1,14 @@
 ---
 naslov: Student blockades
 linkovi:
-  - naziv: About
-    link: /o-blokadama
+  - naziv: Demands
+    link: /zahtevi
   - naziv: News
     link: /vesti
   - naziv: Public actions
     link: /akcije
+  - naziv: About
+    link: /o-blokadama
   - naziv: Contact
     link: /kontakt
 ---

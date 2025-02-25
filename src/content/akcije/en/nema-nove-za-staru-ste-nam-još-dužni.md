@@ -1,4 +1,5 @@
 ---
+link: nema-nove-za-staru-ste-nam-još-dužni
 title: No New Year – you still owe us for the old one
 draft: false
 pubDate: 2024-12-31

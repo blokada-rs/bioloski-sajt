@@ -1,7 +1,7 @@
 ---
-link: pod-nasom-autokomandom
+link: pod-našom-auto-komandom
 title: Под нашом (Ауто)командом
-draft: false
+draft: spremno
 pubDate: 2025-01-27T14:03:00
 heroImage: '@assets/images/autokomanda-masa.jpg'
 ---

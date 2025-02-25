@@ -1,4 +1,5 @@
 ---
+link: saopstenje-mila-paunic
 title: Statement regarding the resignation of Dr Mila Paunić
 draft: false
 pubDate: 2025-01-23

@@ -3,12 +3,12 @@ import { type CollectionEntry, type AnyEntryMap, getCollection, render } from 'a
 
 export const langs = ["sr", "sr-lat", "en"];
 
-export async function collection<C extends keyof AnyEntryMap>(
-    collection: C,
+export async function collection(
+    collection: "vesti" | "akcije",
     lang: string = "all"
-): Promise<(CollectionEntry<C> & {lang: string})[]> {
+): Promise<(CollectionEntry<"vesti" | "akcije"> & {lang: string})[]> {
     const c = (await getCollection(collection))
-        .filter(({data}) => !data.draft)
+        // .filter(({data}) => !data.draft)
         .map(post => ({...post, lang: post.id.split('/')[0], id: post.id.split('/')[1]}));
 
     c.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());

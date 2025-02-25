@@ -1,6 +1,7 @@
 ---
+link: rts
 title: РТС
-draft: false
+draft: spremno
 pubDate: 2024-12-12
 heroImage: '@assets/images/rts.jpg'
 ---

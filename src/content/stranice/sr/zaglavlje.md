@@ -1,13 +1,14 @@
 ---
 naslov: Студентске блокаде
 linkovi:
-  - naziv: О Блокадама
-    link: /o-blokadama
+  - naziv: Захтеви
+    link: /zahtevi
   - naziv: Вести
     link: /vesti
-  - naziv: Акције
+  - naziv: Дневник акција
     link: /akcije
+  - naziv: О Блокадама
+    link: /o-blokadama
   - naziv: Контакт
     link: /kontakt
 ---
-

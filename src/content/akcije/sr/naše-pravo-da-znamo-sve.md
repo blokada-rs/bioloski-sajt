@@ -1,6 +1,7 @@
 ---
+link: naše-pravo-da-znamo-sve
 title: “Наше право да знамо све”
-draft: false
+draft: spremno
 pubDate: 2025-01-17
 heroImage: '@assets/images/vase-pravo-da-znate-sve.jpg'
 ---

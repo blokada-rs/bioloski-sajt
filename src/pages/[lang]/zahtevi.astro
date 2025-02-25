@@ -1,0 +1,65 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { Markdown } from '@astropub/md'
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+
+import { langs, file } from "@scripts/translate";
+export async function getStaticPaths() {
+  return langs.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const { frontmatter } = await file("zahtevi", lang);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>Zahtevi</h1>
+      
+      <div class="zahtevi">
+        {frontmatter.zahtevi.map((zahtev) => 
+          <details>
+            <summary>{zahtev.original}</summary>
+            <div class="content">
+              <Markdown of={zahtev.konkretizacija} />
+            </div>
+          </details>
+        )}
+      </div>
+      
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .zahtevi {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  details summary {
+    cursor: pointer;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+  }
+
+  .content {
+    translate opacity: 0.5s;
+
+    @starting-style {
+      opacity: 0;
+    }
+  }
+</style>

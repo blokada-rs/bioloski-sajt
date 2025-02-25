@@ -1,4 +1,5 @@
 ---
+link: pod-nasom-auto-komandom
 title: Under our command
 draft: false
 pubDate: 2025-01-27

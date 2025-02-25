@@ -1,4 +1,5 @@
 ---
+link: pravni-fakultet
 title: Faculty of Law
 draft: false
 pubDate: 2025-01-16
