@@ -1,9 +1,8 @@
 ---
-import { file } from '@scripts/translate';
+import { langs, file } from '@scripts/i18n';
 import HeaderLink from './HeaderLink.astro';
 import { Icon } from "astro-icon/components";
 import { ICON_SIZE_LG, ICON_SIZE_MD } from 'consts';
-import { langs } from '@scripts/translate';
 
 const { lang } = Astro.params;
 
@@ -73,11 +72,6 @@ const jezik = (jezik: string) => {
 		padding-block: 1em;
 	}
 
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
-	}
-
 	nav {
 		display: flex;
 		align-items: center;
@@ -85,7 +79,7 @@ const jezik = (jezik: string) => {
 	}
 
 	nav a {
-		padding: 1em 0.5em;
+		padding: 1em 0.75em;
 		color: var(--black);
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
@@ -102,7 +96,6 @@ const jezik = (jezik: string) => {
 	}
 
 	nav a.active {
-		text-decoration: none;
 		border-bottom-color: var(--accent);
 	}
 

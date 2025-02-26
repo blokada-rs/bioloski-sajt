@@ -1,10 +1,7 @@
 ---
-import { file, langs } from "@scripts/translate";
+import Base from "@layouts/Base.astro";
+import { file, langs } from "@scripts/i18n";
 import { Image } from "astro:assets";
-
-import BaseHead from "../../components/BaseHead.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
 
 import { SITE_DESCRIPTION } from "../../consts";
 import indeks from "@assets/images/indeks.jpg";
@@ -22,34 +19,25 @@ const { Content: Zahtevi } = await file("zahtevi", lang);
 const { frontmatter } = await file("ostalo", lang);
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={frontmatter.naslov} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <Header />
-    <div class="title" style={`background-image: url(${slavija.src});`}>
-      <h1>{frontmatter.naslov}</h1>
-    </div>
-    <main>
-      <section>
-        <Pocetna />
-      </section>
+<Base {lang} title={frontmatter.naslov} description={SITE_DESCRIPTION} image={slavija.src}>
+  <div slot="above" class="title" style={`background-image: url(${slavija.src});`}>
+    <h1>{frontmatter.naslov}</h1>
+  </div>
 
-      <div class="collage">
-        <Image class="megafon" loading="eager" src={megafon} alt="" />
-        <Image class="indeks" loading="eager" src={indeks} alt="" />
-        <Image class="zastava" loading="eager" src={zastava} alt="" />
-      </div>
+  <section>
+    <Pocetna />
+  </section>
 
-      <section>
-        <Zahtevi />
-      </section>
-    </main>
-    <Footer />
-  </body>
-</html>
+  <div class="collage">
+    <Image class="megafon" loading="eager" src={megafon} alt="" />
+    <Image class="indeks" loading="eager" src={indeks} alt="" />
+    <Image class="zastava" loading="eager" src={zastava} alt="" />
+  </div>
+
+  <section>
+    <Zahtevi />
+  </section>
+</Base>
 
 <style>
   .title {

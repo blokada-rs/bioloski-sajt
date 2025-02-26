@@ -2,7 +2,7 @@
 import { type CollectionEntry } from 'astro:content';
 import BlogPost from '../../../layouts/BlogPost.astro';
 import { render } from 'astro:content';
-import { collection } from '@scripts/translate';
+import { collection } from '@scripts/i18n';
 
 export async function getStaticPaths() {
 	const posts = await collection('akcije');
@@ -12,12 +12,12 @@ export async function getStaticPaths() {
 	}));
 }
 
-type Props = CollectionEntry<'akcije'>;
+type Props = CollectionEntry<'akcije'> & {lang: string};
 
 const post = Astro.props;
 const { Content } = await render(post);
 ---
 
-<BlogPost {...post.data}>
+<BlogPost lang={post.lang} {...post.data}>
 	<Content />
 </BlogPost>

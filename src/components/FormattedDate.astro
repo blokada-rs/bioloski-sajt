@@ -3,12 +3,21 @@ interface Props {
 	date: Date;
 }
 
+const { lang } = Astro.params;
 const { date } = Astro.props;
+
+const locale = (lang?: string) => {
+	switch (lang) {
+		case "sr": return 'sr-RS';
+		case "sr-lat": return "sr-Latn-RS";
+		default: return "en-US";
+	}
+}
 ---
 
 <time datetime={date.toISOString()}>
 	{
-		date.toLocaleDateString('sr-Latn-RS', {
+		date.toLocaleDateString(locale(lang), {
 			year: 'numeric',
 			month: 'short',
 			day: 'numeric',

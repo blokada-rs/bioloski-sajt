@@ -1,11 +1,8 @@
 ---
-import BaseHead from "../../components/BaseHead.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
-
+import Base from "@layouts/Base.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 
-import { langs, file } from "@scripts/translate";
+import { langs, file } from "@scripts/i18n";
 export async function getStaticPaths() {
   return langs.map((lang) => ({ params: { lang } }));
 }
@@ -14,16 +11,6 @@ const { lang } = Astro.params;
 const { Content } = await file("oblokadama", lang);
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <Header />
-    <main>
-      <Content />
-    </main>
-    <Footer />
-  </body>
-</html>
+<Base {lang} title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <Content />
+</Base>
