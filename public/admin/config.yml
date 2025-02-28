@@ -120,9 +120,10 @@ collections:
               - { label: "Sajt", value: "web" }
               - { label: "Instagram", value: "instagram" }
               - { label: "Twitter", value: "twitter" }
+              - { label: "Facebook", value: "facebook" }
               - { label: "YouTube", value: "youtube" }
               - { label: "Viber", value: "viber" }
-              - { label: "Vesti", value: "news" }
+              - { label: "Vesti", value: "newspaper" }
               - { label: "Donacije", value: "hand-coin" }
             default: "Bez"
 

@@ -25,7 +25,10 @@ const linkovi = defineCollection({
 	schema: () => z.object({
 		link: z.string(),
 		linkovi: z.object({
-			ikonica: z.enum(["bez", "web", "instagram", "twitter", "youtube", "viber", "news", "hand-coin"]),
+			ikonica: z.enum([
+				"bez", "web", "instagram", "twitter", 
+				"facebook", "youtube", "viber", "newspaper", "hand-coin"
+			]),
 			naslov: z.string(),
 			link: z.string()
 		}).array()
