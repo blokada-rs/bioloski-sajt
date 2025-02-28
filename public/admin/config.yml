@@ -111,6 +111,7 @@ collections:
         label_singular: 'Link'
         name: "linkovi"
         widget: "list"
+        summary: "{{naslov}}"
         fields:
           - label: "Ikonica"
             name: "ikonica"
