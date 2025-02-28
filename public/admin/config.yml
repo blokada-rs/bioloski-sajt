@@ -117,11 +117,13 @@ collections:
             widget: "select"
             options:
               - { label: "Bez", value: "bez" }
+              - { label: "Sajt", value: "web" }
               - { label: "Instagram", value: "instagram" }
               - { label: "Twitter", value: "twitter" }
               - { label: "YouTube", value: "youtube" }
               - { label: "Viber", value: "viber" }
               - { label: "Vesti", value: "news" }
+              - { label: "Donacije", value: "hand-coin" }
             default: "Bez"
 
           - { label: "Naslov", name: "naslov", widget: "string", i18n: true }

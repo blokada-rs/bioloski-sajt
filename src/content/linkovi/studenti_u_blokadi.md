@@ -1,7 +1,7 @@
 ---
 link: studenti_u_blokadi
 linkovi:
-  - ikonica: bez
+  - ikonica: web
     naslov: Zvanični sajt studenata u blokadi
     link: https://blokade.org
   - ikonica: instagram
@@ -10,10 +10,8 @@ linkovi:
   - ikonica: twitter
     naslov: '@studentblokade'
     link: https://x.com/studentblokade
-  - ikonica: bez
+  - ikonica: hand-coin
     naslov: Blokadne donacije
     link: https://blokadnedonacije.rs
-  - ikonica: bez
-    naslov: 3 grada, 2 točka i 1 cilj
-    link: https://docs.google.com/forms/d/e/1FAIpQLSc_pGzrf4yxy7s_lUyutsIJv5JFWpPO_Iu1tco8joZJVsGaYg/viewform
 ---
+
