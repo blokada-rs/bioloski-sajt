@@ -6,7 +6,13 @@ draft: prevodjenje
 pubDate: 2025-02-28T12:16:00
 heroImage: '@assets/images/studentski-edikt.jpg'
 timeline:
-  - naslov: „Љубе се север и југ”
+  - naslov: Концерт бенда „Membrana Tympani”
+    datum: 2025-03-01T16:07:00.000Z
+    video: ''
+    slike:
+      - '@assets/images/bend-membrana.jpg'
+    tekst: Управо почиње концерт бенда „Membrana Tympani” на бини код Споменика ослободиоцима Ниша.
+  - naslov: „Нека љубе се север и југ”
     datum: 2025-03-01T15:53:00.000Z
     video: ''
     slike:
