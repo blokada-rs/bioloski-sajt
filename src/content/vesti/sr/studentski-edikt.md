@@ -6,6 +6,12 @@ draft: prevodjenje
 pubDate: 2025-02-28T12:16:00
 heroImage: '@assets/images/studentski-edikt.jpg'
 timeline:
+  - naslov: Мајање бајкера
+    datum: 2025-03-01T16:50:00.000Z
+    video: ''
+    slike:
+      - '@assets/images/bajkeri-nis.jpg'
+    tekst: Дугачка колона бајкера пролази кроз улицу Краља Стефана Првовенчаног. Мотори пумпају јако!
   - naslov: Концерт бенда „Membrana Tympani”
     datum: 2025-03-01T16:07:00.000Z
     video: ''
