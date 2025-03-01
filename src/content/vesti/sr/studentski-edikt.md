@@ -6,6 +6,14 @@ draft: prevodjenje
 pubDate: 2025-02-28T12:16:00
 heroImage: '@assets/images/studentski-edikt.jpg'
 timeline:
+  - naslov: 15 минута тишине.
+    datum: 2025-03-01T11:52:00.000Z
+    slike:
+      - '@assets/images/tisina-nis.jpg'
+    tekst: |-
+      Одавање поште страдалима у Новом Саду.
+
+      Тишина је некад најгласнији одговор.
   - naslov: Колоне су кренуле!
     datum: 2025-03-01T11:05:00.000Z
     slike:
@@ -16,7 +24,7 @@ timeline:
       Велики број студената и грађана кренуо је са 4 локације ка Тргу краља Милана, где их жељно ишчекују грађани и грађанке Ниша!
 
       Фотографисала колегиница  [@quinceobjective](https://instagram.com/quinceobjective)
-  - naslov: Скупљање студената на четири локације
+  - naslov: Окупљање студената и грађана на четири локације.
     datum: 2025-03-01T09:00:00.000Z
     slike: []
     tekst: |-
