@@ -6,14 +6,22 @@ draft: prevodjenje
 pubDate: 2025-02-28T12:16:00
 heroImage: '@assets/images/studentski-edikt.jpg'
 timeline:
-  - naslov: Неке слике са висине
-    datum: 2025-03-01T11:38:00.000Z
+  - naslov: Ни Београђани не одмарају!
+    datum: 2025-03-01T13:08:00.000Z
+    video: ''
+    slike:
+      - '@assets/images/flajer-beograd.jpg'
+    tekst: Током  мајања  по Нишу  поред пиштаљки, транспарената и пумпи, у рукама се налазе и позивнице за протест у Београду 15. марта, које деле београдски студенти.
+  - naslov: 'Неке слике са висине:'
+    datum: 2025-03-01T12:38:00.000Z
+    video: ''
     slike:
       - '@assets/images/zgrada-nis1.jpg'
       - '@assets/images/zgrada-nis2.jpg'
-    tekst: Фотографисала колегиница [@komunalniotpad](https://instagram.com/komunalniotpad)
+    tekst: Фотографисала колегиница [@komunalniotpad](https://instagram.com/komunalniotpad).
   - naslov: 15 минута тишине.
     datum: 2025-03-01T11:52:00.000Z
+    video: ''
     slike:
       - '@assets/images/tisina-nis.jpg'
     tekst: |-
@@ -22,6 +30,7 @@ timeline:
       **Тишина је некад најгласнији одговор.**
   - naslov: Колоне су кренуле!
     datum: 2025-03-01T11:05:00.000Z
+    video: ''
     slike:
       - '@assets/images/kolona-nis1.jpeg'
       - '@assets/images/kolona-nis2.jpeg'
@@ -32,6 +41,7 @@ timeline:
       Фотографисала колегиница  [@quinceobjective](https://instagram.com/quinceobjective)
   - naslov: Окупљање студената и грађана на четири локације.
     datum: 2025-03-01T09:00:00.000Z
+    video: ''
     slike: []
     tekst: |-
       Студенти се окупљају на четири локације: 
