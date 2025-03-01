@@ -2,7 +2,7 @@
 link: sretnimo-se-na-sretenje
 title: Let's meet at Sretenje!
 draft: false
-pubDate: 2025-02-25T09:00:00
+pubDate: 2025-02-15T08:00:00.000Z
 heroImage: '@assets/images/sretnimo-se-na-sretenje.jpg'
 ---
 The choice of february the 15th this year symbolic. The date represented not only the holiday of Sretenje, when the first constitution was adopted, but also the day when students from Belgrade, Novi Sad, Niš and other cities gathered in Kragujevac. The support of citizens was not lacking this time either. Everyone gathered in Kragujevac to support the third large and long-planned protest "Let's meet on Sretenje".
