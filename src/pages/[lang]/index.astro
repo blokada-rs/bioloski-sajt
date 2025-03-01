@@ -25,7 +25,7 @@ const live = (await collection("vesti", lang)).find(vest => vest.data.live);
 <Base {lang} title={frontmatter.naslov} description={SITE_DESCRIPTION} image={slavija.src}>
   <div slot="above" class="title" style={`background-image: url(${slavija.src});`}>
     {typeof live !== "undefined" && 
-      <Live href={`${lang}/vesti/${live.id}`}>{live.data.title}</Live>
+      <Live href={`/${lang}/vesti/${live.id}`}>{live.data.title}</Live>
     }
 
     <h1>{frontmatter.naslov}</h1>
