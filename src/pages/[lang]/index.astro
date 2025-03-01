@@ -1,6 +1,6 @@
 ---
 import Base from "@layouts/Base.astro";
-import { file, langs } from "@scripts/i18n";
+import { collection, file, langs } from "@scripts/i18n";
 import { Image } from "astro:assets";
 
 import { SITE_DESCRIPTION } from "../../consts";
@@ -8,6 +8,7 @@ import indeks from "@assets/images/indeks.jpg";
 import megafon from "@assets/images/megafon.jpg";
 import zastava from "@assets/images/zastava.jpg";
 import slavija from "@assets/images/slavija.jpg";
+import Live from "@components/Live.astro";
 
 export async function getStaticPaths() {
   return langs.map((lang) => ({ params: { lang } }));
@@ -17,10 +18,16 @@ const { lang } = Astro.params;
 const { Content: Pocetna } = await file("pocetna", lang);
 const { Content: Zahtevi } = await file("zahtevi", lang);
 const { frontmatter } = await file("ostalo", lang);
+
+const live = (await collection("vesti", lang)).find(vest => vest.data.live);
 ---
 
 <Base {lang} title={frontmatter.naslov} description={SITE_DESCRIPTION} image={slavija.src}>
   <div slot="above" class="title" style={`background-image: url(${slavija.src});`}>
+    {typeof live !== "undefined" && 
+      <Live href={`/${lang}/vesti/${live.id}`}>{live.data.title}</Live>
+    }
+
     <h1>{frontmatter.naslov}</h1>
   </div>
 
@@ -148,5 +155,11 @@ const { frontmatter } = await file("ostalo", lang);
 
   p {
     text-align: justify;
+  }
+
+  .title .live {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
   }
 </style>
