@@ -6,6 +6,17 @@ draft: prevodjenje
 pubDate: 2025-02-28T12:16:00
 heroImage: '@assets/images/studentski-edikt.jpg'
 timeline:
+  - naslov: Атмосфера са улице
+    datum: 2025-03-01T18:22:00.000Z
+    video: ''
+    slike:
+      - '@assets/images/nis-trenutak1.jpg'
+      - '@assets/images/nis-trenutak2.jpg'
+      - '@assets/images/nis-trenutak3.jpg'
+      - '@assets/images/nis-trenutak4.jpg'
+      - '@assets/images/nis-trenutak5.jpg'
+      - '@assets/images/nis-trenutak6.jpg'
+    tekst: ''
   - naslov: Дечији хор
     datum: 2025-03-01T17:56:00.000Z
     video: ''
