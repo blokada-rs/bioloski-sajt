@@ -3,7 +3,6 @@ import { type CollectionEntry } from 'astro:content';
 import BlogPost from '../../../layouts/BlogPost.astro';
 import { render } from 'astro:content';
 import { collection } from '@scripts/i18n';
-import Live from '@components/Live.astro';
 
 export async function getStaticPaths() {
 	const posts = await collection('vesti');

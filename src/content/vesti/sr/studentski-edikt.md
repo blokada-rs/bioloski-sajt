@@ -6,6 +6,16 @@ draft: prevodjenje
 pubDate: 2025-02-28T12:16:00
 heroImage: '@assets/images/studentski-edikt.jpg'
 timeline:
+  - naslov: Колоне су кренуле!
+    datum: 2025-03-01T11:05:00.000Z
+    slike:
+      - '@assets/images/kolona-nis1.jpeg'
+      - '@assets/images/kolona-nis2.jpeg'
+      - '@assets/images/kolona-nis3.jpeg'
+    tekst: |-
+      Велики број студената и грађана кренуо је са 4 локације ка Тргу краља Милана, где их жељно ишчекују грађани и грађанке Ниша!
+
+      Фотографисала колегиница  [@quinceobjective](https://instagram.com/quinceobjective)
   - naslov: Скупљање студената на четири локације
     datum: 2025-03-01T09:00:00.000Z
     slike: []

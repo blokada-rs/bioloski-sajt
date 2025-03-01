@@ -6,6 +6,7 @@ import { Image } from "astro:assets";
 
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../../consts";
 import FormattedDate from "../../../components/FormattedDate.astro";
+import Live from "@components/Live.astro";
 
 const { lang } = Astro.params;
 const posts = await collection("vesti", lang);
@@ -26,6 +27,9 @@ export async function getStaticPaths() {
           <li>
             <a href={`/${lang}/vesti/${post.id}/`}>
               <Image width={720} src={post.data.heroImage} alt="" />
+              {post.data.live && 
+                <Live>{frontmatter.live}</Live>
+              }
               <h4 class="title">{post.data.title}</h4>
               <p class="date">
                 <FormattedDate date={post.data.pubDate} />
@@ -69,8 +73,9 @@ export async function getStaticPaths() {
     margin-bottom: 0.5rem;
     border-radius: 12px;
   }
-  ul li a {
+  li > a {
     display: block;
+    position: relative;
   }
   .title {
     margin: 0;
@@ -81,11 +86,11 @@ export async function getStaticPaths() {
     margin: 0;
     color: rgb(var(--gray));
   }
-  ul li a:hover h4,
-  ul li a:hover .date {
+  li > a:hover h4,
+  li > a:hover .date {
     color: rgb(var(--accent));
   }
-  ul a:hover img {
+  li > a:hover img {
     box-shadow: var(--box-shadow);
   }
   @media (max-width: 720px) {
@@ -102,5 +107,11 @@ export async function getStaticPaths() {
     ul li:first-child .title {
       font-size: 1.563em;
     }
+  }
+
+  .live {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
   }
 </style>
