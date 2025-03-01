@@ -6,9 +6,17 @@ draft: prevodjenje
 pubDate: 2025-02-28T12:16:00
 heroImage: '@assets/images/studentski-edikt.jpg'
 timeline:
+  - naslov: „Љубе се север и југ”
+    datum: 2025-03-01T14:53:00.000Z
+    video: ''
+    slike:
+      - '@assets/images/ljube-se-sever-i-jug.jpg'
+    tekst: |-
+      Док новосадски студенти постављају банер на врх зграде у центру Ниша са улице, десетак метара испод транспарената, чују се грађани како говоре: „Ево их наши Новосађани!". 
+
+      Данас ваздух, поново, мирише на заједништво и солидарност.
   - naslov: Похвала редарима
     datum: 2025-03-01T15:23:00.000Z
-    video: ''
     slike:
       - '@assets/images/redari-nis.jpg'
     tekst: |-

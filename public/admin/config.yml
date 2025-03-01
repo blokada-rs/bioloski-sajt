@@ -170,6 +170,7 @@ collections:
         fields:
           - { label: "Naslov", name: "naslov", widget: "string" }
           - { label: "Datum", name: "datum", widget: "datetime", picker_utc: true }
+          - { label: "Video ID", name: "video", widget: "string", required: false }
           - label: "Slike"
             name: "slike"
             widget: "list"
