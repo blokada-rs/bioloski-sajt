@@ -1,6 +1,7 @@
 ---
 link: pod-nasom-auto-komandom
 title: Under our command
+live: false
 draft: false
 pubDate: 2025-01-27
 heroImage: '@assets/images/autokomanda.jpg'

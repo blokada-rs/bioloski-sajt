@@ -1,10 +1,11 @@
 ---
 interface Props {
 	date: Date;
+	time?: boolean
 }
 
 const { lang } = Astro.params;
-const { date } = Astro.props;
+const { date, time = false } = Astro.props;
 
 const locale = (lang?: string) => {
 	switch (lang) {
@@ -16,6 +17,17 @@ const locale = (lang?: string) => {
 ---
 
 <time datetime={date.toISOString()}>
+	{
+		time && 
+		<>
+			<strong>
+				{date.toLocaleTimeString(locale(lang), {
+					hour: 'numeric',
+					minute: 'numeric'
+				})}
+			</strong> |
+		</>
+	}
 	{
 		date.toLocaleDateString(locale(lang), {
 			year: 'numeric',

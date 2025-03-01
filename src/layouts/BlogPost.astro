@@ -3,10 +3,12 @@ import Base from "./Base.astro";
 import type { CollectionEntry } from "astro:content";
 import { Image } from "astro:assets";
 import FormattedDate from "../components/FormattedDate.astro";
+import Live from "@components/Live.astro";
+import Timeline from "@components/Timeline.astro";
 
-type Props = CollectionEntry<"vesti">["data"] & {lang: string};
+type Props = CollectionEntry<"vesti">["data"] & {lang: string, live: boolean};
 
-const { lang, title, pubDate, updatedDate, heroImage } = Astro.props;
+const { lang, title, pubDate, updatedDate, heroImage, live = false, timeline } = Astro.props;
 ---
 
 <Base {lang} title={title} description={title} image={heroImage.src}>
@@ -20,7 +22,8 @@ const { lang, title, pubDate, updatedDate, heroImage } = Astro.props;
     </div>
     <div class="prose">
       <div class="title">
-        <div class="date">
+        <div class="about">
+          {live && <Live>Live</Live>}
           {pubDate && <FormattedDate date={pubDate} />}
           {
             updatedDate && (
@@ -33,6 +36,9 @@ const { lang, title, pubDate, updatedDate, heroImage } = Astro.props;
         <h1>{title}</h1>
         <hr />
       </div>
+      
+      <Timeline {timeline} />
+      
       <slot />
     </div>
   </article>
@@ -49,11 +55,13 @@ const { lang, title, pubDate, updatedDate, heroImage } = Astro.props;
     box-shadow: var(--box-shadow);
   }
   .prose {
+    color: rgb(var(--gray-dark));
+  }
+  .prose > :global(p) > :global(img) {
     width: 720px;
     max-width: calc(100% - 2em);
-    margin: auto;
-    padding: 1em;
-    color: rgb(var(--gray-dark));
+    display: block;
+    margin-inline: auto;
   }
   .title {
     margin-bottom: 1em;
@@ -64,9 +72,13 @@ const { lang, title, pubDate, updatedDate, heroImage } = Astro.props;
   .title h1 {
     margin: 0 0 0.5em 0;
   }
-  .date {
+  .about {
     margin-bottom: 0.5em;
     color: rgb(var(--gray));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
   }
   .last-updated-on {
     font-style: italic;

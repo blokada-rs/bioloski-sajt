@@ -146,6 +146,7 @@ collections:
     fields:
       - { label: "Link", name: "link", widget: "string", i18n: "duplicate" }
       - { label: "Naslov", name: "title", widget: "string", i18n: true }
+      - { label: "Lajv", name: "live", widget: "boolean", i18n: "duplicate", default: false }
       - label: "Status"
         name: "draft"
         widget: "select"
@@ -160,6 +161,20 @@ collections:
       - { label: "Glavna slika", name: "heroImage", widget: "image", i18n: "duplicate" }
       - { label: "Opis", name: "description", widget: "text", i18n: true, required: false }
       - { label: "Tekst", name: "body", widget: "markdown", i18n: true }
+      - label: Tajmlajn
+        name: timeline
+        widget: list
+        add_to_top: true
+        fields:
+          - { label: "Naslov", name: "naslov", widget: "string" }
+          - { label: "Datum", name: "datum", widget: "datetime" }
+          - label: "Slike"
+            name: "slike"
+            widget: "list"
+            field: { label: "Slike", name: "slike", widget: "image" }
+            required: false
+          - { label: "Tekst", name: "tekst", widget: "text", required: false }
+
 
   - name: "akcije"
     label: "Akcije"

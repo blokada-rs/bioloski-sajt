@@ -3,10 +3,10 @@ import { type CollectionEntry, type AnyEntryMap, getCollection, render } from 'a
 
 export const langs = ["sr", "sr-lat", "en"];
 
-export async function collection(
-    collection: "vesti" | "akcije",
+export async function collection<T extends "vesti" | "akcije">(
+    collection: T,
     lang: string = "all"
-): Promise<(CollectionEntry<"vesti" | "akcije"> & {lang: string})[]> {
+): Promise<(CollectionEntry<T> & {lang: string})[]> {
     const c = (await getCollection(collection))
         // .filter(({data}) => !data.draft)
         .map(post => ({...post, lang: post.id.split('/')[0], id: post.id.split('/')[1]}));

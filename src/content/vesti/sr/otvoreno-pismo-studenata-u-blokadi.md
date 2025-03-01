@@ -1,6 +1,7 @@
 ---
 link: otvoreno-pismo-studenata-u-blokadi
 title: Отворено писмо студената у блокади
+live: false
 draft: prevodjenje
 pubDate: 2025-02-26T02:18:00
 heroImage: '@assets/images/placeholder.jpg'

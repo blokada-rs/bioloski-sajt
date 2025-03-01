@@ -1,6 +1,7 @@
 ---
 link: studentski-edikt
 title: Студентски Едикт
+live: false
 draft: prevodjenje
 pubDate: 2025-02-28T12:16:00
 heroImage: '@assets/images/studentski-edikt.jpg'

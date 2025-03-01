@@ -1,6 +1,7 @@
 ---
 link: pokloni-zivot-daj-krv
 title: Поклони живот - дај крв
+live: false
 draft: spremno
 pubDate: 2025-01-26
 heroImage: '@assets/images/davanje-krvi.jpg'
