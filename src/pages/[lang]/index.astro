@@ -11,6 +11,8 @@ import megafon from "@assets/images/megafon.jpg";
 import zastava from "@assets/images/zastava.jpg";
 import slavija from "@assets/images/slavija.jpg";
 import RecentPosts from "@components/RecentPosts.astro";
+import Slider from "@components/Slider.astro";
+import Card from "@components/Card.astro";
 
 export async function getStaticPaths() {
   return langs.map((lang) => ({ params: { lang } }));
@@ -56,6 +58,7 @@ const posts = postData.map((x) => ({
           subtitle={frontmatter.vesti_podnaslov}
           posts={posts}
           numPosts={3}
+          key="posts1"
         />
         <button class="button-light">{frontmatter.procitaj_vise}</button>
       </section>
@@ -63,10 +66,11 @@ const posts = postData.map((x) => ({
       <div class="dark-post">
         <section class="posts-section container-main">
           <RecentPosts
-            title="Najnovije vesti"
-            subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies orci ac sodales placerat. Etiam vitae aliquet ex, cursus fermentum augue. Mauris egestas justo vel augue tincidunt, quis venenatis turpis finibus. Aliquam dapibus augue lacus, quis bibendum erat iaculis id. In viverra auctor lectus in congue."
+            title={frontmatter.najnovije_vesti}
+            subtitle={frontmatter.vesti_podnaslov}
             posts={posts}
             numPosts={3}
+            key="posts2"
           />
           <button class="button-red">{frontmatter.procitaj_vise}</button>
         </section>

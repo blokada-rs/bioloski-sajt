@@ -1,5 +1,6 @@
 ---
 import Card from "./Card.astro";
+import Slider from "./Slider.astro";
 
 export interface Post {
   title: string;
@@ -14,9 +15,10 @@ interface Props {
   subtitle?: string;
   posts: Post[];
   numPosts: number;
+  key: string;
 }
 
-const { title, subtitle, posts, numPosts } = Astro.props;
+const { title, subtitle, posts, numPosts, key } = Astro.props;
 const newestPosts = posts
   .sort((a, b) => a.date.getTime() - b.date.getTime())
   .slice(0, numPosts);
@@ -27,6 +29,9 @@ const newestPosts = posts
   {subtitle && <p class="section-subtitle">{subtitle}</p>}
   <div class="posts-container">
     {newestPosts.map((post) => <Card {...post} />)}
+  </div>
+  <div class="posts-container-mobile">
+    <Slider posts={posts} key={key}/>
   </div>
 </section>
 
@@ -53,8 +58,20 @@ const newestPosts = posts
   }
 
   .posts-container {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
+  }
+
+  .posts-container-mobile {
+    display: block;
+  }
+  @media (min-width: 750px) {
+    .posts-container{
+      display: grid;
+    }
+    .posts-container-mobile {
+      display: none;
+    }
   }
 </style>
