@@ -14,6 +14,8 @@ const locale = (lang?: string) => {
 		default: return "en-US";
 	}
 }
+
+console.log(date.toUTCString());
 ---
 
 <time datetime={date.toISOString()}>

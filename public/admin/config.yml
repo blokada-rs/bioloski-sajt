@@ -156,8 +156,8 @@ collections:
           - { label: "Prevođenje", value: "prevodjenje" }
           - { label: "Spremno", value: "spremno" }
         default: "uredjivanje"
-      - { label: "Datum objavljivanja", name: "pubDate", widget: "datetime", i18n: "duplicate" }
-      - { label: "Datum izmene", name: "updatedDate", widget: "datetime", i18n: "duplicate", required: false }
+      - { label: "Datum objavljivanja", name: "pubDate", widget: "datetime", picker_utc: true, i18n: "duplicate" }
+      - { label: "Datum izmene", name: "updatedDate", widget: "datetime", picker_utc: true, i18n: "duplicate", required: false }
       - { label: "Glavna slika", name: "heroImage", widget: "image", i18n: "duplicate" }
       - { label: "Opis", name: "description", widget: "text", i18n: true, required: false }
       - { label: "Tekst", name: "body", widget: "markdown", i18n: true }
@@ -165,15 +165,16 @@ collections:
         name: timeline
         widget: list
         add_to_top: true
+        required: false
         fields:
           - { label: "Naslov", name: "naslov", widget: "string" }
-          - { label: "Datum", name: "datum", widget: "datetime" }
+          - { label: "Datum", name: "datum", widget: "datetime", picker_utc: true }
           - label: "Slike"
             name: "slike"
             widget: "list"
             field: { label: "Slike", name: "slike", widget: "image" }
             required: false
-          - { label: "Tekst", name: "tekst", widget: "text", required: false }
+          - { label: "Tekst", name: "tekst", widget: "markdown", required: false }
 
 
   - name: "akcije"
@@ -200,7 +201,7 @@ collections:
           - { label: "Prevođenje", value: "prevodjenje" }
           - { label: "Spremno", value: "spremno" }
         default: "Uređivanje"
-      - { label: "Datum akcije", name: "pubDate", widget: "datetime", i18n: "duplicate" }
+      - { label: "Datum akcije", name: "pubDate", widget: "datetime", picker_utc: true, i18n: "duplicate" }
       - { label: "Glavna slika", name: "heroImage", widget: "image", i18n: "duplicate" }
       - { label: "Opis", name: "description", widget: "text", i18n: true, required: false }
       - { label: "Tekst", name: "body", widget: "markdown", i18n: true }
