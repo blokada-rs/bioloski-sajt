@@ -6,6 +6,12 @@ draft: prevodjenje
 pubDate: 2025-02-28T12:16:00
 heroImage: '@assets/images/studentski-edikt.jpg'
 timeline:
+  - naslov: Неке слике са висине
+    datum: 2025-03-01T11:38:00.000Z
+    slike:
+      - '@assets/images/zgrada-nis1.jpg'
+      - '@assets/images/zgrada-nis2.jpg'
+    tekst: Фотографисала колегиница [@komunalniotpad](https://instagram.com/komunalniotpad)
   - naslov: 15 минута тишине.
     datum: 2025-03-01T11:52:00.000Z
     slike:
