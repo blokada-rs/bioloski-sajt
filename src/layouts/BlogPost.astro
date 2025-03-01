@@ -5,10 +5,13 @@ import { Image } from "astro:assets";
 import FormattedDate from "../components/FormattedDate.astro";
 import Live from "@components/Live.astro";
 import Timeline from "@components/Timeline.astro";
+import { file } from "@scripts/i18n";
 
 type Props = CollectionEntry<"vesti">["data"] & {lang: string, live: boolean};
 
 const { lang, title, pubDate, updatedDate, heroImage, live = false, timeline } = Astro.props;
+
+const { frontmatter } = await file("ostalo", lang);
 ---
 
 <Base {lang} title={title} description={title} image={heroImage.src}>
@@ -23,7 +26,7 @@ const { lang, title, pubDate, updatedDate, heroImage, live = false, timeline } =
     <div class="prose">
       <div class="title">
         <div class="about">
-          {live && <Live>Live</Live>}
+          {live && <Live>{frontmatter.live}</Live>}
           {pubDate && <FormattedDate date={pubDate} />}
           {
             updatedDate && (

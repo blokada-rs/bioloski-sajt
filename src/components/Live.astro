@@ -22,7 +22,7 @@ const { href, ...rest } = Astro.props;
     border-radius: 10000px;
     padding: 0.2rem 1rem;
     color: white;
-    border: 2px solid red;
+    border: 2px solid var(--accent);
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -36,7 +36,7 @@ const { href, ...rest } = Astro.props;
     width: 0.75rem;
     height: 0.75rem;
     position: relative;
-    background-color: red;
+    background-color: var(--accent);
     display: block;
     border-radius: 50%;
   }
@@ -45,7 +45,7 @@ const { href, ...rest } = Astro.props;
     content: "";
     display: block;
     inset: 0;
-    background-color: rgba(255, 0, 0, 0.5);
+    background-color: var(--accent);
     border-radius: 50%;
     position: absolute;
     animation:
@@ -54,12 +54,12 @@ const { href, ...rest } = Astro.props;
   }
 
   @keyframes scale {
-    from { transform: scale(1);    }
+    from { transform: scale(1);   }
     to   { transform: scale(2.5); }
   }
 
   @keyframes opacity {
-    from { opacity: 1; }
-    to   { opacity: 0.3; }
+    from { opacity: 0.5; }
+    to   { opacity: 0;   }
   }
 </style>
