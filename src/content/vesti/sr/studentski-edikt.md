@@ -6,6 +6,16 @@ draft: prevodjenje
 pubDate: 2025-02-28T12:16:00
 heroImage: '@assets/images/studentski-edikt.jpg'
 timeline:
+  - naslov: Храњени као краљеви
+    datum: 2025-03-01T14:16:00.000Z
+    video: ''
+    slike:
+      - '@assets/images/nis-hrana1.jpeg'
+      - '@assets/images/nis-hrana2.jpeg'
+    tekst: |-
+      Домаћински дочек студената од стране грађана Ниша.
+
+      Нишлије хвала вам од свег срца!
   - naslov: Ни Београђани не одмарају!
     datum: 2025-03-01T13:08:00.000Z
     video: ''
