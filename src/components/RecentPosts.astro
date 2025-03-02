@@ -20,7 +20,7 @@ interface Props {
 
 const { title, subtitle, posts, numPosts, key } = Astro.props;
 const newestPosts = posts
-  .sort((a, b) => a.date.getTime() - b.date.getTime())
+  .sort((a, b) =>  b.date.getTime() - a.date.getTime())
   .slice(0, numPosts);
 ---
 
@@ -31,7 +31,7 @@ const newestPosts = posts
     {newestPosts.map((post) => <Card {...post} />)}
   </div>
   <div class="posts-container-mobile">
-    <Slider posts={posts} key={key}/>
+    <Slider posts={newestPosts} key={key}/>
   </div>
 </section>
 
