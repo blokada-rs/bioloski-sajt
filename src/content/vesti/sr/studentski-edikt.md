@@ -1,11 +1,16 @@
 ---
 link: studentski-edikt
 title: Студентски едикт
-live: true
+live: false
 draft: prevodjenje
 pubDate: 2025-02-28T12:16:00
 heroImage: '@assets/images/studentski-edikt.jpg'
 timeline:
+  - naslov: Крај протеста
+    datum: 2025-03-02T03:00:00.000Z
+    video: ''
+    slike: []
+    tekst: Захваљујемо се колегама из Ниша на позиву и гостопримству. Колеге које су остале у Нишу ће преспавати на сестринским факултетима или код Нишлија који су понудили место у својим становима и кућама.
   - naslov: Завршна реч студената
     datum: 2025-03-02T00:07:00.000Z
     video: ''
