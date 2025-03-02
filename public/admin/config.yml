@@ -126,6 +126,7 @@ collections:
               - { label: "YouTube", value: "youtube" }
               - { label: "Viber", value: "viber" }
               - { label: "Vesti", value: "newspaper" }
+              - { label: "Mejl", value: "at" }
               - { label: "Donacije", value: "hand-coin" }
             default: "Bez"
 
