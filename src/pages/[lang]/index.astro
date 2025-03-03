@@ -4,12 +4,19 @@ import BaseHead from "../../components/BaseHead.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 
-import { SITE_DESCRIPTION } from "../../consts";
+import { CARD_MAX_SUBTITLE_LENGTH, SITE_DESCRIPTION } from "../../consts";
 import slavija from "@assets/images/slavija.jpg";
 import RecentPosts from "@components/RecentPosts.astro";
 
 export async function getStaticPaths() {
   return langs.map((lang) => ({ params: { lang } }));
+}
+
+function getSummary(longString: string): string
+{
+  let splitIndex = CARD_MAX_SUBTITLE_LENGTH-3;
+  while(longString[splitIndex--] != " ");
+  return longString.substring(0,splitIndex+1) + "...";
 }
 
 const { lang } = Astro.params;
@@ -19,8 +26,7 @@ const { frontmatter } = await file("ostalo", lang);
 const newsData = await collection("vesti", lang);
 const news = newsData.map((x) => ({
   title: x.data.title,
-  subtitle:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus maximus consectetur sem pulvinar pellentesque. Sed in egestas massa. Quisque at arcu id ante tincidunt eleifend. Aliquam dapibus augue lacus, quis bibendum erat iaculis id. In viverra auctor lectus in congue.",
+  subtitle: getSummary(x.body ?? ""),
   thumbnail: x.data.heroImage.src,
   link: `/${lang}/vesti/${x.id}/`,
   date: x.data.pubDate,
@@ -29,8 +35,7 @@ const news = newsData.map((x) => ({
 const akcijeData = await collection("akcije", lang);
 const akcije = akcijeData.map((x) => ({
   title: x.data.title,
-  subtitle:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus maximus consectetur sem pulvinar pellentesque. Sed in egestas massa. Quisque at arcu id ante tincidunt eleifend. Aliquam dapibus augue lacus, quis bibendum erat iaculis id. In viverra auctor lectus in congue.",
+  subtitle: getSummary(x.body ?? ""),
   thumbnail: x.data.heroImage.src,
   link: `/${lang}/akcije/${x.id}/`,
   date: x.data.pubDate,
@@ -65,7 +70,7 @@ const akcije = akcijeData.map((x) => ({
           numPosts={3}
           key="recentNews"
         />
-        <a href=`/${lang}/vesti`><button class="button-light">{frontmatter.procitaj_vise}</button></a>
+        <a href=`/${lang}/vesti`><button class="button-light">{frontmatter.dugme_vesti}</button></a>
       </section>
 
       <div class="dark-post">
@@ -77,7 +82,7 @@ const akcije = akcijeData.map((x) => ({
             numPosts={3}
             key="recentArchive"
           />
-          <a href=`/${lang}/akcije`><button class="button-red">{frontmatter.procitaj_vise}</button></a>
+          <a href=`/${lang}/akcije`><button class="button-red">{frontmatter.dugme_akcije}</button></a>
         </section>
       </div>
     </div>
