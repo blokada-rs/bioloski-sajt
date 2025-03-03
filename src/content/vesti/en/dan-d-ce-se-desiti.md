@@ -10,6 +10,6 @@ The plenum of students of the Faculty of Media and Communications (FMK) is organ
 
 The President of the Assembly of the Republic of Serbia, Ana Brnabić, called the decision of FMK to start classes on March 3rd "D-day" for the exit of state faculties from the blockade. However, the students believe that the faculty gave in under economic and political pressure, and claim that the blockade will last until the demands are met.
 
-In a statement published on February 12th on the Instagram page @studenti.fmk, the plenum of students of the Faculty of Media and Communications clearly emphasized that the decision to continue academic activities was not made in accordance with the will of the plenum. They also appealed to the Faculty to distance itself from Ana Brnabić's statements, which has not happened to date.
+In a statement published on February 12th on the Instagram page [@studenti.fmk](https://instagram.com/studenti.fmk), the plenum of students of the Faculty of Media and Communications clearly emphasized that the decision to continue academic activities was not made in accordance with the will of the plenum. They also appealed to the Faculty to distance itself from Ana Brnabić's statements, which has not happened to date.
 
 Due to the aforementioned reasons, the students decided to enter into a physical blockade of the faculty on February 24th, and this protest represents a continuation of the struggle for the fulfillment of student demands.
