@@ -16,7 +16,7 @@ The welcome of the students who are coming to Ni**š** by walking, running or bi
  
 The protest on Saturday will last a symbolic 18 hours - from 9:00 in the morning until 3:00 after midnight. These 18 hours are not incidental. It is the calling code for Ni**š**, but also a call for necessary change, a shift from apathy to action, from silence to a loud battle for a  better future. A daylong programme is planned for the protest. 
  
-![Planned programme for the \"Student Edict\"protest](@assets/images/edikt-raspored.jpg)
+![Planned programme for the \\"Student Edict\\"protest](@assets/images/edikt-raspored.jpg)
 
 Every second of this protest, we are writing new pages of history. We are gathering because we will not watch as our future slips away from us in front of our very eyes.
  
