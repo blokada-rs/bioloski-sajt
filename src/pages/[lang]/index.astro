@@ -12,28 +12,53 @@ export async function getStaticPaths() {
   return langs.map((lang) => ({ params: { lang } }));
 }
 
-function getSummary(longString: string): string
-{
-  let splitIndex = CARD_MAX_SUBTITLE_LENGTH-3;
-  while(longString[splitIndex--] != " ");
-  return longString.substring(0,splitIndex+1) + "...";
+function getSummary(longString: string): string {
+  let splitIndex = CARD_MAX_SUBTITLE_LENGTH - 3;
+  while (longString[splitIndex--] != " ");
+  return longString.substring(0, splitIndex + 1) + "...";
 }
 
 const { lang } = Astro.params;
 const { Content: Pocetna } = await file("pocetna", lang);
 const { Content: Zahtevi } = await file("zahtevi", lang);
 const { frontmatter } = await file("ostalo", lang);
+const live = (await collection("vesti", lang)).find((vest) => vest.data.live);
+const optimizedSlavija = await getImage({ src: slavija, format: "avif" });
 
-const live = (await collection("vesti", lang)).find(vest => vest.data.live);
+const newsData = await collection("vesti", lang);
+const news = newsData.map((x) => ({
+  title: x.data.title,
+  subtitle: getSummary(x.body ?? ""),
+  thumbnail: x.data.heroImage.src,
+  link: `/${lang}/vesti/${x.id}/`,
+  date: x.data.pubDate,
+}));
 
-
-const optimizedSlavija = await getImage({src: slavija, format: 'avif'})
+const akcijeData = await collection("akcije", lang);
+const akcije = akcijeData.map((x) => ({
+  title: x.data.title,
+  subtitle: getSummary(x.body ?? ""),
+  thumbnail: x.data.heroImage.src,
+  link: `/${lang}/akcije/${x.id}/`,
+  date: x.data.pubDate,
+}));
 ---
 
-<Base {lang} title={frontmatter.naslov} description={SITE_DESCRIPTION} image={slavija.src}>
-  <div slot="above" class="title" style={`background-image: url(${optimizedSlavija.src});`}>
-    {typeof live !== "undefined" && 
-      <Live href={`/${lang}/vesti/${live.id}`}>{live.data.title}</Live>
+<Base
+  {lang}
+  title={frontmatter.naslov}
+  description={SITE_DESCRIPTION}
+  image={slavija.src}
+>
+  <div
+    slot="above"
+    class="title"
+    style={`background-image: url(${optimizedSlavija.src});`}
+  >
+    {
+      typeof live !== "undefined" && (
+        <Live href={`/${lang}/vesti/${live.id}`}>{live.data.title}</Live>
+      )
     }
 
     <h1>{frontmatter.naslov}</h1>
@@ -43,37 +68,38 @@ const optimizedSlavija = await getImage({src: slavija, format: 'avif'})
     <Pocetna />
   </section>
 
-      <section class="container-main">
-        <Zahtevi />
-      </section>
+  <section class="container-main">
+    <Zahtevi />
+  </section>
 
-      <section class="posts-section container-main">
-        <RecentPosts
-          title={frontmatter.najnovije_vesti}
-          subtitle={frontmatter.vesti_podnaslov}
-          posts={news}
-          numPosts={3}
-          key="recentNews"
-        />
-        <a href=`/${lang}/vesti`><button class="button-light">{frontmatter.dugme_vesti}</button></a>
-      </section>
+  <section class="posts-section container-main">
+    <RecentPosts
+      title={frontmatter.najnovije_vesti}
+      subtitle={frontmatter.vesti_podnaslov}
+      posts={news}
+      numPosts={3}
+      key="recentNews"
+    />
+    <a href=`/${lang}/vesti`
+      ><button class="button-light">{frontmatter.dugme_vesti}</button></a
+    >
+  </section>
 
-      <div class="dark-post">
-        <section class="posts-section container-main">
-          <RecentPosts
-            title={frontmatter.najnovije_akcije}
-            subtitle={frontmatter.najnovije_akcije_podnaslov}
-            posts={akcije}
-            numPosts={3}
-            key="recentArchive"
-          />
-          <a href=`/${lang}/akcije`><button class="button-red">{frontmatter.dugme_akcije}</button></a>
-        </section>
-      </div>
-    </div>
-    <Footer />
-  </body>
-</html>
+  <div class="dark-post">
+    <section class="posts-section container-main">
+      <RecentPosts
+        title={frontmatter.najnovije_akcije}
+        subtitle={frontmatter.najnovije_akcije_podnaslov}
+        posts={akcije}
+        numPosts={3}
+        key="recentArchive"
+      />
+      <a href=`/${lang}/akcije`
+        ><button class="button-red">{frontmatter.dugme_akcije}</button></a
+      >
+    </section>
+  </div>
+</Base>
 
 <style>
   .title {
@@ -118,6 +144,9 @@ const optimizedSlavija = await getImage({src: slavija, format: 'avif'})
 
   .dark-post {
     background-color: #e9e9e9;
+    position:absolute;
+    width: 100vw;
+    left: 0;
   }
 
   @media (max-width: 720px) {
