@@ -1,7 +1,10 @@
 ---
 link: studenti_u_blokadi
 linkovi:
-  - ikonica: bez
+  - ikonica: newspaper
+    naslov: Studentski edikt
+    link: https://blokade.org/sr-lat/vesti/studentski-edikt
+  - ikonica: web
     naslov: Zvanični sajt studenata u blokadi
     link: https://blokade.org
   - ikonica: instagram
@@ -10,10 +13,11 @@ linkovi:
   - ikonica: twitter
     naslov: '@studentblokade'
     link: https://x.com/studentblokade
-  - ikonica: bez
+  - ikonica: facebook
+    naslov: Studenti u blokadi UB
+    link: https://www.facebook.com/people/Studenti-u-blokadi-UB/61571631694236/
+  - ikonica: hand-coin
     naslov: Blokadne donacije
     link: https://blokadnedonacije.rs
-  - ikonica: bez
-    naslov: 3 grada, 2 točka i 1 cilj
-    link: https://docs.google.com/forms/d/e/1FAIpQLSc_pGzrf4yxy7s_lUyutsIJv5JFWpPO_Iu1tco8joZJVsGaYg/viewform
 ---
+

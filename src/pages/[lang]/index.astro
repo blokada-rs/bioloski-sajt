@@ -1,11 +1,11 @@
 ---
-import { file, langs, collection } from "@scripts/translate";
-import BaseHead from "../../components/BaseHead.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
+import Base from "@layouts/Base.astro";
+import { collection, file, langs } from "@scripts/i18n";
+import { Picture, getImage } from "astro:assets";
 
 import { CARD_MAX_SUBTITLE_LENGTH, SITE_DESCRIPTION } from "../../consts";
 import slavija from "@assets/images/slavija.jpg";
+import Live from "@components/Live.astro";
 import RecentPosts from "@components/RecentPosts.astro";
 
 export async function getStaticPaths() {
@@ -23,40 +23,25 @@ const { lang } = Astro.params;
 const { Content: Pocetna } = await file("pocetna", lang);
 const { Content: Zahtevi } = await file("zahtevi", lang);
 const { frontmatter } = await file("ostalo", lang);
-const newsData = await collection("vesti", lang);
-const news = newsData.map((x) => ({
-  title: x.data.title,
-  subtitle: getSummary(x.body ?? ""),
-  thumbnail: x.data.heroImage.src,
-  link: `/${lang}/vesti/${x.id}/`,
-  date: x.data.pubDate,
-}));
 
-const akcijeData = await collection("akcije", lang);
-const akcije = akcijeData.map((x) => ({
-  title: x.data.title,
-  subtitle: getSummary(x.body ?? ""),
-  thumbnail: x.data.heroImage.src,
-  link: `/${lang}/akcije/${x.id}/`,
-  date: x.data.pubDate,
-}));
+const live = (await collection("vesti", lang)).find(vest => vest.data.live);
 
+
+const optimizedSlavija = await getImage({src: slavija, format: 'avif'})
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={frontmatter.naslov} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <Header />
-    <div class="title" style={`background-image: url(${slavija.src});`}>
-      <h1>{frontmatter.naslov}</h1>
-    </div>
-    <div>
-      <section class="container-main">
-        <Pocetna />
-      </section>
+<Base {lang} title={frontmatter.naslov} description={SITE_DESCRIPTION} image={slavija.src}>
+  <div slot="above" class="title" style={`background-image: url(${optimizedSlavija.src});`}>
+    {typeof live !== "undefined" && 
+      <Live href={`/${lang}/vesti/${live.id}`}>{live.data.title}</Live>
+    }
+
+    <h1>{frontmatter.naslov}</h1>
+  </div>
+
+  <section>
+    <Pocetna />
+  </section>
 
       <section class="container-main">
         <Zahtevi />
@@ -194,6 +179,12 @@ const akcije = akcijeData.map((x) => ({
 
   p {
     text-align: justify;
+  }
+
+  .title .live {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
   }
   button {
     cursor: pointer;

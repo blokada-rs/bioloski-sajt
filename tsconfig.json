@@ -9,6 +9,7 @@
       "@assets/*": ["assets/*"],
       "@content/*": ["content/*"],
       "@scripts/*": ["scripts/*"],
+      "@layouts/*": ["layouts/*"],
       "@components/*": ["components/*"]
     }
   }

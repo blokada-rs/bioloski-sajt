@@ -1,96 +1,95 @@
 ---
+import Base from "./Base.astro";
 import type { CollectionEntry } from "astro:content";
-import { Image } from "astro:assets";
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import { Picture } from "astro:assets";
 import FormattedDate from "../components/FormattedDate.astro";
+import Live from "@components/Live.astro";
+import Timeline from "@components/Timeline.astro";
+import { file } from "@scripts/i18n";
 
-type Props = CollectionEntry<"vesti">["data"];
+type Props = CollectionEntry<"vesti">["data"] & {lang: string, live?: boolean};
 
-const { title, pubDate, updatedDate, heroImage } = Astro.props;
+const { lang, title, pubDate, updatedDate, heroImage, live = false, timeline } = Astro.props;
+
+const { frontmatter } = await file("ostalo", lang);
 ---
 
-<html lang="en">
-  <head>
-    <BaseHead title={title} description={title} />
-    <style>
-      main {
-        width: calc(100% - 2em);
-        max-width: 100%;
-        margin: 0;
+<Base {lang} title={title} description={title} image={heroImage.src}>
+  <article>
+    <div class="hero-image">
+      {
+        heroImage && (
+          <Picture formats={['avif', 'webp']} width={1020} src={heroImage} loading="eager" alt="" />
+        )
       }
-      .hero-image {
-        width: 100%;
-      }
-      .hero-image img {
-        display: block;
-        margin: 0 auto;
-        border-radius: 12px;
-        box-shadow: var(--box-shadow);
-      }
-      .prose {
-        width: 720px;
-        max-width: calc(100% - 2em);
-        margin: auto;
-        padding: 1em;
-        color: rgb(var(--gray-dark));
-      }
-      .title {
-        margin-bottom: 1em;
-        padding: 1em 0;
-        text-align: center;
-        line-height: 1;
-      }
-      .title h1 {
-        margin: 0 0 0.5em 0;
-      }
-      .date {
-        margin-bottom: 0.5em;
-        color: rgb(var(--gray));
-      }
-      .last-updated-on {
-        font-style: italic;
-      }
-
-      @media (max-width: 500px) {
-        .title h1 {
-          font-size: 8vw;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <Header />
-    <main>
-      <article>
-        <div class="hero-image">
+    </div>
+    <div class="prose">
+      <div class="title">
+        <div class="about">
+          {live && <Live>{frontmatter.live}</Live>}
+          {pubDate && <FormattedDate date={pubDate} />}
           {
-            heroImage && (
-              <Image width={1020} src={heroImage} loading="eager" alt="" />
+            updatedDate && (
+              <div class="last-updated-on">
+                Last updated on <FormattedDate date={updatedDate} />
+              </div>
             )
           }
         </div>
-        <div class="prose">
-          <div class="title">
-            <div class="date">
-              {pubDate && <FormattedDate date={pubDate} />}
-              {
-                updatedDate && (
-                  <div class="last-updated-on">
-                    Last updated on <FormattedDate date={updatedDate} />
-                  </div>
-                )
-              }
-            </div>
-            <h1>{title}</h1>
-            <hr />
-          </div>
-          <slot />
-        </div>
-      </article>
-    </main>
-    <Footer />
-  </body>
-</html>
+        <h1>{title}</h1>
+        <hr />
+      </div>
+      
+      <Timeline {timeline} />
+      
+      <slot />
+    </div>
+  </article>
+</Base>
+
+<style>
+  .hero-image {
+    width: 100%;
+  }
+  .hero-image img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+  }
+  .prose {
+    color: rgb(var(--gray-dark));
+  }
+  .prose > :global(p) > :global(img) {
+    width: 720px;
+    max-width: calc(100% - 2em);
+    display: block;
+    margin-inline: auto;
+  }
+  .title {
+    margin-bottom: 1em;
+    padding: 1em 0;
+    text-align: center;
+    line-height: 1;
+  }
+  .title h1 {
+    margin: 0 0 0.5em 0;
+  }
+  .about {
+    margin-bottom: 0.5em;
+    color: rgb(var(--gray));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .last-updated-on {
+    font-style: italic;
+  }
+
+  @media (max-width: 500px) {
+    .title h1 {
+      font-size: 8vw;
+    }
+  }
+</style>
