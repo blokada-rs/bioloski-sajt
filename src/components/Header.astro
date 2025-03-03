@@ -23,27 +23,27 @@ const jezik = (jezik: string) => {
 	<nav>
 		<h2><a href=`/${lang}`>{frontmatter.naslov}</a></h2>
 
-		<button class="mobile" popovertarget="menu-links" style={`height: ${ICON_SIZE_LG}px;`}>
+		<button aria-label="Open navigation menu" class="mobile" popovertarget="menu-links" style={`height: ${ICON_SIZE_LG}px;`}>
 			<Icon name="mdi:hamburger-menu" size={ICON_SIZE_LG} />
 		</button>
 
 		<div id="menu-links" popover>
 			<nav class="internal-links">
-				<button class="mobile" popovertarget="menu-links" popovertargetaction="hide" style={`height: ${ICON_SIZE_MD}px;`}>
+				<button aria-label="Close navigation menu" class="mobile" popovertarget="menu-links" popovertargetaction="hide" style={`height: ${ICON_SIZE_MD}px;`}>
 					<Icon name="mdi:close" size={ICON_SIZE_MD} />
 				</button>
 				{frontmatter.linkovi.map(({naziv, link}: {naziv: string, link: string}) => 
 					<HeaderLink href={`/${lang}${link}`}>{naziv}</HeaderLink>
 				)}
 
-				<button class="icon" popovertarget="translate">
+				<button aria-label="Open website language list" class="icon" popovertarget="translate">
 					<Icon name="mdi:translate" size={ICON_SIZE_LG} />
 				</button>
 			</nav>
 		</div>
 
 		<div id="translate" popover>
-			<button popovertarget="translate" popovertargetaction="hide" style={`height: ${ICON_SIZE_MD}px;`}>
+			<button aria-label="Close website language list" popovertarget="translate" popovertargetaction="hide" style={`height: ${ICON_SIZE_MD}px;`}>
 				<Icon name="mdi:close" size={ICON_SIZE_MD} />
 			</button>
 			<ul>
