@@ -24,7 +24,7 @@ export async function getStaticPaths() {
           <li>
             <a href={`/${lang}/akcije/${post.id}/`}>
               <Picture formats={['avif', 'webp']} width={720} src={post.data.heroImage} loading="eager" alt="" />
-              <h4 class="title">{post.data.title}</h4>
+              <h2 class="title">{post.data.title}</h2>
               <p class="date">
                 <FormattedDate date={post.data.pubDate} />
               </p>

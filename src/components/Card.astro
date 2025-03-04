@@ -1,6 +1,5 @@
 ---
 import FormattedDate from "./FormattedDate.astro";
-import { CARD_MAX_SUBTITLE_LENGTH } from "consts";
 
 interface Props {
   title: string;
@@ -11,23 +10,15 @@ interface Props {
 }
 
 const { title, subtitle, thumbnail, link, date } = Astro.props;
-const truncatedSubtitle =
-  subtitle.length > CARD_MAX_SUBTITLE_LENGTH
-    ? subtitle.substring(0, CARD_MAX_SUBTITLE_LENGTH) + "..."
-    : subtitle;
 ---
 
 <article class="card">
-  <a href={link} class="card-link">
-    <img src={thumbnail} alt={title} class="card-thumbnail" loading="lazy" />
-    <div class="card-content">
-      <div class="card-text">
-        <h3 class="card-title">{title}</h3>
-        <p class="card-subtitle">{truncatedSubtitle}</p>
-      </div>
-      <div class="card-footer">
-        <FormattedDate date={date} />
-      </div>
+  <a href={link} class="clear card-link">
+    <img src={thumbnail} alt={title} class="thumbnail" loading="lazy" />
+    <div class="content">
+      <h3>{title}</h3>
+      <FormattedDate date={date} />
+      <p class="subtitle">{subtitle}</p>
     </div>
   </a>
 </article>
@@ -46,45 +37,29 @@ const truncatedSubtitle =
   }
 
   .card-link {
-    text-decoration: none;
-    color: inherit;
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     height: 100%;
   }
 
-  .card-thumbnail {
+  .thumbnail {
     width: 100%;
-    height: 180px;
+    aspect-ratio: 3/2;
     object-fit: cover;
   }
 
-  .card-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 8px;
-  }
-
-  .card-subtitle {
-    font-size: 0.9rem;
-    color: #666;
-  }
-
-  .card-content {
+  .content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Pushes footer to the bottom */
     flex-grow: 1;
-    padding: 16px;
+      padding: 1rem;
   }
 
-  .card-text {
-    flex-grow: 1; /* Allows subtitle and title to take up space */
-  }
-
-  .card-footer {
-    font-size: 0.8rem;
-    color: #999;
-    margin-top: auto; /* Ensures it sticks to the bottom */
+  .subtitle {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+      overflow: hidden;
   }
 </style>

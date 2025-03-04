@@ -25,7 +25,6 @@ const newestPosts = posts
 ---
 
 <section class="recent-posts">
-
   <h2 class="section-title">{title}</h2>
   {subtitle && <div class="title-container"><p class="section-subtitle">{subtitle}</p></div>}
   <div class="posts-container">
@@ -38,30 +37,15 @@ const newestPosts = posts
 
 <style>
   .title-container{
+    margin-bottom: 1rem;
     width:100%;
   }
+
   .recent-posts {
     width: 100%;
-    max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 0px;
-  }
-
-  .section-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 24px;
-  }
-
-  .section-subtitle {
-    max-width: 700px;
-    font-size: 1rem;
-    color: #666;
-    text-align: center;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    flex-direction: column;
   }
 
   .posts-container {
@@ -73,6 +57,7 @@ const newestPosts = posts
   .posts-container-mobile {
     display: block;
   }
+
   @media (min-width: 750px) {
     .posts-container{
       display: grid;

@@ -21,7 +21,7 @@ const jezik = (jezik: string) => {
 
 <header>
 	<nav>
-		<h2><a href=`/${lang}`>{frontmatter.naslov}</a></h2>
+		<a class="title" href=`/${lang}`>{frontmatter.naslov}</a>
 
 		<button aria-label="Open navigation menu" class="mobile" popovertarget="menu-links" style={`height: ${ICON_SIZE_LG}px;`}>
 			<Icon name="mdi:hamburger-menu" size={ICON_SIZE_LG} />
@@ -66,10 +66,8 @@ const jezik = (jezik: string) => {
 		z-index: 100;
 	}
 
-	h2 {
-		margin: 0;
-		font-size: 1em;
-		padding-block: 1em;
+	.title {
+		font-weight: bold;
 	}
 
 	nav {
@@ -83,6 +81,10 @@ const jezik = (jezik: string) => {
 		color: var(--black);
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
+	}
+
+	nav a:hover {
+		background-color: rgba(0, 0, 0, 0.05);
 	}
 
 	nav button {	
@@ -166,6 +168,7 @@ const jezik = (jezik: string) => {
 	}
 
 	#translate {
+		margin: auto;
 		transition: translate 0.2s;
 		padding: 1rem;
 		border-radius: 0.5rem;
