@@ -9,5 +9,17 @@ export default defineConfig({
 	integrations: [sitemap(), icon()],
 	redirects: {
 		'/sub': '/sr-lat/linkovi/studenti_u_blokadi',
+		'/': '/sr-lat'
+	},
+	i18n: {
+		locales: ["sr", "sr-lat", "en"],
+		defaultLocale: "sr",
+		fallback: {
+			en: "sr-lat"
+		},
+		routing: {
+			prefixDefaultLocale: false,
+			fallbackType: "rewrite"
+		}
 	}
 });

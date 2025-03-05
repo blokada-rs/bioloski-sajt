@@ -1,7 +1,7 @@
 ---
 import Base from "@layouts/Base.astro";
 import { collection, file, langs } from "@scripts/i18n";
-import { Image } from "astro:assets";
+import { Picture, getImage } from "astro:assets";
 
 import { SITE_DESCRIPTION } from "../../consts";
 import indeks from "@assets/images/indeks.jpg";
@@ -20,10 +20,13 @@ const { Content: Zahtevi } = await file("zahtevi", lang);
 const { frontmatter } = await file("ostalo", lang);
 
 const live = (await collection("vesti", lang)).find(vest => vest.data.live);
+
+
+const optimizedSlavija = await getImage({src: slavija, format: 'avif'})
 ---
 
 <Base {lang} title={frontmatter.naslov} description={SITE_DESCRIPTION} image={slavija.src}>
-  <div slot="above" class="title" style={`background-image: url(${slavija.src});`}>
+  <div slot="above" class="title" style={`background-image: url(${optimizedSlavija.src});`}>
     {typeof live !== "undefined" && 
       <Live href={`/${lang}/vesti/${live.id}`}>{live.data.title}</Live>
     }
@@ -36,9 +39,9 @@ const live = (await collection("vesti", lang)).find(vest => vest.data.live);
   </section>
 
   <div class="collage">
-    <Image class="megafon" loading="eager" src={megafon} alt="" />
-    <Image class="indeks" loading="eager" src={indeks} alt="" />
-    <Image class="zastava" loading="eager" src={zastava} alt="" />
+    <Picture formats={['avif', 'webp']} pictureAttributes={{class: "megafon"}} loading="eager" src={megafon} alt="" />
+    <Picture formats={['avif', 'webp']} pictureAttributes={{class: "indeks"}} loading="eager" src={indeks} alt="" />
+    <Picture formats={['avif', 'webp']} pictureAttributes={{class: "zastava"}} loading="eager" src={zastava} alt="" />
   </div>
 
   <section>

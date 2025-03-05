@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content'
 import FormattedDate from './FormattedDate.astro';
-import { Image } from 'astro:assets';
+import { Picture } from 'astro:assets';
 import { Markdown } from '@astropub/md';
 
 type Props = {timeline: CollectionEntry<"vesti">["data"]["timeline"]};
@@ -14,10 +14,16 @@ const { timeline } = Astro.props;
         <article>
           <h3>{post.naslov}</h3>
           <FormattedDate date={post.datum} time />
-          {post.slike.length > 0 && 
+          {(post.slike.length > 0 || (post.video?.length ?? 0) > 0) && 
             <div class="slike">
+              {(post.video?.length ?? 0) > 0 && 
+                <iframe 
+                  src={`https://www.youtube-nocookie.com/embed/${post.video}`} 
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen 
+                />
+              }
               {post.slike.map(slika => 
-                <Image src={slika} alt="" />
+                <Picture formats={['avif', 'webp']} src={slika} alt="" />
               )}
             </div>
           }
@@ -82,5 +88,12 @@ const { timeline } = Astro.props;
 
   .slike img {
     width: 100%;
+  }
+
+  iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 8px;
   }
 </style>

@@ -4,18 +4,22 @@ import { ICON_SIZE_LG } from "consts";
 const today = new Date();
 const socialIcons = [
   {
+    label: "Instagram",
     icon: "mdi:instagram",
     link: "https://instagram.com/studenti_u_blokadi",
   },
   {
-    icon: "mdi:facebook",
-    link: "https://www.facebook.com/people/Studenti-u-blokadi-UB/61571631694236/",
-  },
-  {
+    label: "Twitter",
     icon: "mdi:twitter",
     link: "https://x.com/studentblokade",
   },
   {
+    label: "Facebook",
+    icon: "mdi:facebook",
+    link: "https://www.facebook.com/people/Studenti-u-blokadi-UB/61571631694236/",
+  },
+  {
+    label: "Github",
     icon: "mdi:github",
     link: "https://github.com/blokada-rs/sajt",
   },
@@ -27,8 +31,8 @@ const socialIcons = [
     <div>Blokade fakulteta {today.getFullYear()}.</div>
     <div class="social-links">
       {
-        socialIcons.map(({ icon, link }) => (
-          <a href={link} target="_blank" rel="noopener noreferrer" style={`height: ${ICON_SIZE_LG}px;`}>
+        socialIcons.map(({ label, icon, link }) => (
+          <a aria-label={label} href={link} target="_blank" rel="noopener noreferrer" style={`height: ${ICON_SIZE_LG}px;`}>
             <Icon name={icon} size={ICON_SIZE_LG} class="icon" />
           </a>
         ))

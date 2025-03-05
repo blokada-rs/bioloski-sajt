@@ -12,6 +12,7 @@ const vesti = defineCollection({
 		timeline: z.object({
 			naslov: z.string(),
 			datum: z.coerce.date(),
+			video: z.string().optional(),
 			slike: image().array(),
 			tekst: z.string().optional()
 		}).array().optional()
@@ -33,7 +34,7 @@ const linkovi = defineCollection({
 		link: z.string(),
 		linkovi: z.object({
 			ikonica: z.enum([
-				"bez", "web", "instagram", "twitter", 
+				"bez", "web", "instagram", "twitter", "at",
 				"facebook", "youtube", "viber", "newspaper", "hand-coin"
 			]),
 			naslov: z.string(),

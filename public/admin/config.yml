@@ -126,6 +126,7 @@ collections:
               - { label: "YouTube", value: "youtube" }
               - { label: "Viber", value: "viber" }
               - { label: "Vesti", value: "newspaper" }
+              - { label: "Mejl", value: "at" }
               - { label: "Donacije", value: "hand-coin" }
             default: "Bez"
 
@@ -170,6 +171,7 @@ collections:
         fields:
           - { label: "Naslov", name: "naslov", widget: "string" }
           - { label: "Datum", name: "datum", widget: "datetime", picker_utc: true }
+          - { label: "Video ID", name: "video", widget: "string", required: false }
           - label: "Slike"
             name: "slike"
             widget: "list"
