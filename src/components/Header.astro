@@ -30,7 +30,7 @@ const jezik = (jezik: string) => {
 		<div id="menu-links" popover>
 			<nav class="internal-links">
 				<button aria-label="Close navigation menu" class="mobile" popovertarget="menu-links" popovertargetaction="hide" style={`height: ${ICON_SIZE_MD}px;`}>
-					<Icon name="mdi:close" size={ICON_SIZE_MD} />
+					<Icon name="mdi:close" size={ICON_SIZE_LG} />
 				</button>
 				{frontmatter.linkovi.map(({naziv, link}: {naziv: string, link: string}) => 
 					<HeaderLink href={`/${lang}${link}`}>{naziv}</HeaderLink>
@@ -43,10 +43,12 @@ const jezik = (jezik: string) => {
 		</div>
 
 		<div id="translate" popover>
-			<button aria-label="Close website language list" popovertarget="translate" popovertargetaction="hide" style={`height: ${ICON_SIZE_MD}px;`}>
-				<Icon name="mdi:close" size={ICON_SIZE_MD} />
-			</button>
 			<ul>
+				<li>
+					<button aria-label="Close website language list" popovertarget="translate" popovertargetaction="hide" style={`height: ${ICON_SIZE_MD}px;`}>
+						<Icon name="mdi:close" size={ICON_SIZE_MD} />
+					</button>
+				</li>
 				<li><a href={jezik("sr")}>Српски (ћирилица)</a></li>
 				<li><a href={jezik("sr-lat")}>Srpski (latinica)</a></li>
 				<li><a href={jezik("en")}>English</a></li>
@@ -158,13 +160,23 @@ const jezik = (jezik: string) => {
 	}
 
 	#menu-links:popover-open nav {
-		padding: 2rem;
+		padding-block: 1rem;
 		flex-direction: column;
-		align-items: start;
+		align-items: stretch;
 	}
 
 	#menu-links:popover-open a {
-		padding-bottom: 0;
+		padding-inline: 2rem;
+		border-bottom: 4px solid transparent;
+		border-left: 4px solid transparent;
+	}
+
+	#menu-links:popover-open a.active {
+		border-left-color: var(--accent);
+	}
+
+	#menu-links:popover-open button {
+		padding: .5rem 2rem;
 	}
 
 	#translate {
@@ -209,12 +221,12 @@ const jezik = (jezik: string) => {
     #translate a:hover {
         filter: opacity(0.5);
     }
-	
-	button[popovertarget="translate"] {
-		margin-top: 0.5rem;
+
+	button:hover :global(svg) {
+		color: var(--accent-dark);
 	}
 
-	@media (min-width: 750px) {
+	@media (min-width: 850px) {
 		#menu-links {
 			display: contents;
 		}

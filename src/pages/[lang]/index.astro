@@ -6,7 +6,8 @@ import { getImage } from "astro:assets";
 import { SITE_DESCRIPTION } from "../../consts";
 import slavija from "@assets/images/slavija.jpg";
 import Live from "@components/Live.astro";
-import RecentPosts from "@components/RecentPosts.astro";
+import Slider from "../../components/Slider.astro";
+import Card from "../../components/Card.astro";
 
 export async function getStaticPaths() {
   return langs.map((lang) => ({ params: { lang } }));
@@ -19,23 +20,8 @@ const { frontmatter } = await file("ostalo", lang);
 const live = (await collection("vesti", lang)).find((vest) => vest.data.live);
 const optimizedSlavija = await getImage({ src: slavija, format: "avif" });
 
-const newsData = await collection("vesti", lang);
-const news = newsData.map((x) => ({
-  title: x.data.title,
-  subtitle: x.body as string,
-  thumbnail: x.data.heroImage.src,
-  link: `/${lang}/vesti/${x.id}/`,
-  date: x.data.pubDate,
-}));
-
-const akcijeData = await collection("akcije", lang);
-const akcije = akcijeData.map((x) => ({
-  title: x.data.title,
-  subtitle: x.body as string,
-  thumbnail: x.data.heroImage.src,
-  link: `/${lang}/akcije/${x.id}/`,
-  date: x.data.pubDate,
-}));
+const vesti = await collection("vesti", lang);
+const akcije = await collection("akcije", lang);
 ---
 
 <Base
@@ -49,10 +35,8 @@ const akcije = akcijeData.map((x) => ({
     class="title"
     style={`background-image: url(${optimizedSlavija.src});`}
   >
-    {
-      typeof live !== "undefined" && (
-        <Live href={`/${lang}/vesti/${live.id}`}>{live.data.title}</Live>
-      )
+    {typeof live !== "undefined" &&
+      <Live href={`/${lang}/vesti/${live.id}`}>{live.data.title}</Live>
     }
 
     <h1>{frontmatter.naslov}</h1>
@@ -66,29 +50,30 @@ const akcije = akcijeData.map((x) => ({
     <Zahtevi />
   </section>
 
-  <section class="gap">
-    <RecentPosts
-      title={frontmatter.najnovije_vesti}
-      subtitle={frontmatter.vesti_podnaslov}
-      posts={news}
-      numPosts={3}
-      key="recentNews"
-    />
-    <a href=`/${lang}/vesti` class="button primary end">{frontmatter.dugme_vesti}</a>
-  </section>
 
-  <div class="dark-post">
+  <div class="dark-background full-width">
     <section class="gap">
-      <RecentPosts
-        title={frontmatter.najnovije_akcije}
-        subtitle={frontmatter.najnovije_akcije_podnaslov}
-        posts={akcije}
-        numPosts={3}
-        key="recentArchive"
-      />
-      <a href=`/${lang}/akcije` class="button primary end">{frontmatter.dugme_akcije}</a>
+      <h2>{frontmatter.najnovije_vesti}</h2>
+      {frontmatter.vesti_podnaslov && <p class="section-subtitle">{frontmatter.vesti_podnaslov}</p>}
+      <Slider>
+        {vesti.slice(0, 3).map(post =>
+          <Card link=`/${lang}/vesti/${post.id}` {...post} />)
+        }
+        <a slot="button" href=`/${lang}/vesti` class="button primary dugme">{frontmatter.dugme_vesti}</a>
+      </Slider>
     </section>
   </div>
+
+  <section class="gap">
+    <h2>{frontmatter.najnovije_akcije}</h2>
+    {frontmatter.najnovije_akcije_podnaslov && <p class="section-subtitle">{frontmatter.vesti_podnaslov}</p>}
+    <Slider>
+      {akcije.slice(0, 3).map(post =>
+        <Card link=`/${lang}/akcije/${post.id}` {...post} />)
+      }
+      <a slot="button" href=`/${lang}/akcije` class="button primary dugme">{frontmatter.dugme_akcije}</a>
+    </Slider>
+  </section>
 </Base>
 
 <style>
@@ -132,17 +117,20 @@ const akcije = akcijeData.map((x) => ({
     left: 2rem;
   }
 
-  a.button {
-      margin-top: 2rem;
-  }
-
   .gap {
     display: flex;
     flex-direction: column;
     align-items: start;
   }
 
-  .end {
-      align-self: end;
+  .dugme {
+      align-self: center;
+      padding: 1rem 2rem;
+      border-radius: 0.5rem;
+  }
+
+  .dark-background {
+      background-color: hsl(0, 0%, 95%);
+      padding-block: 2rem;
   }
 </style>

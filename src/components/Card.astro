@@ -1,50 +1,43 @@
 ---
 import FormattedDate from "./FormattedDate.astro";
+import { type CollectionEntry } from "astro:content";
+import {Picture} from "astro:assets";
 
-interface Props {
-  title: string;
-  subtitle: string;
-  thumbnail: string;
-  link: string;
-  date: Date;
-}
+type Props = CollectionEntry<'vesti' | 'akcije'> & { link: string };
 
-const { title, subtitle, thumbnail, link, date } = Astro.props;
+const { body, data, link } = Astro.props;
 ---
 
 <article class="card">
-  <a href={link} class="clear card-link">
-    <img src={thumbnail} alt={title} class="thumbnail" loading="lazy" />
+  <a href={link} class="clear">
+    <Picture class="thumbnail" formats={['avif', 'webp']} width={1020} src={data.heroImage} alt="" />
     <div class="content">
-      <h3>{title}</h3>
-      <FormattedDate date={date} />
-      <p class="subtitle">{subtitle}</p>
+      <FormattedDate date={data.pubDate} />
+      <h3>{data.title}</h3>
+      <p class="subtitle">{body}</p>
     </div>
   </a>
 </article>
 
 <style>
-  .card {
+  a {
     background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-  }
-
-  .card:hover {
-    transform: translateY(-5px);
-  }
-
-  .card-link {
     cursor: pointer;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     height: 100%;
+
+    transition: box-shadow 0.3s;
+  }
+
+  a:hover {
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
   }
 
   .thumbnail {
-    width: 100%;
     aspect-ratio: 3/2;
     object-fit: cover;
   }
@@ -53,13 +46,13 @@ const { title, subtitle, thumbnail, link, date } = Astro.props;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-      padding: 1rem;
+    padding: 1rem;
   }
 
   .subtitle {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-      overflow: hidden;
+    overflow: hidden;
   }
 </style>
