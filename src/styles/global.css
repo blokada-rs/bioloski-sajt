@@ -101,6 +101,7 @@ strong {
     border: 1px solid black;
     border-radius: 3px;
     padding: 0.4em 0.6rem;
+    user-select: none;
 }
 
 :where(button:not(.link):not(.clear), a.button):hover {
