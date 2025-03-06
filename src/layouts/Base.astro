@@ -3,6 +3,8 @@ import BaseHead from "@components/BaseHead.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 
+import { langs } from "@scripts/i18n";
+
 interface Props {
 	title: string;
 	description: string;
@@ -14,8 +16,28 @@ const { title, description, lang, image } = Astro.props;
 ---
 
 <!doctype html>
-<html {lang}>
+<html {lang} data-langs={JSON.stringify(langs.filter(lang => typeof lang !== "undefined"))}>
     <head>
+        <script>
+            (() => {
+                const langs = JSON.parse(document.documentElement.dataset.langs!!) as string[];
+                const shouldRedirect = !langs.some(lang =>
+                  window.location.pathname.startsWith(`/${lang}/`) || window.location.pathname === `/${lang}`);
+
+                if (!shouldRedirect) {
+                    localStorage.setItem("lang", document.documentElement.lang);
+                    return;
+                }
+
+                const lang = localStorage.getItem("lang");
+                if (lang !== null) {
+                    window.location.replace(`/${lang}${window.location.pathname}`);
+                    return;
+                }
+
+                window.location.replace(`/sr${window.location.pathname}`);
+            })()
+        </script>
         <BaseHead {title} {description} {image} />
         <slot name="head" />
     </head>

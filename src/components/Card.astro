@@ -1,0 +1,62 @@
+---
+import FormattedDate from "./FormattedDate.astro";
+import { type CollectionEntry } from "astro:content";
+import {Picture} from "astro:assets";
+
+type Props = CollectionEntry<'vesti' | 'akcije'> & { link: string };
+
+const { body, data, link } = Astro.props;
+---
+
+<article class="card">
+  <a href={link} class="clear">
+    <Picture class="thumbnail" formats={['avif', 'webp']} width={1020} src={data.heroImage} alt="" />
+    <div class="content">
+      <FormattedDate date={data.pubDate} />
+      <h3>{data.title}</h3>
+      <p class="subtitle">{body}</p>
+    </div>
+  </a>
+</article>
+
+<style>
+  a {
+    background: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    transition: box-shadow 0.3s;
+  }
+
+  a:hover {
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .thumbnail {
+    aspect-ratio: 3/2;
+    object-fit: cover;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 1rem;
+  }
+
+  .subtitle {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>

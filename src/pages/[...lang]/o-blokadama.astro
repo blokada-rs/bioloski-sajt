@@ -8,9 +8,15 @@ export async function getStaticPaths() {
 }
 
 const { lang } = Astro.params;
+if (typeof lang === "undefined") {
+  return Astro.rewrite(`/sr${Astro.url.pathname}`);
+}
+
 const { Content } = await file("oblokadama", lang);
 ---
 
 <Base {lang} title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <Content />
+  <section>
+    <Content />
+  </section>
 </Base>

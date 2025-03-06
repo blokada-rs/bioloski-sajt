@@ -1,0 +1,91 @@
+---
+import Base from "@layouts/Base.astro";
+import { SITE_DESCRIPTION } from "../../consts";
+
+import { file, langs } from "@scripts/i18n";
+export async function getStaticPaths() {
+  return langs.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+if (typeof lang === "undefined") {
+  return Astro.rewrite(`/sr${Astro.url.pathname}`);
+}
+
+const { frontmatter } = await file("ostalo", lang);
+---
+
+<Base {lang} title={frontmatter.naslov} description={SITE_DESCRIPTION}>
+  <!-- <h1>{frontmatter.kontakt}</h1> -->
+  <section>
+    <h2>{frontmatter.studenti_u_blokadi}</h2>
+    <div class="nalozi">
+      <a class="button" href="https://instagram.com/studenti_u_blokadi">Instagram</a>
+      <a class="button" href="https://www.facebook.com/people/Studenti-u-blokadi-UB/61571631694236/">Facebook</a>
+      <a class="button" href="https://x.com/studentblokade">Twitter</a>
+    </div>
+  </section>
+  <section>
+    <h2>{frontmatter.pojedinacni_fakulteti}</h2>
+    <div class="nalozi">
+        <a class="button" href="https://www.instagram.com/blokada.arh.bg">Arhitektonski</a>
+        <a class="button" href="https://www.instagram.com/blokada.fb">Bezbednosti</a>
+        <a class="button" href="https://www.instagram.com/blokada.bioloski">Biološki</a>
+        <a class="button" href="https://www.instagram.com/ekof.blokada">Ekonomski</a>
+        <a class="button" href="https://www.instagram.com/etfublokadi">Elektrotehnički</a>
+        <a class="button" href="https://www.instagram.com/blokada.ffubg">Farmaceutski</a>
+        <a class="button" href="https://www.instagram.com/filoloski.blokada">Filološki</a>
+        <a class="button" href="https://www.instagram.com/filozofi.u.blokadi">Filozofski</a>
+        <a class="button" href="https://www.instagram.com/blokadaffh">Fizička Hemija</a>
+        <a class="button" href="https://www.instagram.com/fizika_u_blokadi">Fizički</a>
+        <a class="button" href="https://www.instagram.com/blokada.gef">Geografski</a>
+        <a class="button" href="https://www.instagram.com/grf.blokade">Građevinski</a>
+        <a class="button" href="https://www.instagram.com/blokada.hf">Hemijski</a>
+        <a class="button" href="https://www.instagram.com/blokada.matf">Matematički</a>
+        <a class="button" href="https://www.instagram.com/masinci.u.blokadi">Mašinski</a>
+        <a class="button" href="https://www.instagram.com/blokada.mfub">Medicinski</a>
+        <a class="button" href="https://www.instagram.com/blokada_uf">Obrazovanje učitelja i vaspitača</a>
+        <a class="button" href="https://www.instagram.com/blokada.fon">Organizacione nauke</a>
+        <a class="button" href="https://www.instagram.com/blokada.fpn">Političke nauke</a>
+        <a class="button" href="https://www.instagram.com/poljprivredniblokada">Poljoprivredni</a>
+        <a class="button" href="https://www.instagram.com/blokada_pravni">Pravni</a>
+        <a class="button" href="#">Pravoslavni bogoslovski</a>
+        <a class="button" href="https://www.instagram.com/rafublokadi/">Računarski</a>
+        <a class="button" href="https://www.instagram.com/blokada.rgf">Rudarsko-geološki</a>
+        <a class="button" href="https://www.instagram.com/blokada.sfbg">Saobraćajni</a>
+        <a class="button" href="https://www.instagram.com/fasper_blokada">Specijalna edukacija i rehabilitacija</a>
+        <a class="button" href="https://www.instagram.com/dif.blokada">Sport i fizičko vaspitanje</a>
+        <a class="button" href="https://www.instagram.com/stomfbg_blokada">Stomatološki</a>
+        <a class="button" href="#">Tehnički u Boru</a>
+        <a class="button" href="https://www.instagram.com/tmf.blokada">Tehnološko-metalurški</a>
+        <a class="button" href="https://www.instagram.com/fvm_blokade">Veterinarska medicina</a>
+        <a class="button" href="https://www.instagram.com/blokada.sumarski">Šumarski</a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .nalozi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .button {
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  @media (max-width: 500px) {
+    .nalozi {
+      gap: 0.5rem;
+    }
+
+    a {
+      padding: 0.5rem 1rem;
+    }
+  }
+
+</style>

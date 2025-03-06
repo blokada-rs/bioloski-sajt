@@ -2,7 +2,7 @@
 import { langs, file } from '@scripts/i18n';
 import HeaderLink from './HeaderLink.astro';
 import { Icon } from "astro-icon/components";
-import { ICON_SIZE_LG, ICON_SIZE_MD } from 'consts';
+import { ICON_SIZE_LG } from 'consts';
 
 const { lang } = Astro.params;
 
@@ -10,7 +10,10 @@ const { frontmatter } = await file("zaglavlje", lang);
 
 const jezik = (jezik: string) => {
 	let url = Astro.url.pathname.toString();
-	const jezici = langs.sort((a: string, b: string) => b.length - a.length)
+	const jezici = langs
+		.filter(a => typeof a !== "undefined")
+		.sort((a: string, b: string) => b.length - a.length);
+
 	for (const lang of jezici) {
 		url = url.replace(`/${lang}`, '');
 	}
@@ -21,16 +24,16 @@ const jezik = (jezik: string) => {
 
 <header>
 	<nav>
-		<h2><a href=`/${lang}`>{frontmatter.naslov}</a></h2>
+		<a class="title" href=`/${lang}`>{frontmatter.naslov}</a>
 
-		<button aria-label="Open navigation menu" class="mobile" popovertarget="menu-links" style={`height: ${ICON_SIZE_LG}px;`}>
+		<button aria-label="Open navigation menu" class="mobile center" popovertarget="menu-links">
 			<Icon name="mdi:hamburger-menu" size={ICON_SIZE_LG} />
 		</button>
 
 		<div id="menu-links" popover>
 			<nav class="internal-links">
-				<button aria-label="Close navigation menu" class="mobile" popovertarget="menu-links" popovertargetaction="hide" style={`height: ${ICON_SIZE_MD}px;`}>
-					<Icon name="mdi:close" size={ICON_SIZE_MD} />
+				<button aria-label="Close navigation menu" class="mobile" popovertarget="menu-links" popovertargetaction="hide">
+					<Icon name="mdi:close" size={ICON_SIZE_LG} />
 				</button>
 				{frontmatter.linkovi.map(({naziv, link}: {naziv: string, link: string}) => 
 					<HeaderLink href={`/${lang}${link}`}>{naziv}</HeaderLink>
@@ -43,10 +46,12 @@ const jezik = (jezik: string) => {
 		</div>
 
 		<div id="translate" popover>
-			<button aria-label="Close website language list" popovertarget="translate" popovertargetaction="hide" style={`height: ${ICON_SIZE_MD}px;`}>
-				<Icon name="mdi:close" size={ICON_SIZE_MD} />
-			</button>
 			<ul>
+				<li>
+					<button aria-label="Close website language list" popovertarget="translate" popovertargetaction="hide">
+						<Icon name="mdi:close" size={ICON_SIZE_LG} />
+					</button>
+				</li>
 				<li><a href={jezik("sr")}>Српски (ћирилица)</a></li>
 				<li><a href={jezik("sr-lat")}>Srpski (latinica)</a></li>
 				<li><a href={jezik("en")}>English</a></li>
@@ -66,10 +71,8 @@ const jezik = (jezik: string) => {
 		z-index: 100;
 	}
 
-	h2 {
-		margin: 0;
-		font-size: 1em;
-		padding-block: 1em;
+	.title {
+		font-weight: bold;
 	}
 
 	nav {
@@ -79,10 +82,14 @@ const jezik = (jezik: string) => {
 	}
 
 	nav a {
-		padding: 1em 0.75em;
+		padding: 1rem 0.75rem;
 		color: var(--black);
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
+	}
+
+	nav a:hover {
+		background-color: rgba(0, 0, 0, 0.05);
 	}
 
 	nav button {	
@@ -156,16 +163,27 @@ const jezik = (jezik: string) => {
 	}
 
 	#menu-links:popover-open nav {
-		padding: 2rem;
+		padding-block: 1rem;
 		flex-direction: column;
-		align-items: start;
+		align-items: stretch;
 	}
 
 	#menu-links:popover-open a {
-		padding-bottom: 0;
+		padding: 0.5rem 2rem;
+		border-bottom: 4px solid transparent;
+		border-left: 4px solid transparent;
+	}
+
+	#menu-links:popover-open a.active {
+		border-left-color: var(--accent);
+	}
+
+	#menu-links:popover-open button {
+		padding: .5rem 2rem;
 	}
 
 	#translate {
+		margin: auto;
 		transition: translate 0.2s;
 		padding: 1rem;
 		border-radius: 0.5rem;
@@ -206,12 +224,17 @@ const jezik = (jezik: string) => {
     #translate a:hover {
         filter: opacity(0.5);
     }
-	
-	button[popovertarget="translate"] {
-		margin-top: 0.5rem;
+
+	button:hover :global(svg) {
+		color: var(--accent-dark);
 	}
 
-	@media (min-width: 750px) {
+	.center {
+		display: grid;
+		place-content: center;
+	}
+
+	@media (min-width: 850px) {
 		#menu-links {
 			display: contents;
 		}

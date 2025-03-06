@@ -1,12 +1,19 @@
 ---
-import Base from "@layouts/Base.astro";
+import Base from "@layouts/Base.astro"
 import { langs, collection, file } from "@scripts/i18n";
+
 import { Picture } from "astro:assets";
+
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../../consts";
 import FormattedDate from "../../../components/FormattedDate.astro";
+import Live from "@components/Live.astro";
 
 const { lang } = Astro.params;
-const posts = await collection("akcije", lang);
+if (typeof lang === "undefined") {
+  return Astro.rewrite(`/sr${Astro.url.pathname}`);
+}
+
+const posts = await collection("vesti", lang);
 
 const { frontmatter } = await file("ostalo", lang);
 
@@ -16,15 +23,18 @@ export async function getStaticPaths() {
 ---
 
 <Base {lang} title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <h1>{frontmatter.akcije}</h1>
+  <h1>{frontmatter.vesti}</h1>
   <section>
     <ul>
       {
-        posts.map((post) => (
+        posts.map((post, index) => (
           <li>
-            <a href={`/${lang}/akcije/${post.id}/`}>
-              <Picture formats={['avif', 'webp']} width={720} src={post.data.heroImage} loading="eager" alt="" />
-              <h4 class="title">{post.data.title}</h4>
+            <a class="clear" href={`/${lang}/vesti/${post.id}/`}>
+              <Picture formats={['avif', 'webp']} width={720} src={post.data.heroImage} loading={index <= 3 ? "eager" : "lazy"} alt="" />
+              {post.data.live && 
+                <Live>{frontmatter.live}</Live>
+              }
+              <h2 class="title">{post.data.title}</h2>
               <p class="date">
                 <FormattedDate date={post.data.pubDate} />
               </p>
@@ -42,50 +52,57 @@ export async function getStaticPaths() {
     flex-wrap: wrap;
     gap: 2rem;
     list-style-type: none;
-    margin: 0;
     padding: 0;
   }
+
   ul li {
     width: calc(50% - 1rem);
   }
-  ul li * {
-    text-decoration: none;
+
+  ul li   * {
     transition: 0.2s ease;
   }
+
   ul li:first-child {
     width: 100%;
     margin-bottom: 1rem;
     text-align: center;
   }
+
   ul li:first-child img {
     width: 100%;
   }
-  ul li:first-child .title {
-    font-size: 2.369rem;
-  }
+
   ul li img {
     margin-bottom: 0.5rem;
     border-radius: 12px;
   }
-  ul li a {
+
+  li > a {
     display: block;
+    position: relative;
   }
+
   .title {
     margin: 0;
     color: rgb(var(--black));
     line-height: 1;
   }
+
   .date {
     margin: 0;
     color: rgb(var(--gray));
   }
-  ul li a:hover h4,
-  ul li a:hover .date {
-    color: rgb(var(--accent));
+
+  li > a:hover .title,
+  li > a:hover .date {
+    color: var(--accent);
   }
-  ul a:hover img {
+
+  li > a:hover img {
     box-shadow: var(--box-shadow);
   }
+
   @media (max-width: 720px) {
     ul {
       gap: 2em;
@@ -97,8 +114,11 @@ export async function getStaticPaths() {
     ul li:first-child {
       margin-bottom: 0;
     }
-    ul li:first-child .title {
-      font-size: 1.563em;
-    }
+  }
+
+  .live {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
   }
 </style>
