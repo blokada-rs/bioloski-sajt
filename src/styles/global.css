@@ -124,7 +124,7 @@ strong {
     background-color: var(--accent-dark);
 }
 
-p:not(:last-child) {
+:where(p:not(:last-child)) {
     margin-bottom: 1em;
 }
 
@@ -154,7 +154,14 @@ pre > code {
 
 blockquote {
     border-left: 4px solid var(--accent);
-    font-size: 1.333em;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+blockquote + p {
+    margin-bottom: 3rem;
+    text-align: end;
+    font-weight: bold;
 }
 
 hr {
