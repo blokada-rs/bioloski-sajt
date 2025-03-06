@@ -4,6 +4,11 @@ import BlogPost from '../../../layouts/BlogPost.astro';
 import { render } from 'astro:content';
 import { collection } from '@scripts/i18n';
 
+const { lang } = Astro.params;
+if (typeof lang === "undefined") {
+	return Astro.rewrite(`/sr${Astro.url.pathname}`);
+}
+
 export async function getStaticPaths() {
 	const posts = await collection('akcije');
 	return posts.map((post) => ({
@@ -18,6 +23,6 @@ const post = Astro.props;
 const { Content } = await render(post);
 ---
 
-<BlogPost lang={post.lang} {...post.data}>
+<BlogPost {lang} {...post.data}>
 	<Content />
 </BlogPost>

@@ -1,7 +1,7 @@
 import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
 import { type CollectionEntry, type AnyEntryMap, getCollection, render } from 'astro:content';
 
-export const langs = ["sr", "sr-lat", "en"];
+export const langs = ["sr", "sr-lat", "en", undefined];
 
 export async function collection<T extends "vesti" | "akcije">(
     collection: T,

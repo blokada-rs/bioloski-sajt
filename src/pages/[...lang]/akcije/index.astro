@@ -6,6 +6,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../../../consts";
 import FormattedDate from "../../../components/FormattedDate.astro";
 
 const { lang } = Astro.params;
+if (typeof lang === "undefined") {
+  return Astro.rewrite(`/sr${Astro.url.pathname}`);
+}
+
 const posts = await collection("akcije", lang);
 
 const { frontmatter } = await file("ostalo", lang);

@@ -21,6 +21,12 @@ export async function getStaticPaths() {
 }
 
 type Props = CollectionEntry<'linkovi'> & {lang: string};
+
+const { lang } = Astro.params;
+if (typeof lang === "undefined") {
+    return Astro.rewrite(`/sr${Astro.url.pathname}`);
+}
+
 const linkovi = Astro.props;
 ---
 

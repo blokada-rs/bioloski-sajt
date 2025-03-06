@@ -9,6 +9,10 @@ import FormattedDate from "../../../components/FormattedDate.astro";
 import Live from "@components/Live.astro";
 
 const { lang } = Astro.params;
+if (typeof lang === "undefined") {
+  return Astro.rewrite(`/sr${Astro.url.pathname}`);
+}
+
 const posts = await collection("vesti", lang);
 
 const { frontmatter } = await file("ostalo", lang);
