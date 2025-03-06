@@ -3,9 +3,9 @@
     --accent-dark: #930a0a;
     --black: 15, 18, 25;
     --gray: 96, 115, 159;
-    --gray-light: 229, 233, 240;
+    --gray-light: hsl(0, 0%, 95%);
     --gray-dark: 34, 41, 57;
-    --gray-gradient: rgba(var(--gray-light), 50%), #fff;
+    --gray-gradient: var(--gray-light), #fff;
     --box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
     0 16px 32px rgba(var(--gray), 33%);
 }
@@ -139,7 +139,7 @@ img:not(.not-rounded) {
 
 code {
     padding: 2px 5px;
-    background-color: rgb(var(--gray-light));
+    background-color: var(--gray-light);
     border-radius: 2px;
 }
 
@@ -166,7 +166,7 @@ blockquote + p {
 
 hr {
     border: none;
-    border-top: 1px solid rgb(var(--gray-light));
+    border-top: 1px solid var(--gray-light);
 }
 
 @media (max-width: 720px) {

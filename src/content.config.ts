@@ -45,7 +45,15 @@ const linkovi = defineCollection({
 
 const pocetna = defineCollection({
 	loader: glob({ base: './src/content/stranice', pattern: '**/početna.md' }),
-	schema: () => z.object({}),
+	schema: () => z.object({
+		vesti: z.string(),
+		vesti_tekst: z.string(),
+		vesti_dugme: z.string(),
+		akcije: z.string(),
+		akcije_tekst: z.string(),
+		akcije_dugme: z.string(),
+		konkretizacije_zahteva: z.string(),
+	}),
 });
 
 const zahtevi = defineCollection({
