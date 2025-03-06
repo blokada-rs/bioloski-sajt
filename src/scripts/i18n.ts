@@ -1,17 +1,16 @@
 import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
 import { type CollectionEntry, type AnyEntryMap, getCollection, render } from 'astro:content';
 
-export const langs = ["sr", "sr-lat", "en"];
+export const langs = ["sr", "sr-lat", "en", undefined];
 
 export async function collection<T extends "vesti" | "akcije">(
     collection: T,
     lang: string = "all"
 ): Promise<(CollectionEntry<T> & {lang: string})[]> {
     const c = (await getCollection(collection))
-        // .filter(({data}) => !data.draft)
-        .map(post => ({...post, lang: post.id.split('/')[0], id: post.id.split('/')[1]}));
-
-    c.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+      // .filter(({data}) => !data.draft)
+      .map(post => ({...post, lang: post.id.split('/')[0], id: post.id.split('/')[1]}))
+      .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
     if (lang === "all") {
         return c;
