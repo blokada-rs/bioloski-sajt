@@ -6,6 +6,11 @@ draft: prevodjenje
 pubDate: 2025-03-07T16:13:00.000Z
 heroImage: '@assets/images/nas-protest.png'
 timeline:
+  - naslov: Колона се приближава скупштини и Пионирском парку
+    datum: 2025-03-07T18:07:00.000Z
+    video: ''
+    slike: []
+    tekst: ''
   - naslov: Колона студената кренула са Студентског трга
     datum: 2025-03-07T17:50:00.000Z
     video: ''
