@@ -1,6 +1,7 @@
 ---
 import '../styles/reset.css'
 import '../styles/global.css';
+import { ClientRouter } from 'astro:transitions';
 
 interface Props {
 	title: string;
@@ -49,6 +50,8 @@ const { title, description, image } = Astro.props;
 	(typeof image !== "undefined") && 
 	<meta property="twitter:image" content={new URL(image, Astro.url)} />
 }
+
+<ClientRouter />
 
 <!-- Google tag (gtag.js) -->
 <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-LR43G5KCPF" />

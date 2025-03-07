@@ -4,6 +4,7 @@ import { defineCollection, z } from 'astro:content';
 const vesti = defineCollection({
 	loader: glob({ base: './src/content/vesti', pattern: '**/*.md' }),
 	schema: ({ image }) => z.object({
+		link: z.string(),
 		title: z.string(),
 		live: z.boolean(),
 		pubDate: z.coerce.date(),
@@ -22,6 +23,7 @@ const vesti = defineCollection({
 const akcije = defineCollection({
 	loader: glob({ base: './src/content/akcije', pattern: '**/*.md' }),
 	schema: ({ image }) => z.object({
+		link: z.string(),
 		title: z.string(),
 		pubDate: z.coerce.date(),
 		heroImage: image()

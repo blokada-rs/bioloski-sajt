@@ -10,7 +10,7 @@ const { body, data, link } = Astro.props;
 
 <article class="card">
   <a href={link} class="clear">
-    <Picture class="thumbnail" formats={['avif', 'webp']} width={1020} src={data.heroImage} alt="" />
+    <Picture transition:name={link} class="thumbnail" formats={['avif', 'webp']} width={1020} src={data.heroImage} alt="" />
     <div class="content">
       <FormattedDate date={data.pubDate} />
       <h3>{data.title}</h3>
