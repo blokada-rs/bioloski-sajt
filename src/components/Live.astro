@@ -3,12 +3,12 @@ const { href, ...rest } = Astro.props;
 ---
 
 {(typeof href === "undefined")?
-    <span class="live" {...rest}>
+    <span transition:name="live" class="live" {...rest}>
       <div class="icon"></div>
       <slot />
     </span>
   :
-    <a {href} class="live" {...rest}>
+    <a transition:name="live" {href} class="live" {...rest}>
       <div class="icon"></div>
       <slot />
     </a>

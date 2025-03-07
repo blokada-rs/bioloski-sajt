@@ -1,9 +1,6 @@
 ---
 link: studenti_u_blokadi
 linkovi:
-  - ikonica: newspaper
-    naslov: Studentski edikt
-    link: https://blokade.org/sr-lat/vesti/studentski-edikt
   - ikonica: web
     naslov: Zvanični sajt studenata u blokadi
     link: https://blokade.org
