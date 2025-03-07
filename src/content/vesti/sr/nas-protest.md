@@ -6,6 +6,12 @@ draft: prevodjenje
 pubDate: 2025-03-07T16:13:00.000Z
 heroImage: '@assets/images/nas-protest.png'
 timeline:
+  - naslov: Прва студентска колона стигла до РТС-а
+    datum: 2025-03-07T18:24:00.000Z
+    video: ''
+    slike:
+      - '@assets/images/nas-protest2.jpg'
+    tekst: Колона студената са Студентског трга је стигла до зграде РТС-a, где дочекује колеге који се крећу Булеваром Краља Александра.
   - naslov: Колона се приближава скупштини и Пионирском парку
     datum: 2025-03-07T18:07:00.000Z
     video: ''
