@@ -6,6 +6,12 @@ draft: prevodjenje
 pubDate: 2025-03-07T16:13:00.000Z
 heroImage: '@assets/images/nas-protest.png'
 timeline:
+  - naslov: Петнаестоминутни помен
+    datum: 2025-03-07T19:35:00.000Z
+    video: ''
+    slike:
+      - '@assets/images/nas-protest-tisina.jpg'
+    tekst: Студенти, радници и грађани одали су почаст жртвама несреће у Новом Саду, петнаестомиунутном тижином.
   - naslov: Атмосфера са улице
     datum: 2025-03-07T19:31:00.000Z
     video: ''
@@ -15,12 +21,6 @@ timeline:
       - '@assets/images/nas-protest-atmosfera3.jpg.jpg'
       - '@assets/images/nas-protest-atmosfera4.jpg.jpg'
     tekst: ''
-  - naslov: Петнаестоминутни помен
-    datum: 2025-03-07T19:15:00.000Z
-    video: ''
-    slike:
-      - '@assets/images/nas-protest-tisina.jpg'
-    tekst: Студенти, радници и грађани одали су почаст жртвама несреће у Новом Саду, петнаестомиунутном тижином.
   - naslov: Радници РТС-а читају своје захтеве и говоре
     datum: 2025-03-07T18:30:00.000Z
     video: ''
