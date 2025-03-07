@@ -6,6 +6,15 @@ draft: prevodjenje
 pubDate: 2025-03-07T16:13:00.000Z
 heroImage: '@assets/images/nas-protest.png'
 timeline:
+  - naslov: Атмосфера са улице
+    datum: 2025-03-07T19:31:00.000Z
+    video: ''
+    slike:
+      - '@assets/images/nas-protest-atmosfera1.jpg.jpg'
+      - '@assets/images/nas-protest-atmosfera2.jpg.jpg'
+      - '@assets/images/nas-protest-atmosfera3.jpg.jpg'
+      - '@assets/images/nas-protest-atmosfera4.jpg.jpg'
+    tekst: ''
   - naslov: Петнаестоминутни помен
     datum: 2025-03-07T19:15:00.000Z
     video: ''
@@ -16,6 +25,7 @@ timeline:
     datum: 2025-03-07T18:30:00.000Z
     video: ''
     slike:
+      - '@assets/images/nas-protest-zahtevi1.jpg'
       - '@assets/images/nas-protest-zahtevi.jpeg'
     tekst: |-
       Протест подршке радницима РТС-а, започео је обраћањем групе „Наш пРоТеСт” која је представила захтеве радника РТС-а, који гласе:
