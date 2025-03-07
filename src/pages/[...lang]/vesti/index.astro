@@ -30,7 +30,7 @@ export async function getStaticPaths() {
         posts.map((post, index) => (
           <li>
             <a class="clear" href={`/${lang}/vesti/${post.id}/`}>
-              <Picture transition:name={`/${lang}/vesti/${post.id}/`} formats={['avif', 'webp']} width={720} src={post.data.heroImage} loading={index <= 3 ? "eager" : "lazy"} alt="" />
+              <Picture transition:name={`/${lang}/vesti/${post.id}`} formats={['avif', 'webp']} width={720} src={post.data.heroImage} loading={index <= 3 ? "eager" : "lazy"} alt="" />
               {post.data.live && 
                 <Live>{frontmatter.live}</Live>
               }

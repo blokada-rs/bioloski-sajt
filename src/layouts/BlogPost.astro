@@ -9,7 +9,7 @@ import { file } from "@scripts/i18n";
 
 type Props = CollectionEntry<"vesti">["data"] & {lang: string, live?: boolean};
 
-const { lang, link, title, pubDate, updatedDate, heroImage, live = false, timeline } = Astro.props;
+const { lang, title, pubDate, updatedDate, heroImage, live = false, timeline } = Astro.props;
 
 const { frontmatter } = await file("ostalo", lang);
 ---
