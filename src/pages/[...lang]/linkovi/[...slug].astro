@@ -36,7 +36,7 @@ const live = (await collection("vesti", lang)).find((vest) => vest.data.live);
     <ul>
         {live && 
             <li>
-                <a class="live" href={`${lang}/vesti/${live.data.link}`}>
+                <a class="live" href={`/${lang}/vesti/${live.data.link}`}>
                     <Icon size={ICON_SIZE_LG} name={`mdi:newspaper`} />
                     {live.data.title}
                 </a>
