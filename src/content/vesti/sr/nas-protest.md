@@ -1,11 +1,16 @@
 ---
 link: nas-protest
 title: Наш пРоТеСт
-live: true
+live: false
 draft: prevodjenje
 pubDate: 2025-03-07T16:13:00.000Z
 heroImage: '@assets/images/nas-protest.png'
 timeline:
+  - naslov: Крај протеста
+    datum: 2025-03-07T20:03:00.000Z
+    video: ''
+    slike: []
+    tekst: ''
   - naslov: Петнаестоминутни помен
     datum: 2025-03-07T19:35:00.000Z
     video: ''
