@@ -6,6 +6,11 @@ draft: uredjivanje
 pubDate: 2025-03-08T00:00:00.000Z
 heroImage: '@assets/images/osmi-mart.jpg'
 timeline:
+  - naslov: Колона трактора кренула ка Ушћу!
+    datum: 2025-03-08T18:08:00.000Z
+    videos: []
+    slike: []
+    tekst: ''
   - naslov: Хитан позив на акцију!
     datum: 2025-03-08T17:48:00.000Z
     videos: []
