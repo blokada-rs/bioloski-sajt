@@ -67,6 +67,11 @@ const { frontmatter } = await file("ostalo", lang);
     display: block;
     margin-inline: auto;
   }
+
+  .prose :global(:where(ol, ul)) {
+    margin-bottom: 2rem;
+  }
+
   .title {
     margin-bottom: 1em;
     padding: 1em 0;
