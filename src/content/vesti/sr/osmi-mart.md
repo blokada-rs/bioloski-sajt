@@ -8,12 +8,14 @@ heroImage: '@assets/images/osmi-mart.jpg'
 timeline:
   - naslov: Марширање ка СКЦ-у
     datum: 2025-03-08T16:09:00.000Z
-    videos: []
+    videos:
+      - uKHAO53MoDc
     slike: []
     tekst: Учесници марширају Коларчевом улицом и иду ка СКЦ-у.
   - naslov: Обраћање говорница
     datum: 2025-03-08T15:36:00.000Z
-    videos: []
+    videos:
+      - ekVMAGcMqyg
     slike: []
     tekst: „Наша борба траје све док Осми март не постане празник сећања на борбу, а не дан борбе”, поручују оне.
   - naslov: Окупљање на Тргу републике
