@@ -16,10 +16,7 @@ timeline:
   - naslov: Након студентског говора — правац Ушће
     datum: 2025-03-08T19:37:00.000Z
     videos: []
-    slike:
-      - '@assets/images/1000154697.jpg'
-      - '@assets/images/1000154691.jpg'
-      - '@assets/images/1000154688.jpg'
+    slike: []
     tekst: |-
       Студенти поручују: „После студентског говора упутићемо се ка Ушћу, да чујеђо последњи говор — говор пољопривредника”
 
@@ -42,13 +39,11 @@ timeline:
   - naslov: Колона трактора кренула ка Ушћу!
     datum: 2025-03-08T18:08:00.000Z
     videos: []
-    slike:
-      - '@assets/images/hitan-poziv.png'
+    slike: []
     tekst: ''
   - naslov: Хитан позив на акцију!
     datum: 2025-03-08T17:48:00.000Z
-    videos:
-      - uKHAO53MoDc
+    videos: []
     slike:
       - '@assets/images/hitan-poziv.png'
     tekst: |-
