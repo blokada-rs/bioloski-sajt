@@ -64,15 +64,13 @@ timeline:
       Позивају све грађане да иду диркетно до ГО и учествују у борби!
   - naslov: 16 минута тишине код СКЦ-а
     datum: 2025-03-08T16:50:00.000Z
-    videos:
-      - uKHAO53MoDc
+    videos: []
     slike:
       - '@assets/images/16-minuta-tisine.jpg'
     tekst: ''
   - naslov: Колону блокирала полиција
     datum: 2025-03-08T16:53:00.000Z
-    videos:
-      - uKHAO53MoDc
+    videos: []
     slike:
       - '@assets/images/blokada-blokade.jpg'
     tekst: |-
@@ -83,30 +81,25 @@ timeline:
     datum: 2025-03-08T16:09:00.000Z
     videos:
       - uKHAO53MoDc
-    slike:
-      - '@assets/images/mars2.jpg'
+    slike: []
     tekst: Учесници марширају Коларчевом улицом и иду ка СКЦ-у.
   - naslov: Обраћање говорница
     datum: 2025-03-08T15:36:00.000Z
     videos:
       - ekVMAGcMqyg
-    slike:
-      - '@assets/images/mars2.jpg'
+    slike: []
     tekst: „Наша борба траје све док Осми март не постане празник сећања на борбу, а не дан борбе”, поручују оне.
   - naslov: Окупљање на Тргу републике
     datum: 2025-03-08T14:10:00.000Z
     videos:
       - R7LylkssRjE
-    slike:
-      - '@assets/images/mars2.jpg'
+    slike: []
     tekst: Окупљање на Тргу републике поводом редовног „Осмомартовског марша”. Учесници су дочекани уз звук бубњева и поруком ,„Без нас све(т) стаје”, а звук правде ће се тек чути.
     video: ''
   - naslov: Говор испред Врховног јавног тужилаштва
     datum: 2025-03-08T14:37:00.000Z
-    videos:
-      - Kmoy-hWRZTo
-    slike:
-      - '@assets/images/19-minuta-cutanja.jpeg'
+    videos: []
+    slike: []
     tekst: |-
       > Добар дан, слободне жене и саборци!
       > 
@@ -118,8 +111,7 @@ timeline:
     datum: 2025-03-08T13:40:00.000Z
     videos:
       - Kmoy-hWRZTo
-    slike:
-      - '@assets/images/19-minuta-cutanja.jpeg'
+    slike: []
     tekst: |-
       Жене данас не желе цвеће, изашле су на улице јер траже правду!
 
