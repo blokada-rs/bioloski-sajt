@@ -6,10 +6,18 @@ draft: uredjivanje
 pubDate: 2025-03-08T00:00:00.000Z
 heroImage: '@assets/images/osmi-mart.jpg'
 timeline:
+  - naslov: Ушће и Трг републике
+    datum: 2025-03-08T18:34:00.000Z
+    videos: []
+    slike:
+      - '@assets/images/1000154684.jpg'
+      - '@assets/images/1000154677.jpg'
+    tekst: Полиција брани пољопривредној механизацији да пређе Бранков мост. Грађани покушавају да пређу мост у два смера — ка Ушћу да би помогли пољопривредницима и ка Тргу републике да би се прикључили радничком протесту „Раме уз раме”.
   - naslov: Колона трактора кренула ка Ушћу!
     datum: 2025-03-08T18:08:00.000Z
     videos: []
-    slike: []
+    slike:
+      - '@assets/images/hitan-poziv.png'
     tekst: ''
   - naslov: Хитан позив на акцију!
     datum: 2025-03-08T17:48:00.000Z
@@ -28,7 +36,8 @@ timeline:
     tekst: ''
   - naslov: Колону блокирала полиција
     datum: 2025-03-08T16:53:00.000Z
-    videos: []
+    videos:
+      - uKHAO53MoDc
     slike:
       - '@assets/images/blokada-blokade.jpg'
     tekst: |-
@@ -45,7 +54,8 @@ timeline:
     datum: 2025-03-08T15:36:00.000Z
     videos:
       - ekVMAGcMqyg
-    slike: []
+    slike:
+      - '@assets/images/mars2.jpg'
     tekst: „Наша борба траје све док Осми март не постане празник сећања на борбу, а не дан борбе”, поручују оне.
   - naslov: Окупљање на Тргу републике
     datum: 2025-03-08T14:10:00.000Z
@@ -56,7 +66,8 @@ timeline:
     tekst: Окупљање на Тргу републике поводом редовног „Осмомартовског марша”. Учесници су дочекани уз звук бубњева и поруком ,„Без нас све(т) стаје”, а звук правде ће се тек чути.
   - naslov: Говор испред Врховног јавног тужилаштва
     datum: 2025-03-08T14:37:00.000Z
-    videos: []
+    videos:
+      - Kmoy-hWRZTo
     slike: []
     tekst: |-
       > Добар дан, слободне жене и саборци!
@@ -68,11 +79,13 @@ timeline:
     datum: 2025-03-08T13:40:00.000Z
     videos:
       - Kmoy-hWRZTo
-    slike: []
+    slike:
+      - '@assets/images/19-minuta-cutanja.jpeg'
     tekst: |-
       Жене данас не желе цвеће, изашле су на улице јер траже правду!
 
       Испред Врховног јавног тужилаштва биће одржан говор.
+    video: ''
   - naslov: 19 минута тишине
     datum: 2025-03-08T13:15:00.000Z
     videos: []
