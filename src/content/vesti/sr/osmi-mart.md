@@ -6,10 +6,20 @@ draft: uredjivanje
 pubDate: 2025-03-08T00:00:00.000Z
 heroImage: '@assets/images/osmi-mart.jpg'
 timeline:
+  - naslov: Ускоро говор пољопривредника
+    datum: 2025-03-08T20:53:00.000Z
+    videos: []
+    slike:
+      - '@assets/images/1000154767.jpg'
+      - '@assets/images/1000154769.jpg'
+    tekst: Студенти и грађани пристижу до кружног тока испред тржног центра „Ушће”. Ту се скупљају након чега ће чути говор земљорадника.
   - naslov: Након студентског говора — правац Ушће
     datum: 2025-03-08T19:37:00.000Z
     videos: []
-    slike: []
+    slike:
+      - '@assets/images/1000154697.jpg'
+      - '@assets/images/1000154691.jpg'
+      - '@assets/images/1000154688.jpg'
     tekst: |-
       Студенти поручују: „После студентског говора упутићемо се ка Ушћу, да чујеђо последњи говор — говор пољопривредника”
 
@@ -37,7 +47,8 @@ timeline:
     tekst: ''
   - naslov: Хитан позив на акцију!
     datum: 2025-03-08T17:48:00.000Z
-    videos: []
+    videos:
+      - uKHAO53MoDc
     slike:
       - '@assets/images/hitan-poziv.png'
     tekst: |-
@@ -82,6 +93,7 @@ timeline:
     slike:
       - '@assets/images/mars2.jpg'
     tekst: Окупљање на Тргу републике поводом редовног „Осмомартовског марша”. Учесници су дочекани уз звук бубњева и поруком ,„Без нас све(т) стаје”, а звук правде ће се тек чути.
+    video: ''
   - naslov: Говор испред Врховног јавног тужилаштва
     datum: 2025-03-08T14:37:00.000Z
     videos:
