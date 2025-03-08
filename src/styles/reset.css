@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section) {
 }
 
 :where(ol, ul) {
-    padding-inline-start: 40px;
+    padding-inline-start: 2rem;
 }
 
 :where(blockquote, q) {
