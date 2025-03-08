@@ -6,6 +6,13 @@ draft: uredjivanje
 pubDate: 2025-03-08T00:00:00.000Z
 heroImage: '@assets/images/osmi-mart.jpg'
 timeline:
+  - naslov: Враћање преко моста
+    datum: 2025-03-08T21:17:00.000Z
+    videos: []
+    slike:
+      - '@assets/images/1000154789.jpg'
+      - '@assets/images/1000154798.jpg'
+    tekst: Након говора пољопривредника, студенти и грађани по мањим групама прелазе мост.
   - naslov: Ускоро говор пољопривредника
     datum: 2025-03-08T20:53:00.000Z
     videos: []
