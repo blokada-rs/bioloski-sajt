@@ -13,7 +13,7 @@ const vesti = defineCollection({
 		timeline: z.object({
 			naslov: z.string(),
 			datum: z.coerce.date(),
-			video: z.string().optional(),
+			videos: z.string().array().optional(),
 			slike: image().array(),
 			tekst: z.string().optional()
 		}).array().optional()

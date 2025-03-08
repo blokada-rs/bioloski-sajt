@@ -20,6 +20,10 @@ time, mark, audio, video) {
     vertical-align: baseline;
 }
 
+picture, img {
+    display: block;
+}
+
 :where(article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section) {
     display: block;
