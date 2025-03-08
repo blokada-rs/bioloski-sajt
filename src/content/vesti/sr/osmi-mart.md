@@ -6,6 +6,12 @@ draft: uredjivanje
 pubDate: 2025-03-08T00:00:00.000Z
 heroImage: '@assets/images/osmi-mart.jpg'
 timeline:
+  - naslov: 16 минута тишине код СКЦ-а
+    datum: 2025-03-08T16:50:00.000Z
+    videos: []
+    slike:
+      - '@assets/images/16-minuta-tisine.jpg'
+    tekst: ''
   - naslov: Колону блокирала полиција
     datum: 2025-03-08T16:53:00.000Z
     videos: []
