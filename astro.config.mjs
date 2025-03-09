@@ -5,7 +5,7 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://bioloski.blokade.org',
+	site: 'https://bighumus.github.io/bioloski-sajt/',
 	integrations: [sitemap(), icon()],
 	redirects: {
 		'/sub': '/sr-lat/linkovi/studenti_u_blokadi',
