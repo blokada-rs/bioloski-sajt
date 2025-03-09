@@ -4,7 +4,7 @@ import { collection, file, langs } from "@scripts/i18n";
 import { getImage } from "astro:assets";
 
 import { SITE_DESCRIPTION } from "../../consts";
-import slavija from "@assets/images/slavija.jpg";
+import heroBg from "@assets/images/hero-bg.jpg";
 import Live from "@components/Live.astro";
 import Slider from "../../components/Slider.astro";
 import Card from "../../components/Card.astro";
@@ -22,7 +22,7 @@ const { Content: Pocetna, frontmatter: pocetna } = await file("pocetna", lang);
 const { Content: Zahtevi } = await file("zahtevi", lang);
 const { frontmatter } = await file("ostalo", lang);
 const live = (await collection("vesti", lang)).find((vest) => vest.data.live);
-const optimizedSlavija = await getImage({ src: slavija, format: "avif" });
+const optimizedBackground = await getImage({ src: heroBg, format: "avif" });
 
 const vesti = await collection("vesti", lang);
 const akcije = await collection("akcije", lang);
@@ -32,11 +32,11 @@ const akcije = await collection("akcije", lang);
   {lang}
   title={frontmatter.naslov}
   description={SITE_DESCRIPTION}
-  image={slavija.src}
+  image={heroBg.src}
 >
   <div
     class="title full-width"
-    style={`background-image: url(${optimizedSlavija.src});`}
+    style={`background-image: url(${optimizedBackground.src});`}
   >
     {typeof live !== "undefined" &&
       <Live href={`/${lang}/vesti/${live.id}`}>{live.data.title}</Live>
@@ -68,17 +68,6 @@ const akcije = await collection("akcije", lang);
       </div>
     </section>
   </div>
-
-  <section class="gap">
-    <h2>{pocetna.akcije}</h2>
-    {pocetna.akcije_tekst && <p class="section-subtitle">{pocetna.akcije_tekst}</p>}
-    <Slider>
-      {akcije.slice(0, 3).map(post =>
-        <Card link=`/${lang}/akcije/${post.id}` {...post} />)
-      }
-      <a slot="button" href=`/${lang}/akcije` class="button primary dugme">{pocetna.akcije_dugme}</a>
-    </Slider>
-  </section>
 </Base>
 
 <style>

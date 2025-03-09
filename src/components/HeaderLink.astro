@@ -15,9 +15,16 @@ const isActive = `/${pathname}`.toString().startsWith(href?.toString() || '');
 <style>
 	a {
 		display: inline-block;
+		padding: 1rem 0.75rem;
+		color: var(--black);
+		border-bottom: 4px solid transparent;
+		text-decoration: none;
 	}
 
 	a.active {
 		font-weight: bolder;
+	}
+	a:hover{
+		background-color: rgba(0, 0, 0, 0.05);
 	}
 </style>
