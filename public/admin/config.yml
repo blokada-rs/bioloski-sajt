@@ -1,5 +1,5 @@
-site_url: https://blokade.org
-logo_url: https://blokade.org/favicon.ico
+site_url: https://bioloski.blokade.org
+logo_url: https://bioloski.blokade.org/favicon.ico
 
 media_folder: "/src/assets/images/"
 public_folder: "@assets/images/"
@@ -8,7 +8,7 @@ locale: sr
 
 backend:
   name: github
-  repo: blokada-rs/sajt
+  repo: blokada-rs/bioloski-sajt
   branch: to-publish
 
 output:
