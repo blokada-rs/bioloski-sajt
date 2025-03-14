@@ -89,13 +89,6 @@ const zahtevi = defineCollection({
     }),
 });
 
-const oblokadama = defineCollection({
-  loader: glob({
-    base: "./src/content/stranice",
-    pattern: "**/o-blokadama.md",
-  }),
-  schema: () => z.object({}),
-});
 
 const zaglavlje = defineCollection({
   loader: glob({ base: "./src/content/stranice", pattern: "**/zaglavlje.md" }),
@@ -131,7 +124,6 @@ export const collections = {
   linkovi,
   pocetna,
   zahtevi,
-  oblokadama,
   zaglavlje,
   ostalo,
 };
