@@ -1,16 +1,23 @@
 ---
 import FormattedDate from "./FormattedDate.astro";
 import { type CollectionEntry } from "astro:content";
-import {Picture} from "astro:assets";
+import { Picture } from "astro:assets";
 
-type Props = CollectionEntry<'vesti' | 'akcije'> & { link: string };
+type Props = CollectionEntry<"vesti"> & { link: string };
 
 const { body, data, link } = Astro.props;
 ---
 
 <article class="card">
   <a href={link} class="clear">
-    <Picture transition:name={link} class="thumbnail" formats={['avif', 'webp']} width={1020} src={data.heroImage} alt="" />
+    <Picture
+      transition:name={link}
+      class="thumbnail"
+      formats={["avif", "webp"]}
+      width={1020}
+      src={data.heroImage}
+      alt=""
+    />
     <div class="content">
       <FormattedDate date={data.pubDate} />
       <h3>{data.title}</h3>

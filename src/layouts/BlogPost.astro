@@ -7,9 +7,20 @@ import Live from "@components/Live.astro";
 import Timeline from "@components/Timeline.astro";
 import { file } from "@scripts/i18n";
 
-type Props = CollectionEntry<"vesti">["data"] & {lang: string, live?: boolean};
+type Props = CollectionEntry<"vesti">["data"] & {
+  lang: string;
+  live?: boolean;
+};
 
-const { lang, title, pubDate, updatedDate, heroImage, live = false, timeline } = Astro.props;
+const {
+  lang,
+  title,
+  pubDate,
+  updatedDate,
+  heroImage,
+  live = false,
+  timeline,
+} = Astro.props;
 
 const { frontmatter } = await file("ostalo", lang);
 ---
@@ -19,7 +30,14 @@ const { frontmatter } = await file("ostalo", lang);
     <div class="hero-image">
       {
         heroImage && (
-          <Picture transition:name={Astro.originPathname} formats={['avif', 'webp']} width={1020} src={heroImage} loading="eager" alt="" />
+          <Picture
+            transition:name={Astro.originPathname}
+            formats={["avif", "webp"]}
+            width={1020}
+            src={heroImage}
+            loading="eager"
+            alt=""
+          />
         )
       }
     </div>
@@ -39,9 +57,9 @@ const { frontmatter } = await file("ostalo", lang);
         <h1>{title}</h1>
         <hr />
       </div>
-      
+
       <Timeline {timeline} />
-      
+
       <slot />
     </div>
   </article>

@@ -10,19 +10,21 @@ if (typeof lang === "undefined") {
 }
 
 export async function getStaticPaths() {
-  const posts = await collection("vesti");
+  const posts = await collection("rioTinto");
+  const ids = posts.map((p) => (p.id));
+  console.log('Post ids:',ids);
   return posts.map((post) => ({
     params: { lang: post.lang, slug: post.id },
     props: post,
   }));
 }
 
-type Props = CollectionEntry<"vesti"> & { lang: string };
+type Props = CollectionEntry<"rioTinto"> & { lang: string };
 
 const post = Astro.props;
 const { Content } = await render(post);
 ---
 
-<BlogPost lang={post.lang} {...post.data}>
+<BlogPost {lang} {...post.data}>
   <Content />
 </BlogPost>

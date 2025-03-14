@@ -25,7 +25,6 @@ const live = (await collection("vesti", lang)).find((vest) => vest.data.live);
 const optimizedBackground = await getImage({ src: heroBg, format: "avif" });
 
 const vesti = await collection("vesti", lang);
-const akcije = await collection("akcije", lang);
 ---
 
 <Base
@@ -64,7 +63,7 @@ const akcije = await collection("akcije", lang);
     <section>
       <Zahtevi />
       <div class="buttons">
-        <a slot="button" href="https://blokade.org/sr/zahtevi" class="button primary dugme center">{pocetna.konkretizacije_zahteva}</a>
+        <a slot="button" href=`https://blokade.org/${lang}/zahtevi` class="button primary dugme center">{pocetna.konkretizacije_zahteva}</a>
       </div>
     </section>
   </div>
