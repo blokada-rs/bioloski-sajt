@@ -98,6 +98,7 @@ description: Штетност експлоатације јадарита - на
 <b>Више о принципу предострожности:</b>
 
 <a href="https://drive.google.com/file/d/1NRavMxjeX8BIN2FUllAkNwMnSIUG0JcP/view?usp=drive_link">Документ о принципу предострожности</a>
+
 <a href="https://www.danas.rs/dijalog/licni-stavovi/kockanje-kopanjem-licni-stav-filozofkinje-i-psihoterapeutkinje-tatjane-milivojevic/">Дневник: "Коцкање копањем"</a>
 
 
