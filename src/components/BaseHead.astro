@@ -20,6 +20,18 @@ const { title, description, image } = Astro.props;
 <link rel="icon" type="image/ico" href="/favicon.ico">
 <meta name="generator" content={Astro.generator} />
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LR43G5KCPF"></script>
+<script is:inline>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag("js", new Date());
+
+	gtag("config", "G-LR43G5KCPF", { 'debug_mode':true });
+</script>
+
 <!-- Font preloads -->
 <link rel="preload" href="/fonts/montserrat-variable.ttf" as="font" type="font/ttf" crossorigin />
 
@@ -52,15 +64,3 @@ const { title, description, image } = Astro.props;
 }
 
 <ClientRouter />
-
-<!-- Google tag (gtag.js) -->
-<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-LR43G5KCPF" />
-<script is:inline>
-	window.dataLayer = window.dataLayer || [];
-	function gtag() {
-		dataLayer.push(arguments);
-	}
-	gtag("js", new Date());
-
-	gtag("config", "G-LR43G5KCPF", { 'debug_mode':true });
-</script>
