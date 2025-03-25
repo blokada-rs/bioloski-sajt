@@ -1,4 +1,5 @@
 #!/bin/sh
+LANG=C.UTF-8
 locale
 sudo apt-get install gettext
 for dir in "src/content/vesti" "src/content/rioTinto" "src/content/stranice"
