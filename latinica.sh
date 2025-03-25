@@ -1,6 +1,7 @@
 #!/bin/sh
 locale -a
 sudo apt-get install gettext
+sudo localectl set-locale LANG=C.utf8
 for dir in "src/content/vesti" "src/content/rioTinto" "src/content/stranice"
 do
 	rm -rf "$dir/sr-lat"
