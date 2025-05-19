@@ -1,7 +1,7 @@
 ---
 link: stetnost-rudarenja-rio-tinto
 title: On the Harmfulness of Rio Tinto Mining
-live: true
+live: false
 draft: uredjivanje
 pubDate: 2025-03-09T20:00:00.000Z
 heroImage: '@assets/images/IMG_3041.JPG'
