@@ -1,7 +1,7 @@
 ---
 link: pismo-evropskoj-komisiji
 title: Студенти у блокади и академска заједница Србије предали писмо Европској комисији
-live: true
+live: false
 draft: spremno
 pubDate: 2025-04-01T22:40:00.000Z
 updatedDate: 2025-05-19T14:34:00.000Z
