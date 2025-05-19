@@ -49,3 +49,23 @@ _Више о овој теми:_
 [Отварање рудника у Јадру нанело би огромну штету - од експлоатације треба одустати](https://www.insajder.net/teme/profesori-bioloskog-fakulteta-za-insajder-otvaranje-rudnika-u-jadru-nanelo-bi-ogromnu-stetu-po-biodiverzitet-i-prirodu-od-eksploatacije-treba-odustati)
 
 [Преглед утицаја пројекта „Јадар“ на стање биодиверзитета - УВОД](https://drive.google.com/file/d/1KGJ6D9hP1Jh9_wFdtdl_nKE9PeHIMhn7/view?usp=drive_link)
+
+[Преглед утицаја пројекта „Јадар“ на стање биодиверзитета – ЗАКЉУЧНА РАЗМАТРАЊА](https://drive.google.com/file/d/1th29jSdqUOo0FxYa5QvX7cUdsSNTKoq1/view?usp=drive_link)
+
+[Преглед утицаја пројекта „Јадар“ на стање биодиверзитета – ОСНОВНИ ПРИОРИТЕТИ ЗАШТИТЕ](https://drive.google.com/file/d/1yN9GvxDSUnPna5HOU3hCG1vRV8oT_ehN/view?usp=drive_link)
+
+[Преглед утицаја пројекта „Јадар“ на стање биодиверзитета – СТАНИШТА](https://drive.google.com/file/d/1eP7_tDzFewx1Q6NdGHBFe3fAyZQQu4CW/view?usp=drive_link)
+
+[Преглед утицаја пројекта „Јадар“ на стање биодиверзитета – ФЛОРА](https://drive.google.com/file/d/1o8vWS9eaIj6eBO18lF10rn10UUdE3_Lr/view?usp=drive_link)
+
+[Преглед утицаја пројекта „Јадар“ на стање биодиверзитета – ВОДЕНИ БЕСКИЧМЕЊАЦИ](https://drive.google.com/file/d/1X3aR_JBviOMi045k4z4sxgfaZQUnag7T/view?usp=drive_link)
+
+[Преглед утицаја пројекта „Јадар“ на стање биодиверзитета – ТВРДОКРИЛЦИ](https://drive.google.com/file/d/16GX63LBxfhXjDxpKkVGTdKxECf8rlFFW/view?usp=drive_link)
+
+[Преглед утицаја пројекта „Јадар“ на стање биодиверзитета – РИБЕ](https://drive.google.com/file/d/1ZhL5foSx1rMsXBGcNkYAuYt4KlHQ1fdI/view?usp=drive_link)
+
+[Преглед утицаја пројекта „Јадар“ на стање биодиверзитета – ВОДОЗЕМЦИ](https://drive.google.com/file/d/1OjkxzT6Ih3jNlKStO4Mo53xKmI9QHJTM/view?usp=drive_link)
+
+[Преглед утицаја пројекта „Јадар“ на стање биодиверзитета – ГМИЗАВЦИ](https://drive.google.com/file/d/1qAdmPTbsMewXFFufJ_Ti6Ci66LbqeY3o/view?usp=drive_link)
+
+[Преглед утицаја пројекта „Јадар“ на стање биодиверзитета – СИСАРИ](https://drive.google.com/file/d/1g52ohnqVh7bwAIHMQU_Iop_cD9odnHue/view?usp=drive_link)
