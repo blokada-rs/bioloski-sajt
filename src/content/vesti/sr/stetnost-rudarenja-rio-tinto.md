@@ -4,10 +4,9 @@ title: О штетности рударења Рио Тинта у долини 
 live: false
 draft: prevodjenje
 pubDate: 2025-03-09T20:00:00.000Z
-heroImage: "@assets/images/placeholder.jpg"
+heroImage: '@assets/images/IMG_3041.JPG'
 description: Штетност експлоатације јадарита - научне чињенице и ставови студената и професора биолошког факултета. Прочитајте о Деградација станишта, Загађењу вода, Губитку биодиверзитета, Социо-економским ризицима. Сазнајте о историји и етици пословања компаније Рио Тинто.
 ---
-
 Ми, студенти биологије у блокади, уз подршку професора, научника, стручњака и грађана, одлучно се противимо пројекту „Јадар“ компаније Рио Тинто.
 
 Заштита животне средине и природних ресурса (земљишта, воде и ваздуха) гарантована је Уставом Републике Србије (члан 74). Он јасно прописује да:
@@ -93,7 +92,7 @@ description: Штетност експлоатације јадарита - на
 
 <b>Више о принципу предострожности:</b>
 
-<a href="https://drive.google.com/file/d/1NRavMxjeX8BIN2FUllAkNwMnSIUG0JcP/view?usp=drive_link">Документ о принципу предострожности</a>
+<a href="https://drive.google.com/file/d/1NRavMxjeX8BIN2FUllAkNwMnSIUG0JcP/view?usp=drive\_link">Документ о принципу предострожности</a>
 
 <a href="https://www.danas.rs/dijalog/licni-stavovi/kockanje-kopanjem-licni-stav-filozofkinje-i-psihoterapeutkinje-tatjane-milivojevic/">Дневник: "Коцкање копањем"</a>
 
