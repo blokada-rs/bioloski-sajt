@@ -37,4 +37,4 @@ _Више о овој теми:_
 [Утицај арсена, литијума и бора и честичних материја на ситнe сисарe](https://drive.google.com/file/d/1BHsMgYIF0viVh9oHfqw_sOkno3WpK1Cj/view?usp=drive_link)  
 [Утицај повишених концентрација литијума, бора и арсена на биљке](https://drive.google.com/file/d/1kIXcM69pwQ404QpMFGB2n5QdmjkZc4bQ/view?usp=drive_link)
 
-[Пројекат Јадар – могући штетни утицаји на живи свет и здравље човека](https://bio.bg.ac.rs/wp-content/uploads/2025/04/pro%D1%98ekat-%D1%98adar-moguci-stetni-utica%D1%98i-na-zivi-svet-i-zdravlje-coveka.pdf)”
+[Пројекат Јадар – могући штетни утицаји на живи свет и здравље човека](https://bio.bg.ac.rs/wp-content/uploads/2025/04/pro%D1%98ekat-%D1%98adar-moguci-stetni-utica%D1%98i-na-zivi-svet-i-zdravlje-coveka.pdf)
