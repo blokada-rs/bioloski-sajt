@@ -46,4 +46,4 @@ _Више о овој теми:_
 
 [YouTube 2024. RIO TINTO: Problem uspostavljanja nultog stanja u Srbiji](https://www.youtube.com/watch?v=0XZcW7-NSgs&t=374s)
 
-[Prof.dr Zoran Stevanović za Radar: Otvaranje rudnika litijuma nosi ogroman rizik po pijaću vodu](https://radar.nova.rs/drustvo/litijum-strucnjaci-govore-zoran-stevanovic/)
+[Prof. dr Zoran Stevanović za Radar: Otvaranje rudnika litijuma nosi ogroman rizik po pijaću vodu](https://radar.nova.rs/drustvo/litijum-strucnjaci-govore-zoran-stevanovic/)
