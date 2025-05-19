@@ -1,7 +1,7 @@
 ---
 link: stetnost-rudarenja-rio-tinto
 title: О штетности рударења Рио Тинта у долини Јадра
-live: false
+live: true
 draft: prevodjenje
 pubDate: 2025-03-09T20:00:00.000Z
 heroImage: '@assets/images/IMG_3041.JPG'
